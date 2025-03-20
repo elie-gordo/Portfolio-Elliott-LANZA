@@ -1,14 +1,14 @@
-
-import { type Config } from "tailwindcss";
+import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
+  prefix: "",
   theme: {
     container: {
       center: true,
@@ -20,22 +20,38 @@ export default {
     extend: {
       colors: {
         border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        card: "hsl(var(--card))",
-        "card-hover": "hsl(var(--card-hover))",
-        "blue-accent": "hsl(var(--blue-accent))",
+        card: {
+          DEFAULT: "#1a1a1a",
+          hover: "#242424",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
-        md: "calc(var(--radius) - 0.25rem)",
-        sm: "calc(var(--radius) - 0.5rem)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "card-hover": {
+          "0%": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(-8px)" },
+        },
+      },
+      animation: {
+        "card-hover": "card-hover 0.2s ease-out forwards",
       },
     },
   },
-  plugins: [],
-} satisfies Config
+  plugins: [require("tailwindcss-animate")],
+} satisfies Config;
