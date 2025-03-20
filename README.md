@@ -10,6 +10,7 @@ A modern, responsive portfolio website built with React, TypeScript, and Tailwin
 - Social media links
 - Responsive design
 - Clean, minimalist aesthetic
+- Enhanced with Lovable for AI-powered editing
 
 ## Getting Started
 
