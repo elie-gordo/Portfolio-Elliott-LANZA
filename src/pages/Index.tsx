@@ -1,26 +1,16 @@
-
+import { useState, useEffect } from "react";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
-import { useEffect, useState } from "react";
 
-export default function Index() {
-  const [currentTime, setCurrentTime] = useState("00:00:00");
+const Index = () => {
+  const [time, setTime] = useState(new Date());
 
   useEffect(() => {
-    // Update current time
-    function updateTime() {
-      const now = new Date();
-      setCurrentTime(now.toLocaleTimeString());
-    }
-    
-    // Update the time immediately and then every second
-    updateTime();
-    const interval = setInterval(updateTime, 1000);
-    
-    return () => clearInterval(interval);
+    const timer = setInterval(() => setTime(new Date()), 1000);
+    return () => clearInterval(timer);
   }, []);
 
   return (
-    <div className="container mx-auto px-4 min-h-screen">
+    <div className="min-h-screen bg-[#121212] text-white">
       <div className="bento-grid">
         {/* Welcome Card */}
         <div className="bento-card col-span-2">
@@ -54,29 +44,29 @@ export default function Index() {
         <div className="bento-card">
           <h2 className="text-lg text-gray-400 mb-4">Current Time</h2>
           <p className="text-3xl font-bold font-mono">
-            {currentTime}
+            {time.toLocaleTimeString()}
           </p>
         </div>
 
         {/* Contact Card */}
         <div className="bento-card">
           <h2 className="text-2xl font-bold mb-6">Let's Connect</h2>
-          <div className="flex gap-6">
+          <div className="flex space-x-6">
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
-               className="flex items-center justify-center w-12 h-12 rounded-full hover:bg-white/10 transition-colors">
-              <Github className="w-6 h-6" />
+               className="p-3 rounded-full hover:bg-gray-800 transition-colors">
+              <Github className="w-8 h-8" />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
-               className="flex items-center justify-center w-12 h-12 rounded-full hover:bg-white/10 transition-colors">
-              <Linkedin className="w-6 h-6" />
+               className="p-3 rounded-full hover:bg-gray-800 transition-colors">
+              <Linkedin className="w-8 h-8" />
             </a>
             <a href="mailto:your@email.com"
-               className="flex items-center justify-center w-12 h-12 rounded-full hover:bg-white/10 transition-colors">
-              <Mail className="w-6 h-6" />
+               className="p-3 rounded-full hover:bg-gray-800 transition-colors">
+              <Mail className="w-8 h-8" />
             </a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
-               className="flex items-center justify-center w-12 h-12 rounded-full hover:bg-white/10 transition-colors">
-              <Twitter className="w-6 h-6" />
+               className="p-3 rounded-full hover:bg-gray-800 transition-colors">
+              <Twitter className="w-8 h-8" />
             </a>
           </div>
         </div>
@@ -84,18 +74,47 @@ export default function Index() {
         {/* Projects Card */}
         <div className="bento-card col-span-2">
           <h2 className="text-2xl font-bold mb-6">Featured Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white/5 rounded-xl p-6">
+          <div className="grid grid-cols-2 gap-6">
+            <div className="p-6 bg-card-hover rounded-lg">
               <h3 className="text-xl font-bold mb-3">Project 1</h3>
               <p className="text-gray-300">Description of your amazing project</p>
             </div>
-            <div className="bg-white/5 rounded-xl p-6">
+            <div className="p-6 bg-card-hover rounded-lg">
               <h3 className="text-xl font-bold mb-3">Project 2</h3>
               <p className="text-gray-300">Description of another cool project</p>
+            </div>
+          </div>
+        </div>
+
+        {/* New Experience Card */}
+        <div className="bento-card col-span-3">
+          <h2 className="text-2xl font-bold mb-6">Experience</h2>
+          <div className="space-y-6">
+            <div className="flex justify-between items-start">
+              <div>
+                <h3 className="text-xl font-bold text-blue-400">Senior Developer</h3>
+                <p className="text-gray-300">Tech Company Inc.</p>
+                <p className="text-gray-400 mt-2">
+                  Led development of multiple high-impact projects and mentored junior developers.
+                </p>
+              </div>
+              <span className="text-gray-400">2020 - Present</span>
+            </div>
+            <div className="flex justify-between items-start">
+              <div>
+                <h3 className="text-xl font-bold text-blue-400">Full Stack Developer</h3>
+                <p className="text-gray-300">Digital Solutions Ltd.</p>
+                <p className="text-gray-400 mt-2">
+                  Developed and maintained various web applications using modern technologies.
+                </p>
+              </div>
+              <span className="text-gray-400">2018 - 2020</span>
             </div>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default Index;

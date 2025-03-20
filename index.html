@@ -1,94 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bento Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-  <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bento-portfolio-creator</title>
+  <meta name="description" content="GPT Engineer Generated Project" />
+  <meta name="author" content="GPT Engineer" />
+  <meta property="og:image" content="/og-image.svg" />
 </head>
+
 <body>
-  <div class="container">
-    <div class="bento-grid">
-      <!-- Welcome Card -->
-      <div class="bento-card col-span-2">
-        <h2 class="text-sm text-gray-400 mb-2">welcome</h2>
-        <h1 class="text-4xl font-bold mb-4">
-          Hi, I'm <span class="text-blue-400">Your Name</span>
-        </h1>
-        <p class="text-gray-300 text-lg">
-          A software developer with a passion for creating beautiful and functional web experiences
-        </p>
-      </div>
-
-      <!-- About Card -->
-      <div class="bento-card row-span-2">
-        <h2 class="text-2xl font-bold mb-6">About me</h2>
-        <p class="text-gray-300 text-lg mb-6">
-          I specialize in building modern web applications using React, TypeScript, and other cutting-edge technologies.
-        </p>
-        <div class="space-y-4">
-          <p class="text-lg text-gray-400">My tools:</p>
-          <ul class="list-disc list-inside text-gray-300 text-lg space-y-2">
-            <li>React</li>
-            <li>TypeScript</li>
-            <li>Node.js</li>
-            <li>Tailwind CSS</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Time Card -->
-      <div class="bento-card">
-        <h2 class="text-lg text-gray-400 mb-4">Current Time</h2>
-        <p class="text-3xl font-bold font-mono" id="current-time">
-          00:00:00
-        </p>
-      </div>
-
-      <!-- Contact Card -->
-      <div class="bento-card">
-        <h2 class="text-2xl font-bold mb-6">Let's Connect</h2>
-        <div class="social-links">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
-             class="social-icon">
-            <i data-lucide="github"></i>
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
-             class="social-icon">
-            <i data-lucide="linkedin"></i>
-          </a>
-          <a href="mailto:your@email.com"
-             class="social-icon">
-            <i data-lucide="mail"></i>
-          </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
-             class="social-icon">
-            <i data-lucide="twitter"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- Projects Card -->
-      <div class="bento-card col-span-2">
-        <h2 class="text-2xl font-bold mb-6">Featured Projects</h2>
-        <div class="projects-grid">
-          <div class="project-card">
-            <h3 class="text-xl font-bold mb-3">Project 1</h3>
-            <p class="text-gray-300">Description of your amazing project</p>
-          </div>
-          <div class="project-card">
-            <h3 class="text-xl font-bold mb-3">Project 2</h3>
-            <p class="text-gray-300">Description of another cool project</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+  <div id="root"></div>
+  <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+  <script type="module" src="/src/main.tsx"></script>
 </body>
+
 </html>
