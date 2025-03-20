@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -175,7 +174,7 @@ const Index = () => {
           </div>
         </div>
 
-        {/* New Experience Card */}
+        {/* Experience Card */}
         <div className="bento-card col-span-3">
           <h2 className="text-2xl font-bold mb-6">Experience</h2>
           <div className="space-y-6">
@@ -189,6 +188,7 @@ const Index = () => {
               </div>
               <span className="text-gray-400">2020 - Present</span>
             </div>
+            
             <div className="flex justify-between items-start">
               <div>
                 <h3 className="text-xl font-bold text-blue-400">Full Stack Developer</h3>
@@ -198,6 +198,28 @@ const Index = () => {
                 </p>
               </div>
               <span className="text-gray-400">2018 - 2020</span>
+            </div>
+            
+            <div className="flex justify-between items-start">
+              <div>
+                <h3 className="text-xl font-bold text-blue-400">Frontend Developer</h3>
+                <p className="text-gray-300">Creative Web Studio</p>
+                <p className="text-gray-400 mt-2">
+                  Created responsive user interfaces and improved website performance metrics.
+                </p>
+              </div>
+              <span className="text-gray-400">2016 - 2018</span>
+            </div>
+            
+            <div className="flex justify-between items-start">
+              <div>
+                <h3 className="text-xl font-bold text-blue-400">Junior Web Developer</h3>
+                <p className="text-gray-300">Innovation Labs</p>
+                <p className="text-gray-400 mt-2">
+                  Assisted in building and testing web applications while learning modern development practices.
+                </p>
+              </div>
+              <span className="text-gray-400">2014 - 2016</span>
             </div>
           </div>
         </div>
