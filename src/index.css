@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
@@ -9,9 +10,11 @@
     --background: 0 0% 7%;
     --foreground: 0 0% 100%;
     --card: 0 0% 10%;
+    --card-hover: 0 0% 14%;
     --border: 0 0% 14.9%;
     --primary: 0 0% 98%;
     --primary-foreground: 0 0% 9%;
+    --blue-accent: 213.8 93.9% 67.8%;
     --radius: 1rem;
   }
 
@@ -20,42 +23,25 @@
   }
 
   body {
-    @apply bg-[#121212] text-foreground font-['Inter'] m-0 p-0;
+    @apply bg-background text-foreground font-['Inter'] m-0 p-0 min-h-screen;
   }
 }
 
-.bento-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  padding: 1.5rem;
-  width: 100%;
-  max-width: 100%;
-  min-height: 100vh;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-.bento-card {
-  @apply bg-card p-8 rounded-2xl transition-all duration-300 hover:bg-card-hover;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  min-height: 200px;
-  display: flex;
-  flex-direction: column;
-}
-
-.bento-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 768px) {
+@layer components {
   .bento-grid {
-    grid-template-columns: 1fr;
-    padding: 1rem;
+    @apply grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-[1400px] min-h-screen mx-auto py-8;
   }
-  
+
   .bento-card {
-    min-height: 150px;
+    @apply bg-[#1a1a1a] p-8 rounded-2xl border border-[rgba(255,255,255,0.1)] transition-all duration-300 
+           hover:bg-[#242424] hover:translate-y-[-4px] hover:shadow-md min-h-[200px] flex flex-col;
+  }
+
+  .col-span-2 {
+    @apply md:col-span-2;
+  }
+
+  .row-span-2 {
+    @apply md:row-span-2;
   }
 }
