@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const Index = () => {
   const [time, setTime] = useState(new Date());
@@ -76,29 +77,100 @@ const Index = () => {
         <div className="bento-card col-span-3">
           <h2 className="text-2xl font-bold mb-6">Featured Projects</h2>
           <div className="grid grid-cols-3 gap-6">
-            <div className="p-6 bg-card-hover rounded-lg">
-              <h3 className="text-xl font-bold mb-3">Project 1</h3>
-              <p className="text-gray-300">E-commerce platform with modern UI</p>
+            <div className="overflow-hidden rounded-lg bg-card-hover flex flex-col">
+              <div className="w-full">
+                <AspectRatio ratio={16 / 9} className="bg-muted">
+                  <img 
+                    src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=500&q=80" 
+                    alt="Project 1" 
+                    className="object-cover w-full h-full rounded-t-lg"
+                  />
+                </AspectRatio>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3">Project 1</h3>
+                <p className="text-gray-300">E-commerce platform with modern UI</p>
+              </div>
             </div>
-            <div className="p-6 bg-card-hover rounded-lg">
-              <h3 className="text-xl font-bold mb-3">Project 2</h3>
-              <p className="text-gray-300">Task management application</p>
+
+            <div className="overflow-hidden rounded-lg bg-card-hover flex flex-col">
+              <div className="w-full">
+                <AspectRatio ratio={16 / 9} className="bg-muted">
+                  <img 
+                    src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=500&q=80" 
+                    alt="Project 2" 
+                    className="object-cover w-full h-full rounded-t-lg"
+                  />
+                </AspectRatio>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3">Project 2</h3>
+                <p className="text-gray-300">Task management application</p>
+              </div>
             </div>
-            <div className="p-6 bg-card-hover rounded-lg">
-              <h3 className="text-xl font-bold mb-3">Project 3</h3>
-              <p className="text-gray-300">Weather forecast dashboard</p>
+
+            <div className="overflow-hidden rounded-lg bg-card-hover flex flex-col">
+              <div className="w-full">
+                <AspectRatio ratio={16 / 9} className="bg-muted">
+                  <img 
+                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500&q=80" 
+                    alt="Project 3" 
+                    className="object-cover w-full h-full rounded-t-lg"
+                  />
+                </AspectRatio>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3">Project 3</h3>
+                <p className="text-gray-300">Weather forecast dashboard</p>
+              </div>
             </div>
-            <div className="p-6 bg-card-hover rounded-lg">
-              <h3 className="text-xl font-bold mb-3">Project 4</h3>
-              <p className="text-gray-300">Social media analytics tool</p>
+
+            <div className="overflow-hidden rounded-lg bg-card-hover flex flex-col">
+              <div className="w-full">
+                <AspectRatio ratio={16 / 9} className="bg-muted">
+                  <img 
+                    src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=500&q=80" 
+                    alt="Project 4" 
+                    className="object-cover w-full h-full rounded-t-lg"
+                  />
+                </AspectRatio>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3">Project 4</h3>
+                <p className="text-gray-300">Social media analytics tool</p>
+              </div>
             </div>
-            <div className="p-6 bg-card-hover rounded-lg">
-              <h3 className="text-xl font-bold mb-3">Project 5</h3>
-              <p className="text-gray-300">AI-powered image recognition app</p>
+
+            <div className="overflow-hidden rounded-lg bg-card-hover flex flex-col">
+              <div className="w-full">
+                <AspectRatio ratio={16 / 9} className="bg-muted">
+                  <img 
+                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=500&q=80" 
+                    alt="Project 5" 
+                    className="object-cover w-full h-full rounded-t-lg"
+                  />
+                </AspectRatio>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3">Project 5</h3>
+                <p className="text-gray-300">AI-powered image recognition app</p>
+              </div>
             </div>
-            <div className="p-6 bg-card-hover rounded-lg">
-              <h3 className="text-xl font-bold mb-3">Project 6</h3>
-              <p className="text-gray-300">Real-time chat application</p>
+
+            <div className="overflow-hidden rounded-lg bg-card-hover flex flex-col">
+              <div className="w-full">
+                <AspectRatio ratio={16 / 9} className="bg-muted">
+                  <img 
+                    src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=500&q=80" 
+                    alt="Project 6" 
+                    className="object-cover w-full h-full rounded-t-lg"
+                  />
+                </AspectRatio>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3">Project 6</h3>
+                <p className="text-gray-300">Real-time chat application</p>
+              </div>
             </div>
           </div>
         </div>
