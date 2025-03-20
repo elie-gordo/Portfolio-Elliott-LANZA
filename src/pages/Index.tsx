@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 
@@ -72,16 +73,32 @@ const Index = () => {
         </div>
 
         {/* Projects Card */}
-        <div className="bento-card col-span-2">
+        <div className="bento-card col-span-3">
           <h2 className="text-2xl font-bold mb-6">Featured Projects</h2>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-3 gap-6">
             <div className="p-6 bg-card-hover rounded-lg">
               <h3 className="text-xl font-bold mb-3">Project 1</h3>
-              <p className="text-gray-300">Description of your amazing project</p>
+              <p className="text-gray-300">E-commerce platform with modern UI</p>
             </div>
             <div className="p-6 bg-card-hover rounded-lg">
               <h3 className="text-xl font-bold mb-3">Project 2</h3>
-              <p className="text-gray-300">Description of another cool project</p>
+              <p className="text-gray-300">Task management application</p>
+            </div>
+            <div className="p-6 bg-card-hover rounded-lg">
+              <h3 className="text-xl font-bold mb-3">Project 3</h3>
+              <p className="text-gray-300">Weather forecast dashboard</p>
+            </div>
+            <div className="p-6 bg-card-hover rounded-lg">
+              <h3 className="text-xl font-bold mb-3">Project 4</h3>
+              <p className="text-gray-300">Social media analytics tool</p>
+            </div>
+            <div className="p-6 bg-card-hover rounded-lg">
+              <h3 className="text-xl font-bold mb-3">Project 5</h3>
+              <p className="text-gray-300">AI-powered image recognition app</p>
+            </div>
+            <div className="p-6 bg-card-hover rounded-lg">
+              <h3 className="text-xl font-bold mb-3">Project 6</h3>
+              <p className="text-gray-300">Real-time chat application</p>
             </div>
           </div>
         </div>
