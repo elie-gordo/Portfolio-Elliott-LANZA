@@ -1,7 +1,8 @@
 
 import { useState, useEffect } from "react";
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import MaltIcon from "@/components/icons/MaltIcon";
 
 const Index = () => {
   const [time, setTime] = useState(new Date());
@@ -77,9 +78,9 @@ const Index = () => {
                className="p-3 rounded-full hover:bg-gray-800 transition-colors">
               <Mail className="w-8 h-8" />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+            <a href="https://malt.com" target="_blank" rel="noopener noreferrer"
                className="p-3 rounded-full hover:bg-gray-800 transition-colors">
-              <Twitter className="w-8 h-8" />
+              <MaltIcon className="w-8 h-8" />
             </a>
           </div>
         </div>
