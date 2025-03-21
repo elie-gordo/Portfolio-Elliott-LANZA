@@ -40,13 +40,22 @@ const Index = () => {
           <p className="text-gray-300 text-lg mb-6">
             I specialize in building modern web applications using React, TypeScript, and other cutting-edge technologies.
           </p>
-          <div className="space-y-4">
+          <div className="space-y-4 mb-6">
             <p className="text-lg text-gray-400">My tools:</p>
             <ul className="list-disc list-inside text-gray-300 text-lg space-y-2">
               <li>React</li>
               <li>TypeScript</li>
               <li>Node.js</li>
               <li>Tailwind CSS</li>
+            </ul>
+          </div>
+          <div className="space-y-4">
+            <p className="text-lg text-gray-400">Mes atouts:</p>
+            <ul className="list-disc list-inside text-gray-300 text-lg space-y-2">
+              <li>Problem solving</li>
+              <li>Communication</li>
+              <li>Adaptability</li>
+              <li>Attention to detail</li>
             </ul>
           </div>
         </div>
