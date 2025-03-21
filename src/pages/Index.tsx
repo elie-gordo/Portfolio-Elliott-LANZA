@@ -12,7 +12,7 @@ const Index = () => {
     return () => clearInterval(timer);
   }, []);
 
-  // Format options for the date display
+  // Format options for the date display with French locale
   const dateOptions: Intl.DateTimeFormatOptions = { 
     weekday: 'long', 
     year: 'numeric', 
@@ -25,23 +25,23 @@ const Index = () => {
       <div className="bento-grid">
         {/* Welcome Card */}
         <div className="bento-card col-span-2">
-          <h2 className="text-sm text-gray-400 mb-2">welcome</h2>
+          <h2 className="text-sm text-gray-400 mb-2">bienvenue</h2>
           <h1 className="text-4xl font-bold mb-4">
-            Hi, I'm <span className="text-blue-400">Your Name</span>
+            Bonjour, je suis <span className="text-blue-400">Votre Nom</span>
           </h1>
           <p className="text-gray-300 text-lg">
-            A software developer with a passion for creating beautiful and functional web experiences
+            Un développeur logiciel passionné par la création d'expériences web belles et fonctionnelles
           </p>
         </div>
 
         {/* About Card */}
         <div className="bento-card row-span-2">
-          <h2 className="text-2xl font-bold mb-6">About me</h2>
+          <h2 className="text-2xl font-bold mb-6">À propos de moi</h2>
           <p className="text-gray-300 text-lg mb-6">
-            I specialize in building modern web applications using React, TypeScript, and other cutting-edge technologies.
+            Je suis spécialisé dans le développement d'applications web modernes utilisant React, TypeScript et d'autres technologies de pointe.
           </p>
           <div className="space-y-4 mb-6">
-            <p className="text-lg text-gray-400">My tools:</p>
+            <p className="text-lg text-gray-400">Mes outils:</p>
             <ul className="list-disc list-inside text-gray-300 text-lg space-y-2">
               <li>React</li>
               <li>TypeScript</li>
@@ -52,28 +52,28 @@ const Index = () => {
           <div className="space-y-4">
             <p className="text-lg text-gray-400">Mes atouts:</p>
             <ul className="list-disc list-inside text-gray-300 text-lg space-y-2">
-              <li>Problem solving</li>
+              <li>Résolution de problèmes</li>
               <li>Communication</li>
-              <li>Adaptability</li>
-              <li>Attention to detail</li>
+              <li>Adaptabilité</li>
+              <li>Souci du détail</li>
             </ul>
           </div>
         </div>
 
         {/* Time Card */}
         <div className="bento-card">
-          <h2 className="text-lg text-gray-400 mb-4">Current Date & Time</h2>
+          <h2 className="text-lg text-gray-400 mb-4">Date et Heure Actuelles</h2>
           <p className="text-xl font-medium mb-2">
-            {time.toLocaleDateString(undefined, dateOptions)}
+            {time.toLocaleDateString('fr-FR', dateOptions)}
           </p>
           <p className="text-3xl font-bold font-mono">
-            {time.toLocaleTimeString()}
+            {time.toLocaleTimeString('fr-FR')}
           </p>
         </div>
 
         {/* Contact Card */}
         <div className="bento-card">
-          <h2 className="text-2xl font-bold mb-6">Let's Connect</h2>
+          <h2 className="text-2xl font-bold mb-6">Connectons-nous</h2>
           <div className="flex space-x-6">
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
                className="p-3 rounded-full hover:bg-gray-800 transition-colors">
@@ -96,21 +96,21 @@ const Index = () => {
 
         {/* Projects Card */}
         <div className="bento-card col-span-3">
-          <h2 className="text-2xl font-bold mb-6">Featured Projects</h2>
+          <h2 className="text-2xl font-bold mb-6">Projets en Vedette</h2>
           <div className="grid grid-cols-3 gap-6">
             <div className="overflow-hidden rounded-lg bg-card-hover flex flex-col">
               <div className="w-full">
                 <AspectRatio ratio={16 / 9} className="bg-muted">
                   <img 
                     src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=500&q=80" 
-                    alt="Project 1" 
+                    alt="Projet 1" 
                     className="object-cover w-full h-full rounded-t-lg"
                   />
                 </AspectRatio>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-3">Project 1</h3>
-                <p className="text-gray-300">E-commerce platform with modern UI</p>
+                <h3 className="text-xl font-bold mb-3">Projet 1</h3>
+                <p className="text-gray-300">Plateforme e-commerce avec interface moderne</p>
               </div>
             </div>
 
@@ -119,14 +119,14 @@ const Index = () => {
                 <AspectRatio ratio={16 / 9} className="bg-muted">
                   <img 
                     src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=500&q=80" 
-                    alt="Project 2" 
+                    alt="Projet 2" 
                     className="object-cover w-full h-full rounded-t-lg"
                   />
                 </AspectRatio>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-3">Project 2</h3>
-                <p className="text-gray-300">Task management application</p>
+                <h3 className="text-xl font-bold mb-3">Projet 2</h3>
+                <p className="text-gray-300">Application de gestion de tâches</p>
               </div>
             </div>
 
@@ -135,14 +135,14 @@ const Index = () => {
                 <AspectRatio ratio={16 / 9} className="bg-muted">
                   <img 
                     src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500&q=80" 
-                    alt="Project 3" 
+                    alt="Projet 3" 
                     className="object-cover w-full h-full rounded-t-lg"
                   />
                 </AspectRatio>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-3">Project 3</h3>
-                <p className="text-gray-300">Weather forecast dashboard</p>
+                <h3 className="text-xl font-bold mb-3">Projet 3</h3>
+                <p className="text-gray-300">Tableau de bord de prévisions météo</p>
               </div>
             </div>
 
@@ -151,14 +151,14 @@ const Index = () => {
                 <AspectRatio ratio={16 / 9} className="bg-muted">
                   <img 
                     src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=500&q=80" 
-                    alt="Project 4" 
+                    alt="Projet 4" 
                     className="object-cover w-full h-full rounded-t-lg"
                   />
                 </AspectRatio>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-3">Project 4</h3>
-                <p className="text-gray-300">Social media analytics tool</p>
+                <h3 className="text-xl font-bold mb-3">Projet 4</h3>
+                <p className="text-gray-300">Outil d'analyse de médias sociaux</p>
               </div>
             </div>
 
@@ -167,14 +167,14 @@ const Index = () => {
                 <AspectRatio ratio={16 / 9} className="bg-muted">
                   <img 
                     src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=500&q=80" 
-                    alt="Project 5" 
+                    alt="Projet 5" 
                     className="object-cover w-full h-full rounded-t-lg"
                   />
                 </AspectRatio>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-3">Project 5</h3>
-                <p className="text-gray-300">AI-powered image recognition app</p>
+                <h3 className="text-xl font-bold mb-3">Projet 5</h3>
+                <p className="text-gray-300">Application de reconnaissance d'image par IA</p>
               </div>
             </div>
 
@@ -183,14 +183,14 @@ const Index = () => {
                 <AspectRatio ratio={16 / 9} className="bg-muted">
                   <img 
                     src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=500&q=80" 
-                    alt="Project 6" 
+                    alt="Projet 6" 
                     className="object-cover w-full h-full rounded-t-lg"
                   />
                 </AspectRatio>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-3">Project 6</h3>
-                <p className="text-gray-300">Real-time chat application</p>
+                <h3 className="text-xl font-bold mb-3">Projet 6</h3>
+                <p className="text-gray-300">Application de chat en temps réel</p>
               </div>
             </div>
           </div>
@@ -198,25 +198,25 @@ const Index = () => {
 
         {/* Experience Card */}
         <div className="bento-card col-span-3">
-          <h2 className="text-2xl font-bold mb-6">Experience</h2>
+          <h2 className="text-2xl font-bold mb-6">Expérience</h2>
           <div className="space-y-6">
             <div className="flex justify-between items-start">
               <div>
-                <h3 className="text-xl font-bold text-blue-400">Senior Developer</h3>
+                <h3 className="text-xl font-bold text-blue-400">Développeur Senior</h3>
                 <p className="text-gray-300">Tech Company Inc.</p>
                 <p className="text-gray-400 mt-2">
-                  Led development of multiple high-impact projects and mentored junior developers.
+                  Dirigé le développement de plusieurs projets à fort impact et mentoré des développeurs juniors.
                 </p>
               </div>
-              <span className="text-gray-400">2020 - Present</span>
+              <span className="text-gray-400">2020 - Présent</span>
             </div>
             
             <div className="flex justify-between items-start">
               <div>
-                <h3 className="text-xl font-bold text-blue-400">Full Stack Developer</h3>
+                <h3 className="text-xl font-bold text-blue-400">Développeur Full Stack</h3>
                 <p className="text-gray-300">Digital Solutions Ltd.</p>
                 <p className="text-gray-400 mt-2">
-                  Developed and maintained various web applications using modern technologies.
+                  Développé et maintenu diverses applications web en utilisant des technologies modernes.
                 </p>
               </div>
               <span className="text-gray-400">2018 - 2020</span>
@@ -224,10 +224,10 @@ const Index = () => {
             
             <div className="flex justify-between items-start">
               <div>
-                <h3 className="text-xl font-bold text-blue-400">Frontend Developer</h3>
+                <h3 className="text-xl font-bold text-blue-400">Développeur Frontend</h3>
                 <p className="text-gray-300">Creative Web Studio</p>
                 <p className="text-gray-400 mt-2">
-                  Created responsive user interfaces and improved website performance metrics.
+                  Créé des interfaces utilisateur réactives et amélioré les métriques de performance des sites web.
                 </p>
               </div>
               <span className="text-gray-400">2016 - 2018</span>
@@ -235,10 +235,10 @@ const Index = () => {
             
             <div className="flex justify-between items-start">
               <div>
-                <h3 className="text-xl font-bold text-blue-400">Junior Web Developer</h3>
+                <h3 className="text-xl font-bold text-blue-400">Développeur Web Junior</h3>
                 <p className="text-gray-300">Innovation Labs</p>
                 <p className="text-gray-400 mt-2">
-                  Assisted in building and testing web applications while learning modern development practices.
+                  Assisté à la construction et aux tests d'applications web tout en apprenant les pratiques modernes de développement.
                 </p>
               </div>
               <span className="text-gray-400">2014 - 2016</span>
