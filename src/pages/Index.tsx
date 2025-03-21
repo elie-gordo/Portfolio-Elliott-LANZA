@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -150,7 +149,7 @@ const Index = () => {
               <div className="w-full">
                 <AspectRatio ratio={16 / 9} className="bg-muted">
                   <img 
-                    src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=500&q=80" 
+                    src="https://images.unsplash.com/photo-1486312338219-ce64c42644a7?auto=format&fit=crop&w=500&q=80" 
                     alt="Projet 4" 
                     className="object-cover w-full h-full rounded-t-lg"
                   />
@@ -242,6 +241,56 @@ const Index = () => {
                 </p>
               </div>
               <span className="text-gray-400">2014 - 2016</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Education Card */}
+        <div className="bento-card col-span-3">
+          <h2 className="text-2xl font-bold mb-6">École et Formation</h2>
+          <div className="space-y-6">
+            <div className="flex justify-between items-start">
+              <div>
+                <h3 className="text-xl font-bold text-blue-400">Master en Développement Web</h3>
+                <p className="text-gray-300">Université de Technologie</p>
+                <p className="text-gray-400 mt-2">
+                  Spécialisation en développement d'applications web et technologies front-end modernes.
+                </p>
+              </div>
+              <span className="text-gray-400">2012 - 2014</span>
+            </div>
+            
+            <div className="flex justify-between items-start">
+              <div>
+                <h3 className="text-xl font-bold text-blue-400">Licence en Informatique</h3>
+                <p className="text-gray-300">École Supérieure d'Informatique</p>
+                <p className="text-gray-400 mt-2">
+                  Formation en programmation, algorithmes et structures de données.
+                </p>
+              </div>
+              <span className="text-gray-400">2009 - 2012</span>
+            </div>
+            
+            <div className="flex justify-between items-start">
+              <div>
+                <h3 className="text-xl font-bold text-blue-400">Certification en UX/UI Design</h3>
+                <p className="text-gray-300">Design Academy</p>
+                <p className="text-gray-400 mt-2">
+                  Maîtrise des principes de design d'interface et d'expérience utilisateur.
+                </p>
+              </div>
+              <span className="text-gray-400">2013</span>
+            </div>
+            
+            <div className="flex justify-between items-start">
+              <div>
+                <h3 className="text-xl font-bold text-blue-400">Baccalauréat Scientifique</h3>
+                <p className="text-gray-300">Lycée International</p>
+                <p className="text-gray-400 mt-2">
+                  Option Mathématiques et Sciences de l'Ingénieur.
+                </p>
+              </div>
+              <span className="text-gray-400">2009</span>
             </div>
           </div>
         </div>
