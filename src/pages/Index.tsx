@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -9,6 +10,14 @@ const Index = () => {
     const timer = setInterval(() => setTime(new Date()), 1000);
     return () => clearInterval(timer);
   }, []);
+
+  // Format options for the date display
+  const dateOptions: Intl.DateTimeFormatOptions = { 
+    weekday: 'long', 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric' 
+  };
 
   return (
     <div className="min-h-screen bg-[#121212] text-white">
@@ -43,7 +52,10 @@ const Index = () => {
 
         {/* Time Card */}
         <div className="bento-card">
-          <h2 className="text-lg text-gray-400 mb-4">Current Time</h2>
+          <h2 className="text-lg text-gray-400 mb-4">Current Date & Time</h2>
+          <p className="text-xl font-medium mb-2">
+            {time.toLocaleDateString(undefined, dateOptions)}
+          </p>
           <p className="text-3xl font-bold font-mono">
             {time.toLocaleTimeString()}
           </p>
