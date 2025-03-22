@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -196,9 +195,9 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Experience and Education sections side by side */}
-        <div className="bento-card col-span-3/2 flex-1">
-          <h2 className="text-2xl font-bold mb-6 text-center">Expérience</h2>
+        {/* Experience Card */}
+        <div className="bento-card col-span-3">
+          <h2 className="text-2xl font-bold mb-6">Expérience</h2>
           <div className="space-y-6">
             <div className="flex justify-between items-start">
               <div>
@@ -247,8 +246,8 @@ const Index = () => {
         </div>
 
         {/* Education Card */}
-        <div className="bento-card col-span-3/2 flex-1">
-          <h2 className="text-2xl font-bold mb-6 text-center">École et Formation</h2>
+        <div className="bento-card col-span-3">
+          <h2 className="text-2xl font-bold mb-6">École et Formation</h2>
           <div className="space-y-6">
             <div className="flex justify-between items-start">
               <div>
