@@ -196,8 +196,8 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Experience and Education side by side */}
-        <div className="bento-card col-span-3/2">
+        {/* Experience and Education side by side along with Goals */}
+        <div className="bento-card col-span-1">
           <h2 className="text-2xl font-bold mb-6">Expérience</h2>
           <div className="space-y-6">
             <div className="flex justify-between items-start">
@@ -247,7 +247,7 @@ const Index = () => {
         </div>
 
         {/* Education Card */}
-        <div className="bento-card col-span-3/2">
+        <div className="bento-card col-span-1">
           <h2 className="text-2xl font-bold mb-6">École et Formation</h2>
           <div className="space-y-6">
             <div className="flex justify-between items-start">
@@ -292,6 +292,48 @@ const Index = () => {
                 </p>
               </div>
               <span className="text-gray-400">2009</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Goals Card - New Section */}
+        <div className="bento-card col-span-1">
+          <h2 className="text-2xl font-bold mb-6">Mes Objectifs</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-xl font-bold text-blue-400">Court Terme</h3>
+              <ul className="list-disc list-inside text-gray-300 mt-2 space-y-2">
+                <li>Maîtriser les dernières technologies frontend</li>
+                <li>Contribuer à des projets open source</li>
+                <li>Obtenir une certification en IA</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-bold text-blue-400">Moyen Terme</h3>
+              <ul className="list-disc list-inside text-gray-300 mt-2 space-y-2">
+                <li>Diriger une équipe de développement</li>
+                <li>Lancer un produit SaaS indépendant</li>
+                <li>Partager mes connaissances via un blog tech</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-bold text-blue-400">Long Terme</h3>
+              <ul className="list-disc list-inside text-gray-300 mt-2 space-y-2">
+                <li>Créer ma propre entreprise de technologie</li>
+                <li>Devenir expert en architecture de systèmes</li>
+                <li>Mentorer la prochaine génération de développeurs</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-bold text-blue-400">Valeurs</h3>
+              <ul className="list-disc list-inside text-gray-300 mt-2 space-y-2">
+                <li>Continuer à apprendre et à m'adapter</li>
+                <li>Créer des produits qui ont un impact positif</li>
+                <li>Maintenir un équilibre travail-vie personnelle</li>
+              </ul>
             </div>
           </div>
         </div>
