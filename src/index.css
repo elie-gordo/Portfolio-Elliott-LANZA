@@ -20,7 +20,7 @@
   }
 
   body {
-    @apply bg-[#121212] text-foreground font-['Inter'] m-0 p-0;
+    @apply bg-[#121212] text-foreground font-['Inter'] m-0 p-0 pb-16;
   }
 }
 
