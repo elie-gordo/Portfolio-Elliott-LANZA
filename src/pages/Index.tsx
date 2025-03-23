@@ -1,8 +1,8 @@
-
 import { useState, useEffect } from "react";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import MaltIcon from "@/components/icons/MaltIcon";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   const [time, setTime] = useState(new Date());
@@ -118,7 +118,7 @@ const Index = () => {
               <div className="w-full">
                 <AspectRatio ratio={16 / 9} className="bg-muted">
                   <img 
-                    src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=500&q=80" 
+                    src="https://images.unsplash.com/photo-1461749280684-dccba630e44a?auto=format&fit=crop&w=500&q=80" 
                     alt="Projet 2" 
                     className="object-cover w-full h-full rounded-t-lg"
                   />
@@ -338,6 +338,8 @@ const Index = () => {
           </div>
         </div>
       </div>
+      
+      <Footer />
     </div>
   );
 };
