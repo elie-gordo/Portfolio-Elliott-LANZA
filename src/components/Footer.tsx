@@ -1,5 +1,5 @@
 
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import MaltIcon from "@/components/icons/MaltIcon";
 
@@ -65,12 +65,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-[#333333] mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-[#333333] mt-10 pt-6 flex justify-center">
           <p className="text-gray-400 text-sm">
             © {currentYear} Votre Nom. Tous droits réservés.
-          </p>
-          <p className="text-gray-400 text-sm flex items-center mt-4 md:mt-0">
-            Fait avec <Heart className="w-4 h-4 text-red-500 mx-1" /> en France
           </p>
         </div>
       </div>
