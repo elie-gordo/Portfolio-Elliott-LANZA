@@ -9,12 +9,12 @@ const BottomNav = () => {
   const navItems = [
     { path: "/", icon: Home, label: "Accueil" },
     { path: "/index", icon: FolderOpen, label: "Portfolio" },
-    { path: "#contact", icon: Mail, label: "Contact" },
-    { path: "#about", icon: User, label: "À Propos" },
+    { path: "/messages", icon: Mail, label: "Messages" },
+    { path: "/profile", icon: User, label: "Profil" },
   ];
 
   return (
-    <div className="fixed bottom-4 left-0 right-0 z-50 px-4">
+    <div className="fixed bottom-8 left-0 right-0 z-50 px-4">
       <motion.div
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
