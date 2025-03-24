@@ -30,13 +30,13 @@ const Home = () => {
             animate={mounted ? { opacity: 1, y: 0 } : {}}
             exit={{ opacity: 0, y: 20, transition: { duration: 0.7 } }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="text-center max-w-3xl"
+            className="text-center max-w-3xl font-poppins"
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 text-white tracking-tight">
               Bienvenu sur mon portfolio
             </h1>
             
-            <p className="text-gray-400 text-lg md:text-xl mb-12 max-w-lg mx-auto">
+            <p className="text-gray-400 text-lg md:text-xl mb-12 max-w-lg mx-auto font-light">
               Découvrez mes projets, compétences et expériences professionnelles
             </p>
             
@@ -49,7 +49,7 @@ const Home = () => {
             >
               <Button 
                 onClick={handleExploreClick}
-                className="text-lg px-8 py-6 rounded-xl bg-blue-500 hover:bg-blue-600 text-white transition-all duration-300 hover:shadow-lg"
+                className="text-lg px-8 py-6 rounded-xl bg-blue-500 hover:bg-blue-600 text-white transition-all duration-300 hover:shadow-lg font-medium"
                 size="lg"
               >
                 Explorez mon site
