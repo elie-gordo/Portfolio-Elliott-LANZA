@@ -30,10 +30,10 @@ const Index = () => {
         {/* Welcome Card */}
         <div className="bento-card col-span-2 group">
           <h2 className="text-sm text-blue-400 mb-2 font-medium tracking-wider uppercase">bienvenue</h2>
-          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4 text-gradient">
+          <h1 className="text-4xl md:text-5xl font-poppins font-bold mb-4 text-gradient">
             Bonjour, je suis <span>Votre Nom</span>
           </h1>
-          <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
+          <p className="text-gray-300 text-lg md:text-xl leading-relaxed font-poppins">
             Un développeur passionné par la création d'expériences web belles et fonctionnelles
           </p>
           <div className="mt-8 flex">
@@ -46,8 +46,8 @@ const Index = () => {
 
         {/* About Card */}
         <div className="bento-card row-span-2">
-          <h2 className="text-2xl font-bold mb-6 font-serif">À propos de moi</h2>
-          <p className="text-gray-300 text-lg mb-6 leading-relaxed">
+          <h2 className="text-2xl font-bold mb-6 font-poppins">À propos de moi</h2>
+          <p className="text-gray-300 text-lg mb-6 leading-relaxed font-poppins">
             Je suis spécialisé dans le développement d'applications web modernes utilisant React, TypeScript et d'autres technologies de pointe.
           </p>
           <div className="space-y-6 mb-6">
@@ -85,7 +85,7 @@ const Index = () => {
 
         {/* Contact Card */}
         <div className="bento-card backdrop-blur-lg bg-gradient-to-br from-indigo-500/5 to-purple-500/5">
-          <h2 className="text-2xl font-bold mb-6 font-serif">Connectons-nous</h2>
+          <h2 className="text-2xl font-bold mb-6 font-poppins">Connectons-nous</h2>
           <div className="flex space-x-6">
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
                className="p-3 rounded-full bg-white/5 hover:bg-white/10 transition-colors hover:scale-110 transform duration-300">
