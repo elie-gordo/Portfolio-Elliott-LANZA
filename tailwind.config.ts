@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -25,8 +26,8 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
-          DEFAULT: "#1a1a1a",
-          hover: "#242424",
+          DEFAULT: "hsl(var(--card))",
+          hover: "hsl(var(--card-hover))",
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",
@@ -36,6 +37,14 @@ export default {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+      },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+        serif: ["Playfair Display", "serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -47,9 +56,25 @@ export default {
           "0%": { transform: "translateY(0)" },
           "100%": { transform: "translateY(-8px)" },
         },
+        "pulse-slow": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.7" },
+        },
+        "wave": {
+          "0%": { transform: "rotate(0.0deg)" },
+          "10%": { transform: "rotate(14.0deg)" },
+          "20%": { transform: "rotate(-8.0deg)" },
+          "30%": { transform: "rotate(14.0deg)" },
+          "40%": { transform: "rotate(-4.0deg)" },
+          "50%": { transform: "rotate(10.0deg)" },
+          "60%": { transform: "rotate(0.0deg)" },
+          "100%": { transform: "rotate(0.0deg)" },
+        },
       },
       animation: {
         "card-hover": "card-hover 0.2s ease-out forwards",
+        "pulse-slow": "pulse-slow 3s infinite ease-in-out",
+        "wave": "wave 2.5s ease-in-out infinite",
       },
     },
   },

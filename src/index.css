@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,10 +9,13 @@
   :root {
     --background: 0 0% 7%;
     --foreground: 0 0% 100%;
-    --card: 0 0% 10%;
-    --border: 0 0% 14.9%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
+    --card: 240 10% 10%;
+    --card-hover: 240 10% 13%;
+    --border: 240 10% 14.9%;
+    --primary: 240 10% 98%;
+    --primary-foreground: 240 10% 9%;
+    --accent: 213 100% 65%;
+    --accent-foreground: 213 100% 95%;
     --radius: 1rem;
   }
 
@@ -20,15 +24,16 @@
   }
 
   body {
-    @apply bg-[#121212] text-foreground font-['Inter'] m-0 p-0 pb-12;
+    @apply bg-background text-foreground font-['Inter'] m-0 p-0 pb-20;
+    transition: background-color 0.3s ease;
   }
 }
 
 .bento-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  padding: 1.5rem;
+  gap: 2rem;
+  padding: 2rem;
   width: 100%;
   max-width: 100%;
   min-height: 100vh;
@@ -37,25 +42,104 @@
 }
 
 .bento-card {
-  @apply bg-card p-8 rounded-2xl transition-all duration-300 hover:bg-card-hover;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  @apply bg-card p-8 rounded-2xl transition-all duration-300 backdrop-blur-sm shadow-lg border border-white/5;
   min-height: 200px;
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.bento-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.25rem;
+  background: linear-gradient(90deg, transparent, rgba(79, 140, 240, 0.6), transparent);
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .bento-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  background-color: hsl(var(--card-hover));
+}
+
+.bento-card:hover::before {
+  opacity: 1;
+  animation: slide 1.5s ease-in-out;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.staggered-fade-in > * {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.staggered-fade-in > *:nth-child(1) { animation-delay: 0.1s; }
+.staggered-fade-in > *:nth-child(2) { animation-delay: 0.2s; }
+.staggered-fade-in > *:nth-child(3) { animation-delay: 0.3s; }
+.staggered-fade-in > *:nth-child(4) { animation-delay: 0.4s; }
+.staggered-fade-in > *:nth-child(5) { animation-delay: 0.5s; }
+.staggered-fade-in > *:nth-child(6) { animation-delay: 0.6s; }
+
+.text-gradient {
+  @apply bg-gradient-to-r from-blue-500 via-indigo-400 to-purple-500 bg-clip-text text-transparent;
 }
 
 @media (max-width: 768px) {
   .bento-grid {
     grid-template-columns: 1fr;
     padding: 1rem;
+    gap: 1.5rem;
   }
   
   .bento-card {
     min-height: 150px;
+    padding: 1.5rem;
   }
 }
+
+.project-card {
+  @apply overflow-hidden rounded-xl bg-gradient-to-b from-card to-card-hover flex flex-col border border-white/5 shadow-lg transition-all duration-300;
+}
+
+.project-card:hover {
+  @apply shadow-xl transform -translate-y-2;
+}
+
+.project-card img {
+  @apply transition-all duration-500;
+}
+
+.project-card:hover img {
+  @apply scale-105;
+}
+
