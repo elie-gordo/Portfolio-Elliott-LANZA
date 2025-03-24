@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Github, Linkedin, Mail, ArrowRight } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -16,7 +15,6 @@ const Index = () => {
     return () => clearInterval(timer);
   }, []);
 
-  // Format options for the date display with French locale
   const dateOptions: Intl.DateTimeFormatOptions = { 
     weekday: 'long', 
     year: 'numeric', 
@@ -27,7 +25,6 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-[#121212] text-white">
       <div className={`bento-grid ${isVisible ? 'staggered-fade-in' : ''}`}>
-        {/* Welcome Card */}
         <div className="bento-card col-span-2 group">
           <h2 className="text-sm text-blue-400 mb-2 font-medium tracking-wider uppercase">bienvenue</h2>
           <h1 className="text-4xl md:text-5xl font-poppins font-bold mb-4 text-gradient">
@@ -44,7 +41,6 @@ const Index = () => {
           </div>
         </div>
 
-        {/* About Card */}
         <div className="bento-card row-span-2">
           <h2 className="text-2xl font-bold mb-6 font-poppins">À propos de moi</h2>
           <p className="text-gray-300 text-lg mb-6 leading-relaxed font-poppins">
@@ -72,7 +68,6 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Time Card */}
         <div className="bento-card backdrop-blur-lg bg-gradient-to-br from-blue-500/5 to-purple-500/5">
           <h2 className="text-lg text-blue-400 mb-4 font-medium">Date et Heure Actuelles</h2>
           <p className="text-xl font-medium mb-2 text-gray-200">
@@ -83,7 +78,6 @@ const Index = () => {
           </p>
         </div>
 
-        {/* Contact Card */}
         <div className="bento-card backdrop-blur-lg bg-gradient-to-br from-indigo-500/5 to-purple-500/5">
           <h2 className="text-2xl font-bold mb-6 font-poppins">Connectons-nous</h2>
           <div className="flex space-x-6">
@@ -106,9 +100,8 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Projects Card */}
         <div className="bento-card col-span-3">
-          <h2 className="text-2xl font-bold mb-6 font-serif flex items-center">
+          <h2 className="text-2xl font-bold mb-6 font-poppins flex items-center">
             <span className="bg-blue-500/20 w-8 h-8 rounded-full flex items-center justify-center mr-3">
               <span className="bg-blue-500 w-4 h-4 rounded-full animate-pulse-slow"></span>
             </span>
@@ -154,9 +147,8 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Experience Card */}
         <div className="bento-card col-span-1 backdrop-blur-lg bg-gradient-to-br from-blue-500/5 to-indigo-500/5">
-          <h2 className="text-2xl font-bold mb-6 font-serif">Expérience</h2>
+          <h2 className="text-2xl font-bold mb-6 font-poppins">Expérience</h2>
           <div className="space-y-6">
             {[
               {
@@ -188,10 +180,10 @@ const Index = () => {
                 <div className="absolute -left-1.5 top-1">
                   <div className="w-3 h-3 rounded-full bg-blue-500"></div>
                 </div>
-                <h3 className="text-xl font-bold text-blue-400">{job.title}</h3>
-                <p className="text-gray-300">{job.company}</p>
-                <p className="text-gray-400 mt-1 text-sm">{job.period}</p>
-                <p className="text-gray-400 mt-2 text-sm leading-relaxed">
+                <h3 className="text-xl font-bold text-blue-400 font-poppins">{job.title}</h3>
+                <p className="text-gray-300 font-poppins">{job.company}</p>
+                <p className="text-gray-400 mt-1 text-sm font-poppins">{job.period}</p>
+                <p className="text-gray-400 mt-2 text-sm leading-relaxed font-poppins">
                   {job.desc}
                 </p>
               </div>
@@ -199,9 +191,8 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Education Card */}
         <div className="bento-card col-span-1 backdrop-blur-lg bg-gradient-to-br from-indigo-500/5 to-purple-500/5">
-          <h2 className="text-2xl font-bold mb-6 font-serif">École et Formation</h2>
+          <h2 className="text-2xl font-bold mb-6 font-poppins">École et Formation</h2>
           <div className="space-y-6">
             {[
               {
@@ -233,10 +224,10 @@ const Index = () => {
                 <div className="absolute -left-1.5 top-1">
                   <div className="w-3 h-3 rounded-full bg-indigo-500"></div>
                 </div>
-                <h3 className="text-xl font-bold text-indigo-400">{edu.title}</h3>
-                <p className="text-gray-300">{edu.school}</p>
-                <p className="text-gray-400 mt-1 text-sm">{edu.period}</p>
-                <p className="text-gray-400 mt-2 text-sm leading-relaxed">
+                <h3 className="text-xl font-bold text-indigo-400 font-poppins">{edu.title}</h3>
+                <p className="text-gray-300 font-poppins">{edu.school}</p>
+                <p className="text-gray-400 mt-1 text-sm font-poppins">{edu.period}</p>
+                <p className="text-gray-400 mt-2 text-sm leading-relaxed font-poppins">
                   {edu.desc}
                 </p>
               </div>
@@ -244,9 +235,8 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Goals Card */}
         <div className="bento-card col-span-1 backdrop-blur-lg bg-gradient-to-br from-purple-500/5 to-blue-500/5">
-          <h2 className="text-2xl font-bold mb-6 font-serif">Mes Objectifs</h2>
+          <h2 className="text-2xl font-bold mb-6 font-poppins">Mes Objectifs</h2>
           <div className="space-y-6">
             {[
               {
@@ -267,13 +257,13 @@ const Index = () => {
               }
             ].map((goalSet, index) => (
               <div key={index} className="group">
-                <h3 className="text-xl font-bold text-purple-400 flex items-center">
+                <h3 className="text-xl font-bold text-purple-400 flex items-center font-poppins">
                   <span className="w-2 h-2 bg-purple-500 rounded-full mr-2 group-hover:animate-pulse"></span>
                   {goalSet.title}
                 </h3>
                 <ul className="mt-2 space-y-2">
                   {goalSet.goals.map((goal, i) => (
-                    <li key={i} className="text-gray-300 text-sm flex items-start">
+                    <li key={i} className="text-gray-300 text-sm flex items-start font-poppins">
                       <ArrowRight className="w-3 h-3 text-purple-500/70 mt-1 mr-2 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
                       <span>{goal}</span>
                     </li>
