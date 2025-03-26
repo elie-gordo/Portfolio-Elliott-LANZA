@@ -71,11 +71,26 @@ export default {
           "60%": { transform: "rotate(0.0deg)" },
           "100%": { transform: "rotate(0.0deg)" },
         },
+        "meteor": {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+          "70%": { opacity: "1" },
+          "100%": { 
+            transform: "rotate(215deg) translateX(-500px)", 
+            opacity: "0" 
+          },
+        },
+        "float": {
+          "0%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-20px)" },
+          "100%": { transform: "translateY(0px)" },
+        },
       },
       animation: {
         "card-hover": "card-hover 0.2s ease-out forwards",
         "pulse-slow": "pulse-slow 3s infinite ease-in-out",
         "wave": "wave 2.5s ease-in-out infinite",
+        "meteor": "meteor 5s linear infinite",
+        "float": "float 6s ease-in-out infinite",
       },
     },
   },
