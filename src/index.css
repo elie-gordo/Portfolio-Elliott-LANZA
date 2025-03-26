@@ -145,11 +145,6 @@
   @apply scale-105;
 }
 
-/* Cursor effect */
-.cursor-dot, .cursor-ring {
-  display: none; /* Hide cursor effects */
-}
-
 /* Star background */
 .stars {
   position: fixed;

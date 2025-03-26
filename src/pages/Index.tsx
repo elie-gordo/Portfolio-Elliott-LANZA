@@ -26,15 +26,15 @@ const Index = () => {
     <div className="min-h-screen bg-[#121212] text-white">
       <div className={`bento-grid ${isVisible ? 'staggered-fade-in' : ''}`}>
         <div className="bento-card col-span-2 group">
-          <h2 className="text-sm text-blue-400 mb-2 font-medium tracking-wider uppercase">bienvenue</h2>
+          <h2 className="text-sm text-gray-400 mb-2 font-medium tracking-wider uppercase">bienvenue</h2>
           <h1 className="text-4xl md:text-5xl font-poppins font-bold mb-4 text-gradient">
-            Bonjour, je suis <span>Votre Nom</span>
+            Bonjour, je suis <span>John Doe</span>
           </h1>
           <p className="text-gray-300 text-lg md:text-xl leading-relaxed font-poppins">
-            Un développeur passionné par la création d'expériences web belles et fonctionnelles
+            Développeur web spécialisé dans la création d'expériences web élégantes et fonctionnelles
           </p>
           <div className="mt-8 flex">
-            <a href="#contact" className="group inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 px-5 py-3 rounded-lg text-white font-medium transition-all hover:shadow-lg hover:shadow-blue-500/20">
+            <a href="#contact" className="group inline-flex items-center gap-2 bg-gradient-to-r from-gray-700 to-gray-900 px-5 py-3 rounded-lg text-white font-medium transition-all hover:shadow-lg hover:shadow-gray-500/20">
               Me contacter
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
@@ -48,62 +48,62 @@ const Index = () => {
           </p>
           <div className="space-y-6 mb-6">
             <div>
-              <p className="text-lg text-blue-400 mb-3 font-medium">Mes outils:</p>
+              <p className="text-lg text-gray-400 mb-3 font-medium">Mes outils:</p>
               <div className="flex flex-wrap gap-2">
-                <Badge variant="outline" className="bg-blue-500/10 text-blue-400 border-blue-500/30 px-3 py-1">React</Badge>
-                <Badge variant="outline" className="bg-blue-500/10 text-blue-400 border-blue-500/30 px-3 py-1">TypeScript</Badge>
-                <Badge variant="outline" className="bg-blue-500/10 text-blue-400 border-blue-500/30 px-3 py-1">Node.js</Badge>
-                <Badge variant="outline" className="bg-blue-500/10 text-blue-400 border-blue-500/30 px-3 py-1">Tailwind CSS</Badge>
+                <Badge variant="outline" className="bg-gray-500/10 text-gray-400 border-gray-500/30 px-3 py-1">React</Badge>
+                <Badge variant="outline" className="bg-gray-500/10 text-gray-400 border-gray-500/30 px-3 py-1">TypeScript</Badge>
+                <Badge variant="outline" className="bg-gray-500/10 text-gray-400 border-gray-500/30 px-3 py-1">Node.js</Badge>
+                <Badge variant="outline" className="bg-gray-500/10 text-gray-400 border-gray-500/30 px-3 py-1">Tailwind CSS</Badge>
               </div>
             </div>
             <div>
-              <p className="text-lg text-blue-400 mb-3 font-medium">Mes atouts:</p>
+              <p className="text-lg text-gray-400 mb-3 font-medium">Mes atouts:</p>
               <div className="flex flex-wrap gap-2">
-                <Badge variant="outline" className="bg-indigo-500/10 text-indigo-400 border-indigo-500/30 px-3 py-1">Résolution de problèmes</Badge>
-                <Badge variant="outline" className="bg-indigo-500/10 text-indigo-400 border-indigo-500/30 px-3 py-1">Communication</Badge>
-                <Badge variant="outline" className="bg-indigo-500/10 text-indigo-400 border-indigo-500/30 px-3 py-1">Adaptabilité</Badge>
-                <Badge variant="outline" className="bg-indigo-500/10 text-indigo-400 border-indigo-500/30 px-3 py-1">Souci du détail</Badge>
+                <Badge variant="outline" className="bg-gray-500/10 text-gray-400 border-gray-500/30 px-3 py-1">Résolution de problèmes</Badge>
+                <Badge variant="outline" className="bg-gray-500/10 text-gray-400 border-gray-500/30 px-3 py-1">Communication</Badge>
+                <Badge variant="outline" className="bg-gray-500/10 text-gray-400 border-gray-500/30 px-3 py-1">Adaptabilité</Badge>
+                <Badge variant="outline" className="bg-gray-500/10 text-gray-400 border-gray-500/30 px-3 py-1">Souci du détail</Badge>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="bento-card backdrop-blur-lg bg-gradient-to-br from-blue-500/5 to-purple-500/5">
-          <h2 className="text-lg text-blue-400 mb-4 font-medium">Date et Heure Actuelles</h2>
+        <div className="bento-card backdrop-blur-lg bg-gradient-to-br from-gray-500/5 to-gray-500/5">
+          <h2 className="text-lg text-gray-400 mb-4 font-medium">Date et Heure Actuelles</h2>
           <p className="text-xl font-medium mb-2 text-gray-200">
             {time.toLocaleDateString('fr-FR', dateOptions)}
           </p>
-          <p className="text-3xl font-mono font-bold bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">
+          <p className="text-3xl font-mono font-bold bg-gradient-to-r from-gray-400 to-gray-500 bg-clip-text text-transparent">
             {time.toLocaleTimeString('fr-FR')}
           </p>
         </div>
 
-        <div className="bento-card backdrop-blur-lg bg-gradient-to-br from-indigo-500/5 to-purple-500/5">
+        <div className="bento-card backdrop-blur-lg bg-gradient-to-br from-gray-500/5 to-gray-500/5">
           <h2 className="text-2xl font-bold mb-6 font-poppins">Connectons-nous</h2>
           <div className="flex space-x-6">
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
                className="p-3 rounded-full bg-white/5 hover:bg-white/10 transition-colors hover:scale-110 transform duration-300">
-              <Github className="w-8 h-8 text-blue-400" />
+              <Github className="w-8 h-8 text-gray-400" />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
                className="p-3 rounded-full bg-white/5 hover:bg-white/10 transition-colors hover:scale-110 transform duration-300">
-              <Linkedin className="w-8 h-8 text-blue-400" />
+              <Linkedin className="w-8 h-8 text-gray-400" />
             </a>
             <a href="mailto:your@email.com"
                className="p-3 rounded-full bg-white/5 hover:bg-white/10 transition-colors hover:scale-110 transform duration-300">
-              <Mail className="w-8 h-8 text-blue-400" />
+              <Mail className="w-8 h-8 text-gray-400" />
             </a>
             <a href="https://malt.com" target="_blank" rel="noopener noreferrer"
                className="p-3 rounded-full bg-white/5 hover:bg-white/10 transition-colors hover:scale-110 transform duration-300">
-              <MaltIcon className="w-8 h-8 text-blue-400" />
+              <MaltIcon className="w-8 h-8 text-gray-400" />
             </a>
           </div>
         </div>
 
         <div className="bento-card col-span-3">
           <h2 className="text-2xl font-bold mb-6 font-poppins flex items-center">
-            <span className="bg-blue-500/20 w-8 h-8 rounded-full flex items-center justify-center mr-3">
-              <span className="bg-blue-500 w-4 h-4 rounded-full animate-pulse-slow"></span>
+            <span className="bg-gray-500/20 w-8 h-8 rounded-full flex items-center justify-center mr-3">
+              <span className="bg-gray-500 w-4 h-4 rounded-full animate-pulse-slow"></span>
             </span>
             Projets en Vedette
           </h2>
@@ -127,7 +127,7 @@ const Index = () => {
                   </AspectRatio>
                 </div>
                 <div className="p-6">
-                  <Badge className="mb-3 bg-blue-500/10 text-blue-400 hover:bg-blue-500/20 border-0">
+                  <Badge className="mb-3 bg-gray-500/10 text-gray-400 hover:bg-gray-500/20 border-0">
                     {["Web App", "Design", "Frontend", "Full Stack", "Mobile", "Backend"][i]}
                   </Badge>
                   <h3 className="text-xl font-bold mb-3">{`Projet ${i + 1}`}</h3>
@@ -147,7 +147,7 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="bento-card col-span-1 backdrop-blur-lg bg-gradient-to-br from-blue-500/5 to-indigo-500/5">
+        <div className="bento-card col-span-1 backdrop-blur-lg bg-gradient-to-br from-gray-500/5 to-gray-500/5">
           <h2 className="text-2xl font-bold mb-6 font-poppins">Expérience</h2>
           <div className="space-y-6">
             {[
@@ -176,11 +176,11 @@ const Index = () => {
                 desc: "Assisté à la construction et aux tests d'applications web tout en apprenant les pratiques modernes de développement."
               }
             ].map((job, index) => (
-              <div className="relative pl-6 border-l border-blue-500/30 hover:border-blue-500 transition-colors duration-300" key={index}>
+              <div className="relative pl-6 border-l border-gray-500/30 hover:border-gray-500 transition-colors duration-300" key={index}>
                 <div className="absolute -left-1.5 top-1">
-                  <div className="w-3 h-3 rounded-full bg-blue-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-gray-500"></div>
                 </div>
-                <h3 className="text-xl font-bold text-blue-400 font-poppins">{job.title}</h3>
+                <h3 className="text-xl font-bold text-gray-400 font-poppins">{job.title}</h3>
                 <p className="text-gray-300 font-poppins">{job.company}</p>
                 <p className="text-gray-400 mt-1 text-sm font-poppins">{job.period}</p>
                 <p className="text-gray-400 mt-2 text-sm leading-relaxed font-poppins">
@@ -191,7 +191,7 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="bento-card col-span-1 backdrop-blur-lg bg-gradient-to-br from-indigo-500/5 to-purple-500/5">
+        <div className="bento-card col-span-1 backdrop-blur-lg bg-gradient-to-br from-gray-500/5 to-gray-500/5">
           <h2 className="text-2xl font-bold mb-6 font-poppins">École et Formation</h2>
           <div className="space-y-6">
             {[
@@ -220,11 +220,11 @@ const Index = () => {
                 desc: "Option Mathématiques et Sciences de l'Ingénieur."
               }
             ].map((edu, index) => (
-              <div className="relative pl-6 border-l border-indigo-500/30 hover:border-indigo-500 transition-colors duration-300" key={index}>
+              <div className="relative pl-6 border-l border-gray-500/30 hover:border-gray-500 transition-colors duration-300" key={index}>
                 <div className="absolute -left-1.5 top-1">
-                  <div className="w-3 h-3 rounded-full bg-indigo-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-gray-500"></div>
                 </div>
-                <h3 className="text-xl font-bold text-indigo-400 font-poppins">{edu.title}</h3>
+                <h3 className="text-xl font-bold text-gray-400 font-poppins">{edu.title}</h3>
                 <p className="text-gray-300 font-poppins">{edu.school}</p>
                 <p className="text-gray-400 mt-1 text-sm font-poppins">{edu.period}</p>
                 <p className="text-gray-400 mt-2 text-sm leading-relaxed font-poppins">
@@ -235,7 +235,7 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="bento-card col-span-1 backdrop-blur-lg bg-gradient-to-br from-purple-500/5 to-blue-500/5">
+        <div className="bento-card col-span-1 backdrop-blur-lg bg-gradient-to-br from-gray-500/5 to-gray-500/5">
           <h2 className="text-2xl font-bold mb-6 font-poppins">Mes Objectifs</h2>
           <div className="space-y-6">
             {[
@@ -257,14 +257,14 @@ const Index = () => {
               }
             ].map((goalSet, index) => (
               <div key={index} className="group">
-                <h3 className="text-xl font-bold text-purple-400 flex items-center font-poppins">
-                  <span className="w-2 h-2 bg-purple-500 rounded-full mr-2 group-hover:animate-pulse"></span>
+                <h3 className="text-xl font-bold text-gray-400 flex items-center font-poppins">
+                  <span className="w-2 h-2 bg-gray-500 rounded-full mr-2 group-hover:animate-pulse"></span>
                   {goalSet.title}
                 </h3>
                 <ul className="mt-2 space-y-2">
                   {goalSet.goals.map((goal, i) => (
                     <li key={i} className="text-gray-300 text-sm flex items-start font-poppins">
-                      <ArrowRight className="w-3 h-3 text-purple-500/70 mt-1 mr-2 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="w-3 h-3 text-gray-500/70 mt-1 mr-2 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
                       <span>{goal}</span>
                     </li>
                   ))}
