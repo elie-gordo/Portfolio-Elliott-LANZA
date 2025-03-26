@@ -6,8 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Index from "./pages/Index";
-import Profile from "./pages/Profile";
-import Messages from "./pages/Messages";
+import Contact from "./pages/Contact";
 import BottomNav from "./components/BottomNav";
 import StarBackground from "./components/StarBackground";
 
@@ -23,8 +22,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/index" element={<Index />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/messages" element={<Messages />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <BottomNav />
       </BrowserRouter>

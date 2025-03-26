@@ -1,5 +1,5 @@
 
-import { Home, User, FolderOpen, Mail } from "lucide-react";
+import { Home, FolderOpen, Mail } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -9,8 +9,7 @@ const BottomNav = () => {
   const navItems = [
     { path: "/", icon: Home, label: "Accueil" },
     { path: "/index", icon: FolderOpen, label: "Portfolio" },
-    { path: "/messages", icon: Mail, label: "Messages" },
-    { path: "/profile", icon: User, label: "Profil" },
+    { path: "/contact", icon: Mail, label: "Contact" },
   ];
 
   return (
@@ -28,7 +27,7 @@ const BottomNav = () => {
               to={item.path}
               className={`relative flex items-center justify-center p-2 rounded-xl transition-all ${
                 location.pathname === item.path
-                  ? "text-blue-400"
+                  ? "text-white"
                   : "text-gray-400 hover:text-gray-200"
               }`}
             >
@@ -36,7 +35,7 @@ const BottomNav = () => {
               {location.pathname === item.path && (
                 <motion.div
                   layoutId="bottomNavIndicator"
-                  className="absolute -bottom-1 w-1.5 h-1.5 rounded-full bg-blue-400"
+                  className="absolute -bottom-1 w-1.5 h-1.5 rounded-full bg-white"
                   transition={{ type: "spring", duration: 0.5 }}
                 />
               )}
