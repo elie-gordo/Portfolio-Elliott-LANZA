@@ -9,7 +9,6 @@ import Index from "./pages/Index";
 import Profile from "./pages/Profile";
 import Messages from "./pages/Messages";
 import BottomNav from "./components/BottomNav";
-import CursorEffect from "./components/CursorEffect";
 import StarBackground from "./components/StarBackground";
 
 const queryClient = new QueryClient();
@@ -21,7 +20,6 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <StarBackground />
-        <CursorEffect />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/index" element={<Index />} />

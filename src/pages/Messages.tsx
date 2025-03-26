@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Input } from "@/components/ui/input";
@@ -168,7 +167,7 @@ const Messages = () => {
                   <img src={conv.avatar} alt={conv.name} />
                 </Avatar>
                 {conv.online && (
-                  <span className="absolute bottom-0 right-3 h-3 w-3 rounded-full bg-green-500 border-2 border-background"></span>
+                  <span className="absolute bottom-0 right-3 h-3 w-3 rounded-full bg-gray-300 border-2 border-background"></span>
                 )}
               </div>
               <div className="flex-1 min-w-0">
@@ -179,7 +178,7 @@ const Messages = () => {
                 <p className="text-sm text-gray-400 truncate">{conv.lastMessage}</p>
               </div>
               {conv.unread > 0 && (
-                <span className="ml-2 h-5 min-w-5 px-1.5 flex items-center justify-center rounded-full bg-blue-500 text-xs text-white">
+                <span className="ml-2 h-5 min-w-5 px-1.5 flex items-center justify-center rounded-full bg-gray-500 text-xs text-white">
                   {conv.unread}
                 </span>
               )}
@@ -237,7 +236,7 @@ const Messages = () => {
               <div 
                 className={`max-w-[80%] p-3 rounded-lg ${
                   message.sender === 'me' 
-                    ? 'bg-blue-500 text-white rounded-tr-none' 
+                    ? 'bg-gray-700 text-white rounded-tr-none' 
                     : 'bg-card rounded-tl-none'
                 }`}
               >
@@ -274,7 +273,7 @@ const Messages = () => {
             <Button 
               onClick={handleSendMessage}
               disabled={!newMessage.trim()}
-              className="ml-2 bg-blue-500 hover:bg-blue-600 text-white rounded-full h-10 w-10 flex items-center justify-center p-0"
+              className="ml-2 bg-gray-700 hover:bg-gray-800 text-white rounded-full h-10 w-10 flex items-center justify-center p-0"
             >
               <Send size={18} />
             </Button>

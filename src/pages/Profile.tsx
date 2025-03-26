@@ -17,12 +17,12 @@ const Profile = () => {
       >
         {/* En-tête du profil */}
         <div className="relative">
-          <div className="h-48 rounded-lg bg-gradient-to-r from-blue-500 to-blue-700"></div>
+          <div className="h-48 rounded-lg bg-gradient-to-r from-gray-700 to-gray-900"></div>
           <div className="absolute -bottom-16 left-6 border-4 border-background">
             <Avatar className="h-32 w-32">
               <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Photo de profil" />
             </Avatar>
-            <button className="absolute bottom-0 right-0 p-2 rounded-full bg-blue-500 text-white">
+            <button className="absolute bottom-0 right-0 p-2 rounded-full bg-gray-600 text-white">
               <Camera size={16} />
             </button>
           </div>
@@ -48,7 +48,7 @@ const Profile = () => {
                 <Briefcase size={16} className="mr-1" /> Développeur Frontend
               </p>
             </div>
-            <Button variant="default" className="bg-blue-500 hover:bg-blue-600">
+            <Button variant="default" className="bg-gray-700 hover:bg-gray-800">
               <LogOut size={16} className="mr-2" /> Déconnexion
             </Button>
           </div>
