@@ -1,3 +1,4 @@
+
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -67,7 +68,7 @@ const Home = () => {
     <div 
       ref={containerRef}
       onMouseMove={handleMouseMove}
-      className="min-h-screen w-full flex flex-col items-center justify-center bg-[#121212] px-4 sm:px-6 relative overflow-hidden"
+      className="min-h-screen w-full flex flex-col items-center justify-center bg-transparent px-4 sm:px-6 relative overflow-hidden"
     >
       <AnimatePresence>
         {!isExiting ? (
@@ -121,13 +122,19 @@ const Home = () => {
                 className="absolute inset-0 rounded-xl"
               />
               
-              <button 
+              <Button 
                 onClick={handleExploreClick}
-                className="group inline-flex items-center gap-2 text-lg px-8 py-6 rounded-xl bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm border border-white/10 shadow-xl transition-all duration-300 hover:shadow-white/10 font-medium relative overflow-hidden"
+                className="text-lg px-8 py-6 rounded-xl bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm border border-white/10 shadow-xl transition-all duration-300 hover:shadow-white/10 font-medium relative overflow-hidden group"
+                size="lg"
               >
                 <span className="relative z-10">Explorez mon site</span>
-                <span className="absolute inset-0 bg-white/10 z-0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-500 opacity-50 group-hover:opacity-0"></span>
-              </button>
+                <motion.span 
+                  className="absolute inset-0 bg-white/10 z-0"
+                  initial={{ x: "-100%", opacity: 0.5 }}
+                  whileHover={{ x: "100%", opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                />
+              </Button>
             </motion.div>
           </motion.div>
         ) : (
