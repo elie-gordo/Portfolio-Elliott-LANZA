@@ -148,7 +148,7 @@ const Index = () => {
           </div>
         </div>
 
-        {/* The three sections below are now side by side */}
+        {/* Les trois sections côte à côte */}
         <div className="bento-card col-span-1 backdrop-blur-lg bg-gradient-to-br from-gray-500/5 to-gray-500/5">
           <h2 className="text-2xl font-bold mb-6 font-poppins">Expérience</h2>
           <div className="space-y-6">
@@ -170,12 +170,6 @@ const Index = () => {
                 company: "Creative Web Studio",
                 period: "2016 - 2018",
                 desc: "Créé des interfaces utilisateur réactives et amélioré les métriques de performance des sites web."
-              },
-              {
-                title: "Développeur Web Junior",
-                company: "Innovation Labs",
-                period: "2014 - 2016",
-                desc: "Assisté à la construction et aux tests d'applications web tout en apprenant les pratiques modernes de développement."
               }
             ].map((job, index) => (
               <div className="relative pl-6 border-l border-gray-500/30 hover:border-gray-500 transition-colors duration-300" key={index}>
@@ -214,12 +208,6 @@ const Index = () => {
                 school: "Design Academy",
                 period: "2013",
                 desc: "Maîtrise des principes de design d'interface et d'expérience utilisateur."
-              },
-              {
-                title: "Baccalauréat Scientifique",
-                school: "Lycée International",
-                period: "2009",
-                desc: "Option Mathématiques et Sciences de l'Ingénieur."
               }
             ].map((edu, index) => (
               <div className="relative pl-6 border-l border-gray-500/30 hover:border-gray-500 transition-colors duration-300" key={index}>
@@ -252,10 +240,6 @@ const Index = () => {
               {
                 title: "Long Terme",
                 goals: ["Créer ma propre entreprise de technologie", "Devenir expert en architecture de systèmes", "Mentorer la prochaine génération de développeurs"]
-              },
-              {
-                title: "Valeurs",
-                goals: ["Continuer à apprendre et à m'adapter", "Créer des produits qui ont un impact positif", "Maintenir un équilibre travail-vie personnelle"]
               }
             ].map((goalSet, index) => (
               <div key={index} className="group">

@@ -74,11 +74,14 @@
 .staggered-fade-in > *:nth-child(4) { animation-delay: 0.4s; }
 .staggered-fade-in > *:nth-child(5) { animation-delay: 0.5s; }
 .staggered-fade-in > *:nth-child(6) { animation-delay: 0.6s; }
+.staggered-fade-in > *:nth-child(7) { animation-delay: 0.7s; }
+.staggered-fade-in > *:nth-child(8) { animation-delay: 0.8s; }
+.staggered-fade-in > *:nth-child(9) { animation-delay: 0.9s; }
 
 /* Bento grid components */
 .bento-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   padding: 2rem;
   width: 100%;
@@ -86,6 +89,12 @@
   min-height: 100vh;
   margin: 0 auto;
   box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .bento-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 }
 
 .bento-card {
