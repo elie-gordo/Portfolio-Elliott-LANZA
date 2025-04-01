@@ -18,7 +18,7 @@ const BottomNav = () => {
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.3 }}
-        className="rounded-2xl bg-[#1E1E1E] border border-[#333333] backdrop-blur-md mx-auto max-w-[280px]"
+        className="rounded-2xl bg-[#1E1E1E] border border-[#333333] backdrop-blur-md mx-auto max-w-[200px]"
       >
         <div className="flex justify-between items-center px-4 py-3">
           {navItems.map((item) => (
