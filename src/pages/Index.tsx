@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Github, Linkedin, Mail, ArrowRight } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -147,6 +148,7 @@ const Index = () => {
           </div>
         </div>
 
+        {/* The three sections below are now side by side */}
         <div className="bento-card col-span-1 backdrop-blur-lg bg-gradient-to-br from-gray-500/5 to-gray-500/5">
           <h2 className="text-2xl font-bold mb-6 font-poppins">Expérience</h2>
           <div className="space-y-6">
