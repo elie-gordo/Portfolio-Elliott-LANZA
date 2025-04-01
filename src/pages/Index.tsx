@@ -5,10 +5,12 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import MaltIcon from "@/components/icons/MaltIcon";
 import Footer from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
   const [time, setTime] = useState(new Date());
   const [isVisible, setIsVisible] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setInterval(() => setTime(new Date()), 1000);
@@ -23,6 +25,10 @@ const Index = () => {
     day: 'numeric' 
   };
 
+  const handleContactClick = () => {
+    navigate("/contact");
+  };
+
   return (
     <div className="min-h-screen bg-[#121212] text-white">
       <div className={`bento-grid ${isVisible ? 'staggered-fade-in' : ''}`}>
@@ -35,10 +41,14 @@ const Index = () => {
             Développeur web spécialisé dans la création d'expériences web élégantes et fonctionnelles
           </p>
           <div className="mt-8 flex">
-            <a href="#contact" className="group inline-flex items-center gap-2 bg-gradient-to-r from-gray-700 to-gray-900 px-5 py-3 rounded-lg text-white font-medium transition-all hover:shadow-lg hover:shadow-gray-500/20">
-              Me contacter
+            <button 
+              onClick={handleContactClick} 
+              className="group inline-flex items-center gap-2 text-lg px-8 py-6 rounded-xl bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm border border-white/10 shadow-xl transition-all duration-300 hover:shadow-white/10 font-medium relative overflow-hidden"
+            >
+              <span className="relative z-10">Me contacter</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </a>
+              <span className="absolute inset-0 bg-white/10 z-0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-500 opacity-50 group-hover:opacity-0"></span>
+            </button>
           </div>
         </div>
 
