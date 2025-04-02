@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Github, Linkedin, Mail, ArrowRight } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -27,7 +26,7 @@ const Index = () => {
     <div className="layout-container">
       <div className="content-wrapper">
         <div className={`bento-grid ${isVisible ? 'staggered-fade-in' : ''}`}>
-          <div className="bento-card col-span-2 group">
+          <div className="bento-card col-span-3 md:col-span-2 group">
             <h2 className="text-sm text-gray-400 mb-2 font-medium tracking-wider uppercase">bienvenue</h2>
             <h1 className="text-4xl md:text-5xl font-poppins font-bold mb-4 text-gradient">
               Bonjour, je suis <span>John Doe</span>
@@ -43,7 +42,7 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="bento-card row-span-2">
+          <div className="bento-card col-span-3 md:col-span-1 row-span-2">
             <h2 className="text-2xl font-bold mb-6 font-poppins">À propos de moi</h2>
             <p className="text-gray-300 text-lg mb-6 leading-relaxed font-poppins">
               Je suis spécialisé dans le développement d'applications web modernes utilisant React, TypeScript et d'autres technologies de pointe.
@@ -70,7 +69,7 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="bento-card backdrop-blur-lg bg-gradient-to-br from-gray-500/5 to-gray-500/5">
+          <div className="bento-card col-span-3 md:col-span-1 backdrop-blur-lg bg-gradient-to-br from-gray-500/5 to-gray-500/5">
             <h2 className="text-lg text-gray-400 mb-4 font-medium">Date et Heure Actuelles</h2>
             <p className="text-xl font-medium mb-2 text-gray-200">
               {time.toLocaleDateString('fr-FR', dateOptions)}
@@ -80,7 +79,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="bento-card backdrop-blur-lg bg-gradient-to-br from-gray-500/5 to-gray-500/5">
+          <div className="bento-card col-span-3 md:col-span-1 backdrop-blur-lg bg-gradient-to-br from-gray-500/5 to-gray-500/5">
             <h2 className="text-2xl font-bold mb-6 font-poppins">Connectons-nous</h2>
             <div className="flex space-x-6">
               <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
@@ -149,7 +148,6 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Les trois sections côte à côte */}
           <div className="bento-card col-span-1 backdrop-blur-lg bg-gradient-to-br from-gray-500/5 to-gray-500/5">
             <h2 className="text-2xl font-bold mb-6 font-poppins">Expérience</h2>
             <div className="space-y-6">
