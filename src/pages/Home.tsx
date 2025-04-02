@@ -68,7 +68,7 @@ const Home = () => {
     <div 
       ref={containerRef}
       onMouseMove={handleMouseMove}
-      className="min-h-screen w-full flex flex-col items-center justify-center bg-transparent px-4 sm:px-6 relative overflow-hidden"
+      className="home-container"
     >
       <AnimatePresence>
         {!isExiting ? (
@@ -78,7 +78,7 @@ const Home = () => {
             animate={mounted ? { opacity: 1, y: 0 } : {}}
             exit={{ opacity: 0, y: 20, transition: { duration: 0.7 } }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="text-center max-w-3xl font-poppins relative z-10"
+            className="text-center max-w-3xl font-poppins relative z-10 px-4"
           >
             <motion.div
               animate={{ scale: [0.9, 1] }}
