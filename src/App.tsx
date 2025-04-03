@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Index from "./pages/Index";
 import Contact from "./pages/Contact";
+import Services from "./pages/Services";
 import BottomNav from "./components/BottomNav";
 import StarBackground from "./components/StarBackground";
 
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/" element={<Home />} />
           <Route path="/index" element={<Index />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/services" element={<Services />} />
         </Routes>
         <BottomNav />
       </BrowserRouter>

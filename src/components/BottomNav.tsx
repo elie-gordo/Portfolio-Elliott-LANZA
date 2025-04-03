@@ -1,5 +1,5 @@
 
-import { Home, FolderOpen, Mail } from "lucide-react";
+import { Home, FolderOpen, Mail, Briefcase } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -9,6 +9,7 @@ const BottomNav = () => {
   const navItems = [
     { path: "/", icon: Home, label: "Accueil" },
     { path: "/index", icon: FolderOpen, label: "Portfolio" },
+    { path: "/services", icon: Briefcase, label: "Prestations" },
     { path: "/contact", icon: Mail, label: "Contact" },
   ];
 
@@ -18,7 +19,7 @@ const BottomNav = () => {
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.3 }}
-        className="rounded-2xl bg-[#1E1E1E] border border-[#333333] backdrop-blur-md mx-auto max-w-[200px]"
+        className="rounded-2xl bg-[#1E1E1E] border border-[#333333] backdrop-blur-md mx-auto max-w-[260px]"
       >
         <div className="flex justify-between items-center px-4 py-3">
           {navItems.map((item) => (
