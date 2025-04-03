@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Github, Linkedin, Mail, ArrowRight } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -30,7 +29,7 @@ const Index = () => {
         <div className={`bento-grid ${isVisible ? 'staggered-fade-in' : ''}`}>
           <div className="bento-card col-span-3 md:col-span-2 group">
             <h2 className="text-sm text-gray-400 mb-2 font-medium tracking-wider uppercase">bienvenue</h2>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-poppins font-bold mb-8 text-gradient">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-poppins font-bold mb-8 text-gradient break-words hyphens-auto">
               Bonjour, je suis <span>John Doe</span>
             </h1>
             <p className="text-gray-300 text-lg md:text-xl leading-relaxed font-poppins">
