@@ -43,7 +43,7 @@ const Services = () => {
     <div className="layout-container bg-background">
       <div className="content-wrapper pb-20">
         <div className={`max-w-4xl mx-auto px-4 pt-24 pb-12 ${isVisible ? 'fade-in' : ''}`}>
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-gradient mb-8">Nos Services Professionnels</h1>
+          <h1 className="text-4xl md:text-5xl font-sans font-bold text-gradient mb-8">Nos Services Professionnels</h1>
           <p className="text-gray-300 text-lg mb-12">
             Découvrez mes différentes prestations pour répondre à vos besoins en matière de développement et de stratégie numérique.
           </p>
@@ -57,7 +57,7 @@ const Services = () => {
                 transition={{ delay: 0.1 * service.id }}
                 className="bg-card p-8 rounded-2xl border border-white/5 hover:border-white/10 transition-all"
               >
-                <h2 className="text-2xl md:text-3xl font-serif font-bold text-gradient mb-4">{service.title}</h2>
+                <h2 className="text-2xl md:text-3xl font-sans font-bold text-gradient mb-4">{service.title}</h2>
                 <p className="text-gray-300 mb-6">{service.description}</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {service.details.map((detail, index) => (
