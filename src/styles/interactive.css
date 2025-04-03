@@ -1,0 +1,19 @@
+
+/* Interactive elements */
+a, button {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+a:hover, button:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+/* Form elements */
+input, textarea, select {
+  @apply bg-card-hover border-white/10 text-foreground;
+}
+
+form {
+  @apply w-full;
+}
