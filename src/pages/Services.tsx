@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Brain, Cpu } from "lucide-react";
+import { Brain, Cpu, Smartphone, Lightbulb, Palette } from "lucide-react";
 
 const Services = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,19 +32,22 @@ const Services = () => {
       id: 2,
       title: "Applications Mobiles",
       description: "Développement d'applications mobiles natives ou cross-platform pour iOS et Android, avec une expérience utilisateur intuitive et fluide.",
-      details: ["Apps iOS", "Apps Android", "Solutions cross-platform", "Maintenance et mise à jour"]
+      details: ["Apps iOS", "Apps Android", "Solutions cross-platform", "Maintenance et mise à jour"],
+      icon: <Smartphone className="w-6 h-6 text-white/80" />
     },
     {
       id: 3,
       title: "Conseil Numérique",
       description: "Accompagnement stratégique pour la transformation digitale de votre entreprise. Audit de vos solutions existantes et recommandations personnalisées.",
-      details: ["Stratégie digitale", "Audit technique", "Optimisation UX/UI", "Formation"]
+      details: ["Stratégie digitale", "Audit technique", "Optimisation UX/UI", "Formation"],
+      icon: <Lightbulb className="w-6 h-6 text-white/80" />
     },
     {
       id: 4,
       title: "Design UI/UX",
       description: "Création d'interfaces utilisateur modernes et attrayantes, avec une expérience utilisateur optimisée pour maximiser l'engagement et la conversion.",
-      details: ["Design d'interface", "Prototypage", "Tests utilisateurs", "Identité visuelle"]
+      details: ["Design d'interface", "Prototypage", "Tests utilisateurs", "Identité visuelle"],
+      icon: <Palette className="w-6 h-6 text-white/80" />
     }
   ];
 
