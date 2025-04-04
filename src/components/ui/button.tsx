@@ -1,6 +1,8 @@
+
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
+import { motion } from "framer-motion"
 
 import { cn } from "@/lib/utils"
 
@@ -9,7 +11,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "text-lg px-8 py-6 rounded-xl bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm border border-white/10 shadow-xl transition-all duration-300 hover:shadow-white/10 font-medium relative overflow-hidden",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
@@ -42,6 +44,33 @@ export interface ButtonProps
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
+    
+    // For the default variant, we'll add a motion wrapper with the sliding effect
+    if (variant === "default") {
+      return (
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="relative inline-block"
+        >
+          <Comp
+            className={cn(buttonVariants({ variant, size, className }))}
+            ref={ref}
+            {...props}
+          >
+            <span className="relative z-10">{props.children}</span>
+            <motion.span 
+              className="absolute inset-0 bg-white/10 z-0"
+              initial={{ x: "-100%", opacity: 0.5 }}
+              whileHover={{ x: "100%", opacity: 0 }}
+              transition={{ duration: 0.5 }}
+            />
+          </Comp>
+        </motion.div>
+      )
+    }
+    
+    // For other variants, return the button as is
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}

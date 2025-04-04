@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -13,20 +12,17 @@ const Home = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   
-  // Track mouse position for parallax effect
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!containerRef.current) return;
     
     const { clientX, clientY } = e;
     const { width, height, left, top } = containerRef.current.getBoundingClientRect();
     
-    // Calculate mouse position relative to container center
     const x = ((clientX - left) / width - 0.5) * 2;
     const y = ((clientY - top) / height - 0.5) * 2;
     
     mousePositionRef.current = { x, y };
     
-    // Apply motion to title and subtitle
     if (titleRef.current) {
       titleRef.current.style.transform = `translate(${x * -20}px, ${y * -10}px)`;
     }
@@ -39,7 +35,6 @@ const Home = () => {
   useEffect(() => {
     setMounted(true);
     
-    // Reset transforms when mouse leaves the container
     const resetTransforms = () => {
       if (titleRef.current) {
         titleRef.current.style.transform = 'translate(0, 0)';
@@ -61,7 +56,7 @@ const Home = () => {
     setIsExiting(true);
     setTimeout(() => {
       navigate("/index");
-    }, 800); // Delay navigation to match animation duration
+    }, 800);
   };
 
   return (
@@ -110,8 +105,6 @@ const Home = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={mounted ? { opacity: 1, scale: 1 } : {}}
               transition={{ delay: 0.3, duration: 0.5 }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
               className="relative"
             >
               <motion.div
@@ -124,16 +117,9 @@ const Home = () => {
               
               <Button 
                 onClick={handleExploreClick}
-                className="text-lg px-8 py-6 rounded-xl bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm border border-white/10 shadow-xl transition-all duration-300 hover:shadow-white/10 font-medium relative overflow-hidden group"
                 size="lg"
               >
-                <span className="relative z-10">Explorez mon site</span>
-                <motion.span 
-                  className="absolute inset-0 bg-white/10 z-0"
-                  initial={{ x: "-100%", opacity: 0.5 }}
-                  whileHover={{ x: "100%", opacity: 0 }}
-                  transition={{ duration: 0.5 }}
-                />
+                Explorez mon site
               </Button>
             </motion.div>
           </motion.div>
@@ -154,7 +140,6 @@ const Home = () => {
         )}
       </AnimatePresence>
       
-      {/* Decorative elements */}
       <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-white rounded-full animate-pulse-slow"></div>
       <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-white rounded-full animate-pulse-slow" style={{ animationDelay: "1s" }}></div>
       <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-white rounded-full animate-pulse-slow" style={{ animationDelay: "0.5s" }}></div>

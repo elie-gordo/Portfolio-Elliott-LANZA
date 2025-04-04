@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -73,23 +72,7 @@ const Services = () => {
           
           <div className="mt-16 text-center">
             <Link to="/contact">
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="relative inline-block"
-              >
-                <Button 
-                  className="text-lg px-8 py-6 rounded-xl bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm border border-white/10 shadow-xl transition-all duration-300 hover:shadow-white/10 font-medium relative overflow-hidden group"
-                >
-                  <span className="relative z-10">Me contacter</span>
-                  <motion.span 
-                    className="absolute inset-0 bg-white/10 z-0"
-                    initial={{ x: "-100%", opacity: 0.5 }}
-                    whileHover={{ x: "100%", opacity: 0 }}
-                    transition={{ duration: 0.5 }}
-                  />
-                </Button>
-              </motion.div>
+              <Button>Me contacter</Button>
             </Link>
           </div>
         </div>

@@ -2,6 +2,7 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const WelcomeCard = () => {
   return (
@@ -14,9 +15,11 @@ const WelcomeCard = () => {
         Développeur web spécialisé dans la création d'expériences web élégantes et fonctionnelles
       </p>
       <div className="mt-8 flex">
-        <Link to="/contact" className="group inline-flex items-center gap-2 bg-white text-black px-5 py-3 rounded-lg font-medium transition-all hover:bg-gray-200 hover:shadow-lg hover:shadow-white/20">
-          Me contacter
-          <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+        <Link to="/contact">
+          <Button>
+            Me contacter
+            <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+          </Button>
         </Link>
       </div>
     </div>
