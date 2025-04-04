@@ -1,8 +1,10 @@
+
 import { useState, useEffect } from "react";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Brain, Cpu } from "lucide-react";
 
 const Services = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -13,10 +15,18 @@ const Services = () => {
 
   const services = [
     {
+      id: 0,
+      title: "Automatisation et intégration IA",
+      description: "Intégration d'intelligence artificielle dans vos applications et processus d'entreprise. Automatisation de tâches complexes et optimisation des workflows.",
+      details: ["Chatbots IA", "Automatisation de processus", "Analyse de données", "Solutions personnalisées"],
+      icon: <Brain className="w-6 h-6 text-white/80" />
+    },
+    {
       id: 1,
       title: "Développement Web",
       description: "Création de sites web sur mesure, responsive et optimisés pour les moteurs de recherche. Utilisation des technologies modernes pour une performance optimale.",
-      details: ["Sites vitrines", "E-commerce", "Applications web", "Progressive Web Apps"]
+      details: ["Sites vitrines", "E-commerce", "Applications web", "Progressive Web Apps"],
+      icon: <Cpu className="w-6 h-6 text-white/80" />
     },
     {
       id: 2,
@@ -56,7 +66,10 @@ const Services = () => {
                 transition={{ delay: 0.1 * service.id }}
                 className="bg-card p-8 rounded-2xl border border-white/5 hover:border-white/10 transition-all"
               >
-                <h2 className="text-2xl md:text-3xl font-sans font-bold text-gradient mb-4">{service.title}</h2>
+                <div className="flex items-center gap-3 mb-4">
+                  {service.icon && service.icon}
+                  <h2 className="text-2xl md:text-3xl font-sans font-bold text-gradient">{service.title}</h2>
+                </div>
                 <p className="text-gray-300 mb-6">{service.description}</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {service.details.map((detail, index) => (
