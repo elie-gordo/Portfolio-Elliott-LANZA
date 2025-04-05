@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
 
 const AboutMeCard = () => {
   return (
@@ -11,14 +12,25 @@ const AboutMeCard = () => {
       </p>
       <div className="space-y-6 mb-6">
         <div>
-          <p className="text-lg text-gray-400 mb-3 font-medium">Mes outils:</p>
+          <p className="text-lg text-gray-400 mb-3 font-medium">Langages:</p>
           <div className="flex flex-wrap gap-2">
-            <Badge variant="outline" className="bg-black/20 text-gray-300 border-gray-700 px-3 py-1">React</Badge>
+            <Badge variant="outline" className="bg-black/20 text-gray-300 border-gray-700 px-3 py-1">JavaScript</Badge>
             <Badge variant="outline" className="bg-black/20 text-gray-300 border-gray-700 px-3 py-1">TypeScript</Badge>
-            <Badge variant="outline" className="bg-black/20 text-gray-300 border-gray-700 px-3 py-1">Node.js</Badge>
-            <Badge variant="outline" className="bg-black/20 text-gray-300 border-gray-700 px-3 py-1">Tailwind CSS</Badge>
+            <Badge variant="outline" className="bg-black/20 text-gray-300 border-gray-700 px-3 py-1">Python</Badge>
+            <Badge variant="outline" className="bg-black/20 text-gray-300 border-gray-700 px-3 py-1">HTML/CSS</Badge>
           </div>
         </div>
+        
+        <div>
+          <p className="text-lg text-gray-400 mb-3 font-medium">Logiciels:</p>
+          <div className="flex flex-wrap gap-2">
+            <Badge variant="outline" className="bg-black/20 text-gray-300 border-gray-700 px-3 py-1">React</Badge>
+            <Badge variant="outline" className="bg-black/20 text-gray-300 border-gray-700 px-3 py-1">Node.js</Badge>
+            <Badge variant="outline" className="bg-black/20 text-gray-300 border-gray-700 px-3 py-1">Tailwind CSS</Badge>
+            <Badge variant="outline" className="bg-black/20 text-gray-300 border-gray-700 px-3 py-1">Git</Badge>
+          </div>
+        </div>
+        
         <div>
           <p className="text-lg text-gray-400 mb-3 font-medium">Mes atouts:</p>
           <div className="flex flex-wrap gap-2">
