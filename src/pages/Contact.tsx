@@ -1,4 +1,3 @@
-
 import React from "react";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
@@ -226,7 +225,7 @@ const Contact = () => {
                 
                 <Button 
                   type="submit" 
-                  className="w-full bg-gray-700 hover:bg-gray-800 text-white"
+                  className="w-full"
                 >
                   <Send className="mr-2 h-4 w-4" /> Envoyer le message
                 </Button>
