@@ -1,6 +1,6 @@
 
 import { Github, Linkedin, Mail } from "lucide-react";
-import MaltIcon from "@/components/icons/MaltIcon";
+import LinkTreeIcon from "@/components/icons/LinkTreeIcon";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -26,9 +26,9 @@ const Footer = () => {
                className="p-2 rounded-full hover:bg-white/10 transition-all duration-300">
               <Mail className="w-5 h-5 text-gray-400 hover:text-white" />
             </a>
-            <a href="https://malt.fr" target="_blank" rel="noopener noreferrer"
+            <a href="https://linktr.ee" target="_blank" rel="noopener noreferrer"
                className="p-2 rounded-full hover:bg-white/10 transition-all duration-300">
-              <MaltIcon className="w-5 h-5 text-gray-400 hover:text-white" />
+              <LinkTreeIcon className="w-5 h-5 text-gray-400 hover:text-white" />
             </a>
           </div>
         </div>

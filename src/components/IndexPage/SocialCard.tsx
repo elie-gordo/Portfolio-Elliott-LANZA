@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Github, Linkedin, Mail } from "lucide-react";
-import MaltIcon from "@/components/icons/MaltIcon";
+import LinkTreeIcon from "@/components/icons/LinkTreeIcon";
 
 const SocialCard = () => {
   return (
@@ -20,9 +20,9 @@ const SocialCard = () => {
           className="p-3 rounded-full bg-white/5 hover:bg-white/10 transition-colors hover:scale-110 transform duration-300">
           <Mail className="w-8 h-8 text-white" />
         </a>
-        <a href="https://malt.fr" target="_blank" rel="noopener noreferrer"
+        <a href="https://linktr.ee" target="_blank" rel="noopener noreferrer"
           className="p-3 rounded-full bg-white/5 hover:bg-white/10 transition-colors hover:scale-110 transform duration-300">
-          <MaltIcon className="w-8 h-8 text-white" />
+          <LinkTreeIcon className="w-8 h-8 text-white" />
         </a>
       </div>
     </div>
