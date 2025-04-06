@@ -14,7 +14,7 @@ const LinkTreeIcon = ({ className, size = 24, color = "currentColor" }: {
       className={className}
       alt="Linktree"
       style={{
-        filter: color === "currentColor" ? "inherit" : `${color === "white" || color.includes("text-white") ? "brightness(0) invert(1)" : ""}`,
+        filter: "brightness(0) invert(1)",
       }}
     />
   );
