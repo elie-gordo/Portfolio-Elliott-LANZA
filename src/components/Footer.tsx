@@ -28,7 +28,7 @@ const Footer = () => {
             </a>
             <a href="https://linktr.ee" target="_blank" rel="noopener noreferrer"
                className="p-2 rounded-full hover:bg-white/10 transition-all duration-300">
-              <LinkTreeIcon size={20} className="text-gray-400 hover:text-white" />
+              <LinkTreeIcon className="w-5 h-5 text-gray-400 hover:text-white" />
             </a>
           </div>
         </div>
