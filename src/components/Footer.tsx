@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center space-x-4">
-            <h3 className="text-2xl font-bold text-white">Elliott L.</h3>
+            <h3 className="text-2xl font-bold text-white">Elliott LANZA</h3>
           </div>
 
           <div className="flex space-x-4">
@@ -28,14 +28,14 @@ const Footer = () => {
             </a>
             <a href="https://linktr.ee" target="_blank" rel="noopener noreferrer"
                className="p-2 rounded-full hover:bg-white/10 transition-all duration-300">
-              <LinkTreeIcon className="w-5 h-5 text-gray-400 hover:text-white" size={20} />
+              <LinkTreeIcon size={20} className="text-gray-400 hover:text-white" />
             </a>
           </div>
         </div>
         
         <div className="mt-6 pt-4 border-t border-[#333333] text-center">
           <p className="text-gray-400 text-sm">
-            © {currentYear} Elliott L. Tous droits réservés.
+            © {currentYear} Elliott LANZA. Tous droits réservés.
           </p>
         </div>
       </div>
