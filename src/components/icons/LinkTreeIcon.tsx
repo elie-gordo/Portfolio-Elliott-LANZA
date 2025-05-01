@@ -1,14 +1,30 @@
 
 import React from 'react';
-import { Link } from 'lucide-react';
 
 const LinkTreeIcon = ({ className, size = 24, color = "currentColor" }: { 
   className?: string; 
   size?: number; 
   color?: string;
 }) => {
-  // Utiliser l'icône Link de Lucide React au lieu d'une image
-  return <Link size={size} className={className} color={color} />;
+  return (
+    <svg 
+      width={size}
+      height={size}
+      className={className}
+      viewBox="0 0 24 24" 
+      fill="none" 
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path 
+        d="M13.5 21V16.5H17.5L10.5 3V7.5H6.5L13.5 21Z" 
+        fill={color} 
+        stroke={color} 
+        strokeWidth="0.5" 
+        strokeLinecap="round" 
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
 };
 
 export default LinkTreeIcon;
