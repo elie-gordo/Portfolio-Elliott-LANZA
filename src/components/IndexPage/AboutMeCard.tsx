@@ -8,7 +8,7 @@ const AboutMeCard = () => {
     <div className="bento-card col-span-3 md:col-span-1 row-span-2">
       <h2 className="text-2xl font-bold mb-6 font-poppins">À propos de moi</h2>
       <p className="text-gray-300 text-lg mb-6 leading-relaxed font-poppins">
-        Je suis spécialisé dans le développement d'applications web modernes utilisant React, TypeScript et d'autres technologies de pointe.
+        Développeur Fullstack et intégrateur IA, je combine mon expertise en développement web avec une solide maîtrise de l'intelligence artificielle pour créer des solutions innovantes et performantes. Avec plusieurs années d'expérience, je suis capable de travailler aussi bien sur le frontend (React, Angular) que le backend (Node.js, Python, Django), tout en intégrant des technologies d'IA (CrewAi, n8n) pour enrichir les applications avec des fonctionnalités intelligentes. Passionnée par l'optimisation des processus, je me spécialise dans la création d'applications scalables et adaptées aux besoins spécifiques des clients. Si vous recherchez un partenaire technique pour des projets sur-mesure, n'hésitez pas à me contacter.
       </p>
       <div className="space-y-6 mb-6">
         <div>
