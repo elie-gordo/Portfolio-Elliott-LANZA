@@ -95,7 +95,7 @@ const Services = () => {
             />
             <h3 className="text-2xl font-bold text-gradient mb-6">Besoin d'une solution sur mesure ?</h3>
             <Link to="/contact">
-              <Button variant="custom" className="group flex items-center gap-2 px-8 py-4 text-lg bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 shadow-lg hover:shadow-blue-500/20 border-none hover:scale-105 transition-all duration-300">
+              <Button variant="custom" className="px-8 py-4 text-lg group flex items-center gap-2 transition-all">
                 Me contacter
                 <ChevronRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </Button>

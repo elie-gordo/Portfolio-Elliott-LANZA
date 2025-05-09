@@ -20,7 +20,7 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        custom: "text-white rounded-xl backdrop-blur-sm font-medium relative overflow-hidden",
+        custom: "text-white rounded-xl backdrop-blur-sm border border-white/20 font-medium relative overflow-hidden bg-white/10 shadow-md",
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -71,27 +71,26 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       )
     }
 
-    // For custom variant, add a pulsing effect to draw attention
+    // For custom variant, add a subtle highlight effect that matches the site's aesthetic
     if (variant === "custom") {
       return (
         <motion.div
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="relative inline-block"
-          animate={{ 
-            boxShadow: ["0 0 0 rgba(66, 153, 225, 0)", "0 0 20px rgba(79, 70, 229, 0.6)", "0 0 0 rgba(66, 153, 225, 0)"] 
-          }}
-          transition={{ 
-            repeat: Infinity, 
-            duration: 2.5 
-          }}
         >
           <Comp
             className={cn(buttonVariants({ variant, size, className }))}
             ref={ref}
             {...props}
           >
-            {props.children}
+            <span className="relative z-10">{props.children}</span>
+            <motion.span 
+              className="absolute inset-0 bg-white/5 z-0"
+              initial={{ x: "-100%", opacity: 0.5 }}
+              whileHover={{ x: "100%", opacity: 0 }}
+              transition={{ duration: 0.5 }}
+            />
           </Comp>
         </motion.div>
       )
