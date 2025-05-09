@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Brain, Cpu, Smartphone, Lightbulb, Palette } from "lucide-react";
+import { Brain, Cpu, Smartphone, Lightbulb, Palette, ChevronRight } from "lucide-react";
 
 const Services = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -86,9 +86,19 @@ const Services = () => {
             ))}
           </div>
           
-          <div className="mt-16 text-center">
+          <div className="mt-20 text-center relative">
+            <motion.div 
+              className="absolute -z-10 w-[120%] h-[120%] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/5 blur-xl"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            />
+            <h3 className="text-2xl font-bold text-gradient mb-6">Besoin d'une solution sur mesure ?</h3>
             <Link to="/contact">
-              <Button>Me contacter</Button>
+              <Button variant="custom" className="group flex items-center gap-2 px-8 py-4 text-lg bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 shadow-lg hover:shadow-blue-500/20 border-none hover:scale-105 transition-all duration-300">
+                Me contacter
+                <ChevronRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+              </Button>
             </Link>
           </div>
         </div>
