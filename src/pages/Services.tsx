@@ -15,6 +15,13 @@ const Services = () => {
 
   const services = [
     {
+      id: 3,
+      title: "Conseil Numérique",
+      description: "Accompagnement stratégique pour la transformation digitale de votre entreprise. Audit de vos solutions existantes et recommandations personnalisées.",
+      details: ["Stratégie digitale", "Audit technique", "Optimisation UX/UI", "Formation"],
+      icon: <Lightbulb className="w-6 h-6 text-white/80" />
+    },
+    {
       id: 0,
       title: "Automatisation et intégration IA",
       description: "Intégration d'intelligence artificielle dans vos applications et processus d'entreprise. Automatisation de tâches complexes et optimisation des workflows.",
@@ -34,13 +41,6 @@ const Services = () => {
       description: "Développement d'applications mobiles natives ou cross-platform pour iOS et Android, avec une expérience utilisateur intuitive et fluide.",
       details: ["Apps iOS", "Apps Android", "Solutions cross-platform", "Maintenance et mise à jour"],
       icon: <Smartphone className="w-6 h-6 text-white/80" />
-    },
-    {
-      id: 3,
-      title: "Conseil Numérique",
-      description: "Accompagnement stratégique pour la transformation digitale de votre entreprise. Audit de vos solutions existantes et recommandations personnalisées.",
-      details: ["Stratégie digitale", "Audit technique", "Optimisation UX/UI", "Formation"],
-      icon: <Lightbulb className="w-6 h-6 text-white/80" />
     },
     {
       id: 4,
