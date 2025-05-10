@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Brain, Cpu, Smartphone, Lightbulb, Palette, ChevronRight } from "lucide-react";
+import { Brain, Cpu, Smartphone, Lightbulb, Palette, ArrowRight } from "lucide-react";
 
 const Services = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -96,9 +96,9 @@ const Services = () => {
             <h3 className="text-2xl font-bold text-gradient mb-6">Besoin d'une solution sur mesure ?</h3>
             <div className="flex justify-center">
               <Link to="/contact">
-                <Button className="group flex items-center gap-2">
+                <Button>
                   Me contacter
-                  <ChevronRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                 </Button>
               </Link>
             </div>
