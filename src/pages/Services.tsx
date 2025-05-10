@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -93,12 +94,14 @@ const Services = () => {
               transition={{ duration: 0.5 }}
             />
             <h3 className="text-2xl font-bold text-gradient mb-6">Besoin d'une solution sur mesure ?</h3>
-            <Link to="/contact">
-              <Button className="group flex items-center gap-2">
-                Me contacter
-                <ChevronRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-              </Button>
-            </Link>
+            <div className="flex justify-center">
+              <Link to="/contact">
+                <Button className="group flex items-center gap-2">
+                  Me contacter
+                  <ChevronRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
