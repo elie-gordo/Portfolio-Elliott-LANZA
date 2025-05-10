@@ -96,10 +96,22 @@ const Services = () => {
             <h3 className="text-2xl font-bold text-gradient mb-6">Besoin d'une solution sur mesure ?</h3>
             <div className="flex justify-center">
               <Link to="/contact">
-                <Button>
-                  Me contacter
-                  <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-                </Button>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="relative inline-block"
+                >
+                  <Button>
+                    <span className="relative z-10">Me contacter</span>
+                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                    <motion.span 
+                      className="absolute inset-0 bg-white/10 z-0"
+                      initial={{ x: "-100%", opacity: 0.5 }}
+                      whileHover={{ x: "100%", opacity: 0 }}
+                      transition={{ duration: 0.5 }}
+                    />
+                  </Button>
+                </motion.div>
               </Link>
             </div>
           </div>

@@ -18,7 +18,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="layout-container">
+    <div className="layout-container bg-background">
       <div className="content-wrapper">
         <div className={`bento-grid ${isVisible ? 'staggered-fade-in' : ''}`}>
           <WelcomeCard />
