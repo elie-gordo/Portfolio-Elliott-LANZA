@@ -9,6 +9,7 @@ import ProjectsCard from "@/components/IndexPage/ProjectsCard";
 import ExperienceCard from "@/components/IndexPage/ExperienceCard";
 import EducationCard from "@/components/IndexPage/EducationCard";
 import GoalsCard from "@/components/IndexPage/GoalsCard";
+import StarBackground from "@/components/StarBackground";
 
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -19,6 +20,7 @@ const Index = () => {
 
   return (
     <div className="layout-container bg-background">
+      <StarBackground />
       <div className="content-wrapper">
         <div className={`bento-grid ${isVisible ? 'staggered-fade-in' : ''}`}>
           <WelcomeCard />
