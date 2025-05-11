@@ -9,6 +9,16 @@ interface TimelineItemProps {
 }
 
 const TimelineItem = ({ title, organization, period, description }: TimelineItemProps) => {
+  // Function to convert newline characters to JSX line breaks
+  const formatDescription = (text: string) => {
+    return text.split('\n').map((line, i) => (
+      <React.Fragment key={i}>
+        {line}
+        {i < text.split('\n').length - 1 && <br />}
+      </React.Fragment>
+    ));
+  };
+
   return (
     <div className="relative pl-6 border-l border-white/10 hover:border-white/30 transition-colors duration-300">
       <div className="absolute -left-1.5 top-1">
@@ -18,7 +28,7 @@ const TimelineItem = ({ title, organization, period, description }: TimelineItem
       <p className="text-gray-300 font-poppins">{organization}</p>
       <p className="text-gray-400 mt-1 text-sm font-poppins">{period}</p>
       <p className="text-gray-400 mt-2 text-sm leading-relaxed font-poppins">
-        {description}
+        {formatDescription(description)}
       </p>
     </div>
   );
