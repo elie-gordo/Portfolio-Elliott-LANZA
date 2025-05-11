@@ -2,6 +2,7 @@
 import React from "react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
 interface ProjectCardProps {
   index: number;
@@ -12,8 +13,10 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ index, title, description, category, imageUrl }: ProjectCardProps) => {
+  const tags = category.split(' ').filter(tag => tag.startsWith('#'));
+  
   return (
-    <div className="project-card">
+    <Card className="project-card h-full flex flex-col border-none shadow-md overflow-hidden bg-gradient-to-br from-black/60 to-black/40">
       <div className="w-full">
         <AspectRatio ratio={16 / 9} className="bg-gradient-to-br from-black/60 to-black/40">
           <img 
@@ -23,14 +26,18 @@ const ProjectCard = ({ index, title, description, category, imageUrl }: ProjectC
           />
         </AspectRatio>
       </div>
-      <div className="p-6">
-        <Badge className="mb-3 bg-black/20 text-gray-300 hover:bg-black/30 border-0">
-          {category}
-        </Badge>
+      <CardContent className="p-6 flex-grow">
         <h3 className="text-xl font-bold mb-3">{title}</h3>
         <p className="text-gray-400">{description}</p>
-      </div>
-    </div>
+      </CardContent>
+      <CardFooter className="p-4 pt-0 flex flex-wrap gap-2">
+        {tags.map((tag, i) => (
+          <Badge key={i} className="bg-black/20 text-gray-300 hover:bg-black/30 border-0">
+            {tag}
+          </Badge>
+        ))}
+      </CardFooter>
+    </Card>
   );
 };
 
