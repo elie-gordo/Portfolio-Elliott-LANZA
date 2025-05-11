@@ -26,10 +26,10 @@ const Index = () => {
           <WelcomeCard />
           <AboutMeCard />
           <DateTimeCard />
+          <EducationCard />
           <SocialCard />
           <ProjectsCard />
           <ExperienceCard />
-          <EducationCard />
           <GoalsCard />
         </div>
       </div>
