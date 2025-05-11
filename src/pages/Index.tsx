@@ -23,13 +23,13 @@ const Index = () => {
       <StarBackground />
       <div className="content-wrapper">
         <div className={`bento-grid ${isVisible ? 'staggered-fade-in' : ''}`}>
+          <EducationCard />
           <WelcomeCard />
           <AboutMeCard />
           <DateTimeCard />
           <SocialCard />
           <ProjectsCard />
           <ExperienceCard />
-          <EducationCard />
           <GoalsCard />
         </div>
       </div>
