@@ -27,7 +27,7 @@ const GoalSet = ({ title, goals }: GoalSetProps) => (
 const GoalsCard = () => {
   const goalSets = [
     {
-      title: "Objectifs Court Terme",
+      title: "🎯 Objectifs Court Terme",
       goals: [
         "Maîtriser les dernières technologies frontend (React, Next.js, Tailwind, etc.)",
         "Contribuer à des projets open source pour rester à jour et donner en retour à la communauté.",
@@ -37,7 +37,7 @@ const GoalsCard = () => {
       ]
     },
     {
-      title: "Objectifs Moyen Terme",
+      title: "🚀 Objectifs Moyen Terme",
       goals: [
         "Diriger une équipe de développement pour porter les évolutions de mes produits SaaS.",
         "Lancer un produit SaaS indépendant (→ InvestAi) et l'amener à ses premiers MRR significatifs.",
@@ -47,7 +47,7 @@ const GoalsCard = () => {
       ]
     },
     {
-      title: "Objectifs Long Terme",
+      title: "🌍 Objectifs Long Terme",
       goals: [
         "Créer ma propre entreprise de technologie (→ objectif déjà en cours avec Orion & InvestAi).",
         "Faire d'InvestAi une référence dans l'IA appliquée à l'investissement personnel et pro.",
