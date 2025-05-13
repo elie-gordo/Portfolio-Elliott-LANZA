@@ -27,16 +27,34 @@ const GoalSet = ({ title, goals }: GoalSetProps) => (
 const GoalsCard = () => {
   const goalSets = [
     {
-      title: "Court Terme",
-      goals: ["Maîtriser les dernières technologies frontend", "Contribuer à des projets open source", "Obtenir une certification en IA"]
+      title: "Objectifs Court Terme",
+      goals: [
+        "Maîtriser les dernières technologies frontend (React, Next.js, Tailwind, etc.)",
+        "Contribuer à des projets open source pour rester à jour et donner en retour à la communauté.",
+        "Obtenir une certification en IA pour renforcer l'expertise d'InvestAi.",
+        "Structurer les process d'Orion Solution via des outils no-code (n8n, Make, Zapier) pour industrialiser les automatisations.",
+        "Itérer rapidement sur InvestAi via les retours des premiers utilisateurs et tests A/B."
+      ]
     },
     {
-      title: "Moyen Terme",
-      goals: ["Diriger une équipe de développement", "Lancer un produit SaaS indépendant", "Partager mes connaissances via un blog tech"]
+      title: "Objectifs Moyen Terme",
+      goals: [
+        "Diriger une équipe de développement pour porter les évolutions de mes produits SaaS.",
+        "Lancer un produit SaaS indépendant (→ InvestAi) et l'amener à ses premiers MRR significatifs.",
+        "Développer une offre spécialisée chez Orion Solution pour des secteurs cibles (e-commerce, finance, PME tech…).",
+        "Partager mes connaissances via un blog tech orienté IA, SaaS et automatisation.",
+        "Mettre en place un CRM et un tunnel de vente automatisé pour Orion Solution."
+      ]
     },
     {
-      title: "Long Terme",
-      goals: ["Créer ma propre entreprise de technologie", "Devenir expert en architecture de systèmes", "Mentorer la prochaine génération de développeurs"]
+      title: "Objectifs Long Terme",
+      goals: [
+        "Créer ma propre entreprise de technologie (→ objectif déjà en cours avec Orion & InvestAi).",
+        "Faire d'InvestAi une référence dans l'IA appliquée à l'investissement personnel et pro.",
+        "Positionner Orion Solution comme une agence leader de l'automatisation en Europe francophone.",
+        "Devenir expert en architecture de systèmes pour garantir la scalabilité de mes produits.",
+        "Mentorer la prochaine génération de développeurs/entrepreneurs à travers des formations ou du contenu."
+      ]
     }
   ];
 
