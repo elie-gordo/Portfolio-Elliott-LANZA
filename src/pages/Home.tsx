@@ -91,7 +91,7 @@ const Home = () => {
               ref={titleRef}
               className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 text-gradient tracking-tight transition-transform duration-200 ease-out"
             >
-              Bienvenu sur mon portfolio
+              Bienvenue sur mon Portfolio
             </h1>
             
             <p 
