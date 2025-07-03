@@ -43,7 +43,7 @@ const ProjectCard = ({ index, title, description, category, imageUrl, route }: P
           ))}
         </div>
         <Link to={route}>
-          <Button variant="outline" className="bg-white/5 border-white/20 text-white hover:bg-white/10 text-sm px-4 py-2">
+          <Button className="text-sm px-4 py-2">
             Voir les projets
             <ArrowRight className="w-4 h-4 ml-2" />
           </Button>
