@@ -12,7 +12,7 @@ const WelcomeCard = () => {
         Elliott LANZA
       </h1>
       <p className="text-gray-300 text-lg md:text-xl leading-relaxed font-poppins">
-        Développeur fullstack spécialisé en intégration IA, avec expertise en applications web, mobiles et solutions IA.
+        Développeur Fullstack et intégrateur IA, je combine mon expertise en développement web avec une solide maîtrise de l'intelligence artificielle pour créer des solutions innovantes et performantes. Avec plusieurs années d'expérience, je suis capable de travailler aussi bien sur le frontend (React, Angular) que le backend (Node.js, Python, Django), tout en intégrant des technologies d'IA (CrewAi, n8n) pour enrichir les applications avec des fonctionnalités intelligentes. Passionnée par l'optimisation des processus, je me spécialise dans la création d'applications scalables et adaptées aux besoins spécifiques des clients. Si vous recherchez un partenaire technique pour des projets sur-mesure, n'hésitez pas à me contacter.
       </p>
       <div className="mt-8 flex">
         <Link to="/contact">
