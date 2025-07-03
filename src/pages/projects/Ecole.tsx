@@ -2,8 +2,9 @@ import React from "react";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import StarBackground from "@/components/StarBackground";
+import ProjectReferenceCard from "@/components/ProjectReferenceCard";
+import schoolImage from "@/assets/school-projects.jpg";
 
 const Ecole = () => {
   return (
@@ -21,17 +22,13 @@ const Ecole = () => {
           <h1 className="text-4xl font-bold mb-8 text-gradient">Projets d'école</h1>
           
           <div className="grid gap-6">
-            <Card className="bg-black/20 border-white/10">
-              <CardHeader>
-                <CardTitle className="text-white">À venir</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-300">
-                  Cette section sera bientôt mise à jour avec mes projets académiques.
-                  N'hésitez pas à revenir prochainement pour découvrir mes réalisations dans ce domaine.
-                </p>
-              </CardContent>
-            </Card>
+            <ProjectReferenceCard
+              title="Projets Académiques"
+              description="Développement de projets étudiants couvrant différents domaines de l'informatique : algorithmes, structures de données, développement web, bases de données et projets de groupe. Acquisition de compétences fondamentales et méthodologies de développement."
+              image={schoolImage}
+              technologies={["Java", "C++", "SQL", "Git", "Agile", "Testing", "Documentation", "Team Work"]}
+              imageAlt="Environnement d'étude et projets académiques"
+            />
           </div>
         </div>
       </div>

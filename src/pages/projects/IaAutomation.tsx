@@ -2,8 +2,9 @@ import React from "react";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import StarBackground from "@/components/StarBackground";
+import ProjectReferenceCard from "@/components/ProjectReferenceCard";
+import aiImage from "@/assets/ai-automation.jpg";
 
 const IaAutomation = () => {
   return (
@@ -21,17 +22,13 @@ const IaAutomation = () => {
           <h1 className="text-4xl font-bold mb-8 text-gradient">Agents iA & Automatisations</h1>
           
           <div className="grid gap-6">
-            <Card className="bg-black/20 border-white/10">
-              <CardHeader>
-                <CardTitle className="text-white">À venir</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-300">
-                  Cette section sera bientôt mise à jour avec mes projets d'IA et d'automatisation.
-                  N'hésitez pas à revenir prochainement pour découvrir mes réalisations dans ce domaine.
-                </p>
-              </CardContent>
-            </Card>
+            <ProjectReferenceCard
+              title="Agents IA & Automatisations"
+              description="Développement d'agents intelligents et systèmes d'automatisation utilisant les dernières technologies d'IA. Création de chatbots, systèmes de recommandation et workflows automatisés pour optimiser les processus métier."
+              image={aiImage}
+              technologies={["Python", "TensorFlow", "OpenAI", "LangChain", "FastAPI", "Machine Learning", "NLP", "Automation"]}
+              imageAlt="Intelligence artificielle et automatisation"
+            />
           </div>
         </div>
       </div>

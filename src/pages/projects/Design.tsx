@@ -2,8 +2,9 @@ import React from "react";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import StarBackground from "@/components/StarBackground";
+import ProjectReferenceCard from "@/components/ProjectReferenceCard";
+import designImage from "@/assets/design-creation.jpg";
 
 const Design = () => {
   return (
@@ -21,17 +22,13 @@ const Design = () => {
           <h1 className="text-4xl font-bold mb-8 text-gradient">Designs & Créations</h1>
           
           <div className="grid gap-6">
-            <Card className="bg-black/20 border-white/10">
-              <CardHeader>
-                <CardTitle className="text-white">À venir</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-300">
-                  Cette section sera bientôt mise à jour avec mes projets de design et création.
-                  N'hésitez pas à revenir prochainement pour découvrir mes réalisations dans ce domaine.
-                </p>
-              </CardContent>
-            </Card>
+            <ProjectReferenceCard
+              title="Design & Créations Visuelles"
+              description="Conception d'interfaces utilisateur modernes et créatives, développement d'identités visuelles et création de supports graphiques. Focus sur l'expérience utilisateur et l'esthétique pour des solutions digitales impactantes."
+              image={designImage}
+              technologies={["Figma", "Adobe Creative Suite", "UI/UX", "Branding", "Typography", "Color Theory", "Prototyping", "Wireframing"]}
+              imageAlt="Outils de design et créations graphiques"
+            />
           </div>
         </div>
       </div>

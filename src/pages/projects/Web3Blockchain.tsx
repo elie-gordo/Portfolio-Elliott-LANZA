@@ -2,8 +2,9 @@ import React from "react";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import StarBackground from "@/components/StarBackground";
+import ProjectReferenceCard from "@/components/ProjectReferenceCard";
+import web3Image from "@/assets/web3-blockchain.jpg";
 
 const Web3Blockchain = () => {
   return (
@@ -21,17 +22,13 @@ const Web3Blockchain = () => {
           <h1 className="text-4xl font-bold mb-8 text-gradient">Web3/BlockChain</h1>
           
           <div className="grid gap-6">
-            <Card className="bg-black/20 border-white/10">
-              <CardHeader>
-                <CardTitle className="text-white">À venir</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-300">
-                  Cette section sera bientôt mise à jour avec mes projets Web3/Blockchain.
-                  N'hésitez pas à revenir prochainement pour découvrir mes réalisations dans ce domaine.
-                </p>
-              </CardContent>
-            </Card>
+            <ProjectReferenceCard
+              title="Applications Décentralisées"
+              description="Développement de DApps et smart contracts sur Ethereum et autres blockchains. Création d'interfaces utilisateur pour interagir avec la blockchain, intégration de wallets et développement de solutions DeFi innovantes."
+              image={web3Image}
+              technologies={["Solidity", "Web3.js", "Ethers.js", "React", "Ethereum", "IPFS", "MetaMask", "Hardhat"]}
+              imageAlt="Interface blockchain et crypto-monnaies"
+            />
           </div>
         </div>
       </div>

@@ -2,8 +2,9 @@ import React from "react";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import StarBackground from "@/components/StarBackground";
+import ProjectReferenceCard from "@/components/ProjectReferenceCard";
+import startupImage from "@/assets/startup-saas.jpg";
 
 const StartupSaas = () => {
   return (
@@ -21,17 +22,13 @@ const StartupSaas = () => {
           <h1 className="text-4xl font-bold mb-8 text-gradient">Startup & SaaS</h1>
           
           <div className="grid gap-6">
-            <Card className="bg-black/20 border-white/10">
-              <CardHeader>
-                <CardTitle className="text-white">À venir</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-300">
-                  Cette section sera bientôt mise à jour avec mes projets Startup/SaaS.
-                  N'hésitez pas à revenir prochainement pour découvrir mes réalisations dans ce domaine.
-                </p>
-              </CardContent>
-            </Card>
+            <ProjectReferenceCard
+              title="Solutions SaaS Innovantes"
+              description="Développement d'applications web modernes avec architecture microservices, intégration d'APIs tierces et systèmes de paiement. Focus sur l'expérience utilisateur et la scalabilité pour accompagner la croissance des startups."
+              image={startupImage}
+              technologies={["React", "TypeScript", "Node.js", "PostgreSQL", "Stripe", "AWS", "Docker", "Kubernetes"]}
+              imageAlt="Interface d'application SaaS moderne"
+            />
           </div>
         </div>
       </div>

@@ -2,8 +2,9 @@ import React from "react";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import StarBackground from "@/components/StarBackground";
+import ProjectReferenceCard from "@/components/ProjectReferenceCard";
+import pythonJsImage from "@/assets/python-js.jpg";
 
 const PythonJs = () => {
   return (
@@ -21,17 +22,13 @@ const PythonJs = () => {
           <h1 className="text-4xl font-bold mb-8 text-gradient">Python/JS</h1>
           
           <div className="grid gap-6">
-            <Card className="bg-black/20 border-white/10">
-              <CardHeader>
-                <CardTitle className="text-white">À venir</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-300">
-                  Cette section sera bientôt mise à jour avec mes projets Python/JavaScript.
-                  N'hésitez pas à revenir prochainement pour découvrir mes réalisations dans ce domaine.
-                </p>
-              </CardContent>
-            </Card>
+            <ProjectReferenceCard
+              title="Applications Full-Stack"
+              description="Développement d'applications complètes utilisant Python pour le backend avec Django/Flask et JavaScript/React pour le frontend. Intégration de bases de données, APIs REST et déploiement cloud pour des solutions robustes et performantes."
+              image={pythonJsImage}
+              technologies={["Python", "JavaScript", "React", "Django", "Flask", "PostgreSQL", "MongoDB", "REST API"]}
+              imageAlt="Code Python et JavaScript sur écrans multiples"
+            />
           </div>
         </div>
       </div>
