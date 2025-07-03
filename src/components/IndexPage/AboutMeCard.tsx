@@ -30,6 +30,8 @@ const AboutMeCard = () => {
             <Badge variant="outline" className="bg-black/20 text-gray-300 border-gray-700 px-3 py-1">Adobe Creative Suite</Badge>
             <Badge variant="outline" className="bg-black/20 text-gray-300 border-gray-700 px-3 py-1">Blender</Badge>
             <Badge variant="outline" className="bg-black/20 text-gray-300 border-gray-700 px-3 py-1">Figma</Badge>
+            <Badge variant="outline" className="bg-black/20 text-gray-300 border-gray-700 px-3 py-1">LangChain</Badge>
+            <Badge variant="outline" className="bg-black/20 text-gray-300 border-gray-700 px-3 py-1">n8n</Badge>
           </div>
         </div>
         

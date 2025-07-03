@@ -34,7 +34,7 @@ const ProjectsCard = () => {
     {
       title: "Agents iA & Automatisations",
       description: "Création d'agents intelligents et systèmes d'automatisation avancés utilisant l'IA pour optimiser les processus.",
-      category: "#IA #Automation #CrewAI #n8n",
+      category: "#IA #Automation #CrewAI #LangChain #n8n",
       imageUrl: aiAutomation,
       route: "/projets/ia-automation"
     },
