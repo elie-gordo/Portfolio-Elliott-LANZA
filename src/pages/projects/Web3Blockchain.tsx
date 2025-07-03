@@ -29,19 +29,15 @@ const Web3Blockchain = () => {
 
 Le projet s'est distingué par une forte implication communautaire et une approche narrative unique autour des personnages, avant d'être suspendu pour des raisons externes à la partie technique.
 
-👨‍🚀 Mon rôle a couvert l'ensemble du cycle produit :
+👨‍🚀 **Mon rôle a couvert l'ensemble du cycle produit :**
 
-Audit des smart contracts existants et de l'écosystème
+• Audit des smart contracts existants et de l'écosystème
+• Recrutement & gestion d'équipe (design, dev, marketing)
+• Développement d'un site complet avec intégration Web3
+• Création d'une interface de mint, wallet connect, et galerie NFT
+• Mise en place des fondations pour une DAO communautaire
 
-Recrutement & gestion d'équipe (design, dev, marketing)
-
-Développement d'un site complet avec intégration Web3
-
-Création d'une interface de mint, wallet connect, et galerie NFT
-
-Mise en place des fondations pour une DAO communautaire
-
-CryptoWaifu V2, c'est une démonstration de ma capacité à reprendre un projet Web3 existant, à réactiver une dynamique produit et à articuler technologie, storytelling et communauté."
+**CryptoWaifu V2**, c'est une démonstration de ma capacité à reprendre un projet Web3 existant, à réactiver une dynamique produit et à articuler technologie, storytelling et communauté."
               image={cryptowaifuImage}
               technologies={["React", "Next.js", "TailwindCSS", "Ethers.js", "WalletConnect", "OpenSea API", "Notion", "Figma"]}
               imageAlt="Interface de CryptoWaifu V2"
