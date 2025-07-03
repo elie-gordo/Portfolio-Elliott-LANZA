@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import StarBackground from "@/components/StarBackground";
 import ProjectReferenceCard from "@/components/ProjectReferenceCard";
 import Footer from "@/components/Footer";
-import web3Image from "@/assets/web3-blockchain.jpg";
+import cryptowaifuImage from "@/assets/cryptowaifu-v2.jpg";
 
 const Web3Blockchain = () => {
   return (
@@ -24,11 +24,27 @@ const Web3Blockchain = () => {
           
           <div className="grid gap-6">
             <ProjectReferenceCard
-              title="Applications Décentralisées"
-              description="Développement de DApps et smart contracts sur Ethereum et autres blockchains. Création d'interfaces utilisateur pour interagir avec la blockchain, intégration de wallets et développement de solutions DeFi innovantes."
-              image={web3Image}
-              technologies={["Solidity", "Web3.js", "Ethers.js", "React", "Ethereum", "IPFS", "MetaMask", "Hardhat"]}
-              imageAlt="Interface blockchain et crypto-monnaies"
+              title="CryptoWaifu V2 – Relance d'un projet NFT communautaire (non aboutie)"
+              description="CryptoWaifu V2 est une reprise ambitieuse d'une collection NFT déjà existante, avec pour objectif de transformer un projet laissé à l'abandon en une plateforme communautaire Web3 solide, orientée produit et storytelling. J'ai pris en main la relance globale du projet, en reconstituant une équipe pluridisciplinaire et en redéveloppant entièrement l'infrastructure web dédiée à l'expérience NFT : mint, lore, wallet connect, et galerie des assets.
+
+Le projet s'est distingué par une forte implication communautaire et une approche narrative unique autour des personnages, avant d'être suspendu pour des raisons externes à la partie technique.
+
+👨‍🚀 Mon rôle a couvert l'ensemble du cycle produit :
+
+Audit des smart contracts existants et de l'écosystème
+
+Recrutement & gestion d'équipe (design, dev, marketing)
+
+Développement d'un site complet avec intégration Web3
+
+Création d'une interface de mint, wallet connect, et galerie NFT
+
+Mise en place des fondations pour une DAO communautaire
+
+CryptoWaifu V2, c'est une démonstration de ma capacité à reprendre un projet Web3 existant, à réactiver une dynamique produit et à articuler technologie, storytelling et communauté."
+              image={cryptowaifuImage}
+              technologies={["React", "Next.js", "TailwindCSS", "Ethers.js", "WalletConnect", "OpenSea API", "Notion", "Figma"]}
+              imageAlt="Interface de CryptoWaifu V2"
             />
           </div>
         </div>
