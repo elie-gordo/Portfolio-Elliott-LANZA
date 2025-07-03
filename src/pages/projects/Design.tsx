@@ -18,7 +18,7 @@ const Design = () => {
             </Button>
           </Link>
           
-          <h1 className="text-4xl font-bold mb-8 text-gradient">Design et Création</h1>
+          <h1 className="text-4xl font-bold mb-8 text-gradient">Designs & Créations</h1>
           
           <div className="grid gap-6">
             <Card className="bg-black/20 border-white/10">

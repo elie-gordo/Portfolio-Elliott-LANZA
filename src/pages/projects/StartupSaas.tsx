@@ -18,7 +18,7 @@ const StartupSaas = () => {
             </Button>
           </Link>
           
-          <h1 className="text-4xl font-bold mb-8 text-gradient">Startup/Saas</h1>
+          <h1 className="text-4xl font-bold mb-8 text-gradient">Startup & SaaS</h1>
           
           <div className="grid gap-6">
             <Card className="bg-black/20 border-white/10">
