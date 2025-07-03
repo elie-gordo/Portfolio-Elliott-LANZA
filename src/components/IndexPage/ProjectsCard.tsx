@@ -60,7 +60,7 @@ const ProjectsCard = () => {
         <span className="bg-white/10 w-8 h-8 rounded-full flex items-center justify-center mr-3">
           <span className="bg-white w-4 h-4 rounded-full animate-pulse-slow"></span>
         </span>
-        Projets en Vedette
+        Mes Projets
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {projects.map((project, i) => (
