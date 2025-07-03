@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 const WelcomeCard = () => {
   return (
     <div className="bento-card col-span-3 md:col-span-2 group">
-      <h2 className="text-sm text-gray-400 mb-2 font-medium tracking-wider uppercase">bienvenue</h2>
+      <h2 className="text-sm text-gray-400 mb-2 font-medium tracking-wider uppercase">Bienvenue sur mon Portfolio</h2>
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-poppins font-bold mb-8 text-gradient break-words hyphens-auto">
         Elliott LANZA
       </h1>

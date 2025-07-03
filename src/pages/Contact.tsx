@@ -246,7 +246,7 @@ const Contact = () => {
                 <Mail className="h-5 w-5 mr-3 mt-1 text-gray-400" />
                 <div>
                   <h3 className="font-medium">Email</h3>
-                  <p className="text-gray-400 text-sm">contact@example.com</p>
+                  <p className="text-gray-400 text-sm">elliott.lanza@gmail.com</p>
                 </div>
               </div>
               
@@ -254,7 +254,7 @@ const Contact = () => {
                 <Phone className="h-5 w-5 mr-3 mt-1 text-gray-400" />
                 <div>
                   <h3 className="font-medium">Téléphone</h3>
-                  <p className="text-gray-400 text-sm">+33 1 23 45 67 89</p>
+                  <p className="text-gray-400 text-sm">Bientôt disponible</p>
                 </div>
               </div>
               
@@ -271,8 +271,7 @@ const Contact = () => {
             
             <div>
               <h3 className="font-medium mb-2">Horaires</h3>
-              <p className="text-gray-400 text-sm mb-1">Lundi - Vendredi: 9h - 18h</p>
-              <p className="text-gray-400 text-sm">Weekend: Fermé</p>
+              <p className="text-gray-400 text-sm">Nous sommes joignables 24h/24 et 7j/7.</p>
             </div>
             
             <p className="text-sm text-gray-500 mt-6">
