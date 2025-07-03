@@ -7,6 +7,7 @@ import ProjectReferenceCard from "@/components/ProjectReferenceCard";
 import Footer from "@/components/Footer";
 import pythonJsImage from "@/assets/python-js.jpg";
 import betiqImage from "@/assets/betiq-telegram-bot.jpg";
+import photoContestImage from "@/assets/photo-contest-bot.jpg";
 
 const PythonJs = () => {
   return (
@@ -77,6 +78,28 @@ L'expérience utilisateur est entièrement intégrée à Telegram : boutons cliq
               image={betiqImage}
               technologies={["Node.js", "Telegram Bot API", "IA", "Machine Learning", "JavaScript", "API REST"]}
               imageAlt="Interface du bot Telegram BetIQ pour paris sportifs avec IA"
+            />
+            
+            <ProjectReferenceCard
+              title="📸 PhotoContestBot – Bot Telegram pour concours photo automatisés"
+              description="**PhotoContestBot** est un bot Telegram interactif conçu pour animer des groupes autour de concours photo hebdomadaires, avec un système de vote intégré, des statistiques en temps réel et une gestion automatisée des sondages et résultats.
+
+Pensé pour favoriser l'engagement communautaire, le bot permet aux membres de publier des photos accompagnées d'un titre ou d'une description, de voter via des boutons personnalisés, et de suivre l'évolution des scores et classements. Chaque semaine, les meilleures contributions sont automatiquement sélectionnées pour un sondage final, et les résultats sont partagés au sein du groupe.
+
+✨ **Fonctionnalités principales :**
+
+🖼️ **Gestion des photos :** publication avec titre/description, vote direct via boutons (+1/-1), modification de vote, blocage des doublons
+
+📊 **Système de vote :** notation en temps réel, affichage des scores, détails consultables, anti-abus intégré
+
+🏆 **Concours hebdomadaires :** sélection automatique du top 3 chaque dimanche à 20h, sondage natif Telegram, vote de 24h, annonce automatique des gagnants
+
+📈 **Statistiques :** score net, classement général, historique des gagnants, suivi des publications et performances individuelles
+
+Le bot gère l'ensemble du processus en autonomie et transforme un simple groupe Telegram en une véritable compétition créative et communautaire."
+              image={photoContestImage}
+              technologies={["Node.js", "Telegram Bot API", "JavaScript", "MongoDB", "API REST", "Cron Jobs"]}
+              imageAlt="Interface du bot Telegram PhotoContestBot pour concours photo avec système de vote"
             />
           </div>
         </div>
