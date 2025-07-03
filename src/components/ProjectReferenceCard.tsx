@@ -30,9 +30,33 @@ const ProjectReferenceCard = ({
         <CardTitle className="text-white text-xl">{title}</CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
-        <p className="text-gray-300 leading-relaxed">
-          {description}
-        </p>
+        <div className="text-gray-300 leading-relaxed">
+          {description.split('\n').map((line, index) => {
+            const urlRegex = /(https?:\/\/[^\s]+)/g;
+            const parts = line.split(urlRegex);
+            
+            return (
+              <p key={index} className={index > 0 ? "mt-2" : ""}>
+                {parts.map((part, partIndex) => {
+                  if (urlRegex.test(part)) {
+                    return (
+                      <a 
+                        key={partIndex}
+                        href={part} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-blue-400 hover:text-blue-300 underline transition-colors"
+                      >
+                        {part}
+                      </a>
+                    );
+                  }
+                  return part;
+                })}
+              </p>
+            );
+          })}
+        </div>
         <div className="flex flex-wrap gap-2">
           {technologies.map((tech, index) => (
             <Badge 
