@@ -63,7 +63,25 @@ const Contact = () => {
     <div className="layout-container bg-background">
       <StarBackground />
       <div className="content-wrapper">
-        <div className="container max-w-4xl mx-auto px-4 py-8 font-poppins pb-24 pt-16 sm:pt-20">
+        {/* Animated background elements */}
+        <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-white rounded-full animate-pulse-slow"></div>
+        <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-white rounded-full animate-pulse-slow" style={{ animationDelay: "1s" }}></div>
+        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-white rounded-full animate-pulse-slow" style={{ animationDelay: "0.5s" }}></div>
+        <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-white rounded-full animate-pulse-slow" style={{ animationDelay: "1.5s" }}></div>
+        
+        <motion.div 
+          className="absolute bottom-20 left-10 md:left-20 w-20 h-20 bg-gradient-to-tr from-white/5 to-white/10 rounded-full blur-xl"
+          animate={{ y: [-10, 10], opacity: [0.5, 0.3] }}
+          transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
+        />
+        
+        <motion.div 
+          className="absolute top-20 right-10 md:right-20 w-24 h-24 bg-gradient-to-tr from-white/5 to-white/10 rounded-full blur-xl"
+          animate={{ y: [10, -10], opacity: [0.3, 0.5] }}
+          transition={{ duration: 4, repeat: Infinity, repeatType: "reverse" }}
+        />
+        
+        <div className="container max-w-4xl mx-auto px-4 py-8 font-poppins pb-24 pt-16 sm:pt-20 relative z-10">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
