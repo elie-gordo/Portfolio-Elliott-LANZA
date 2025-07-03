@@ -14,15 +14,15 @@ const Footer = () => {
           </div>
 
           <div className="flex space-x-4">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
+            <a href="https://github.com/elie-gordo" target="_blank" rel="noopener noreferrer" 
                className="p-2 rounded-full hover:bg-white/10 transition-all duration-300">
               <Github className="w-5 h-5 text-gray-400 hover:text-white" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.linkedin.com/in/elliott-lanza-a78681265/" target="_blank" rel="noopener noreferrer"
                className="p-2 rounded-full hover:bg-white/10 transition-all duration-300">
               <Linkedin className="w-5 h-5 text-gray-400 hover:text-white" />
             </a>
-            <a href="mailto:your@email.com"
+            <a href="mailto:elliott.lanza@gmail.com"
                className="p-2 rounded-full hover:bg-white/10 transition-all duration-300">
               <Mail className="w-5 h-5 text-gray-400 hover:text-white" />
             </a>
