@@ -46,7 +46,7 @@ const ProjectsCard = () => {
       route: "/projets/ecole"
     },
     {
-      title: "Design et Création",
+      title: "Designs & Créations",
       description: "Projets de design graphique, UI/UX et création visuelle avec focus sur l'esthétique et l'expérience utilisateur.",
       category: "#Design #UI/UX #Figma #Creative",
       imageUrl: designCreation,
