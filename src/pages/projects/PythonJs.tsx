@@ -72,9 +72,7 @@ L'expérience utilisateur est entièrement intégrée à Telegram : boutons cliq
 
 ⚖️ **MOYEN** – Bon équilibre (≥60%) / Potentiel modéré
 
-🚀 **HIGH RISK** – Fort potentiel (≥45%) / Risque élevé
-
-🛠️ **Technos utilisées :** Node.js, Telegram Bot API, intelligence artificielle (modèle custom), gestion de données sportives, génération dynamique d'UI dans Telegram."
+🚀 **HIGH RISK** – Fort potentiel (≥45%) / Risque élevé"
               image={betiqImage}
               technologies={["Telegram Bot API", "IA", "Machine Learning", "JavaScript", "API REST"]}
               imageAlt="Interface du bot Telegram BetIQ pour paris sportifs avec IA"
