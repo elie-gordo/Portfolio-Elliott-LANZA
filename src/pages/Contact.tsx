@@ -27,6 +27,7 @@ import {
 } from "lucide-react";
 import Footer from "@/components/Footer";
 import StarBackground from "@/components/StarBackground";
+import CursorEffect from "@/components/CursorEffect";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Le nom doit contenir au moins 2 caractères" }),
@@ -61,6 +62,7 @@ const Contact = () => {
 
   return (
     <div className="layout-container bg-background">
+      <CursorEffect />
       <StarBackground />
       <div className="content-wrapper">
         {/* Animated background elements from Home page */}
