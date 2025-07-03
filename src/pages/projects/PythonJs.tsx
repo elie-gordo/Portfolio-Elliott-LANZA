@@ -98,7 +98,7 @@ Pensé pour favoriser l'engagement communautaire, le bot permet aux membres de p
 
 Le bot gère l'ensemble du processus en autonomie et transforme un simple groupe Telegram en une véritable compétition créative et communautaire."
               image={photoContestImage}
-              technologies={["Node.js", "Telegram Bot API", "JavaScript", "MongoDB", "API REST", "Cron Jobs"]}
+              technologies={["Node.js", "Telegram Bot API", "Python", "MongoDB", "API REST"]}
               imageAlt="Interface du bot Telegram PhotoContestBot pour concours photo avec système de vote"
             />
           </div>
