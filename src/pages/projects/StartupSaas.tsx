@@ -39,7 +39,7 @@ Automatisations connectées à des outils du quotidien
 
 💬 Le chatbot intelligent, développé avec n8n, est relié à une base de données Supabase pour offrir une gestion dynamique et contextualisée des réponses, tout en intégrant des workflows avancés (notamment avec GPT-4 et diverses API métier)."
               image={orionImage}
-              technologies={["React", "Next.js", "TailwindCSS", "Supabase", "n8n", "GPT-4", "Zapier", "Airtable", "Notion", "Figma"]}
+              technologies={["React", "Next.js", "TailwindCSS", "Supabase", "n8n", "GPT-4", "Figma"]}
               imageAlt="Interface de la plateforme Orion Solutions"
             />
           </div>
