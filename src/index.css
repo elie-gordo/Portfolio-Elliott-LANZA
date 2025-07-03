@@ -258,6 +258,12 @@ form {
 }
 
 /* Responsive adjustments */
+@media (max-width: 1200px) {
+  .container {
+    @apply px-6;
+  }
+}
+
 @media (max-width: 768px) {
   .bento-grid {
     grid-template-columns: 1fr;
@@ -268,6 +274,10 @@ form {
   .bento-card {
     min-height: 150px;
     padding: 1.5rem;
+  }
+  
+  .home-container {
+    padding: 0 1rem;
   }
 }
 
@@ -287,7 +297,27 @@ form {
     @apply px-4;
   }
   
-  .home-container {
-    padding: 0 1rem;
+  .bento-card {
+    padding: 1rem;
+  }
+}
+
+/* Très petits écrans */
+@media (max-width: 390px) {
+  h1 {
+    font-size: 1.75rem;
+    line-height: 1.1;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+  }
+  
+  .bento-card {
+    padding: 0.75rem;
+  }
+  
+  .container {
+    @apply px-3;
   }
 }
