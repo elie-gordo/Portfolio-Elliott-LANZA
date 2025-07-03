@@ -8,7 +8,7 @@ const AboutMeCard = () => {
     <div className="bento-card col-span-3 md:col-span-1 row-span-2">
       <h2 className="text-2xl font-bold mb-6 font-poppins">À propos de moi</h2>
       <p className="text-gray-300 text-lg mb-6 leading-relaxed font-poppins">
-        Développeur fullstack spécialisé en intégration IA, avec expertise en applications web, mobiles et solutions IA.
+        Créatif, polyvalent, avec un excellent relationnel et de solides compétences en management. J'allie organisation et esprit d'équipe pour faire avancer les projets efficacement.
       </p>
       <div className="space-y-6 mb-6">
         <div>
