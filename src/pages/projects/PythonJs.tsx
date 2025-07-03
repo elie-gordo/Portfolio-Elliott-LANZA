@@ -6,6 +6,7 @@ import StarBackground from "@/components/StarBackground";
 import ProjectReferenceCard from "@/components/ProjectReferenceCard";
 import Footer from "@/components/Footer";
 import pythonJsImage from "@/assets/python-js.jpg";
+import betiqImage from "@/assets/betiq-telegram-bot.jpg";
 
 const PythonJs = () => {
   return (
@@ -44,6 +45,38 @@ Outil générant automatiquement des personas marketing et une landing page pers
               image={pythonJsImage}
               technologies={["Python", "JavaScript", "React", "Django", "Flask", "PostgreSQL", "MongoDB", "REST API"]}
               imageAlt="Code Python et JavaScript sur écrans multiples"
+            />
+            
+            <ProjectReferenceCard
+              title="BetIQ 2.5 - Bot Telegram IA"
+              description="**BetIQ 2.5** est un bot Telegram intelligent conçu pour accompagner les parieurs dans leur prise de décision grâce à l'intelligence artificielle. Pensé pour être simple, rapide et accessible, le bot permet de générer automatiquement des combinés de paris optimisés selon plusieurs niveaux de risque, tout en proposant une analyse prédictive des cotes et la détection en temps réel de value bets.
+
+L'expérience utilisateur est entièrement intégrée à Telegram : boutons cliquables, interactions fluides, mode démo sans API réelles, et génération instantanée de recommandations.
+
+💡 **Fonctionnalités principales :**
+
+🔍 Recherche automatique de matchs (J+0 à J+3) sur tous les sports
+
+📊 Analyse IA des cotes et probabilités pour repérer les value bets
+
+🎲 Génération de combinés par niveau de risque (SAFE, MOYEN, HIGH RISK)
+
+💬 Interface Telegram 100% interactive avec boutons et commandes claires
+
+🎭 Mode démo complet pour tests sans connexion à des API externes
+
+🎯 **Types de combinés proposés :**
+
+🛡️ **SAFE** – Haute confiance (≥75%) / Faible risque
+
+⚖️ **MOYEN** – Bon équilibre (≥60%) / Potentiel modéré
+
+🚀 **HIGH RISK** – Fort potentiel (≥45%) / Risque élevé
+
+🛠️ **Technos utilisées :** Node.js, Telegram Bot API, intelligence artificielle (modèle custom), gestion de données sportives, génération dynamique d'UI dans Telegram."
+              image={betiqImage}
+              technologies={["Node.js", "Telegram Bot API", "IA", "Machine Learning", "JavaScript", "API REST"]}
+              imageAlt="Interface du bot Telegram BetIQ pour paris sportifs avec IA"
             />
           </div>
         </div>
