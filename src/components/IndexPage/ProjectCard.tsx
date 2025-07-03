@@ -42,8 +42,8 @@ const ProjectCard = ({ index, title, description, category, imageUrl, route }: P
             </Badge>
           ))}
         </div>
-        <Link to={route} className="w-full">
-          <Button variant="outline" className="w-full bg-white/5 border-white/20 text-white hover:bg-white/10">
+        <Link to={route}>
+          <Button variant="outline" className="bg-white/5 border-white/20 text-white hover:bg-white/10 text-sm px-4 py-2">
             Voir les projets
             <ArrowRight className="w-4 h-4 ml-2" />
           </Button>
