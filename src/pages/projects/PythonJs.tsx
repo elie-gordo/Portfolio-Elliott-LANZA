@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import StarBackground from "@/components/StarBackground";
 import ProjectReferenceCard from "@/components/ProjectReferenceCard";
+import Footer from "@/components/Footer";
 import pythonJsImage from "@/assets/python-js.jpg";
 
 const PythonJs = () => {
@@ -31,6 +32,10 @@ const PythonJs = () => {
             />
           </div>
         </div>
+      </div>
+      
+      <div className="footer-wrapper">
+        <Footer />
       </div>
     </div>
   );
