@@ -11,7 +11,7 @@ import designCreation from "@/assets/design-creation.jpg";
 const ProjectsCard = () => {
   const projects = [
     {
-      title: "Startup/Saas",
+      title: "Startup & SaaS",
       description: "Développement de plateformes SaaS scalables et d'applications startup avec focus sur l'expérience utilisateur et la performance.",
       category: "#SaaS #Startup #React #Node.js",
       imageUrl: startupSaas,
