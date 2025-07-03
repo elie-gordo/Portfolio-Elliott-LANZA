@@ -6,16 +6,23 @@ const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    // Petit délai pour s'assurer que le composant est monté
+    // Force le scroll immédiatement et après le rendu
+    window.scrollTo(0, 0);
+    
+    // Double vérification après un micro-délai
     const timer = setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'instant'
-      });
-    }, 0);
+      window.scrollTo(0, 0);
+    }, 10);
 
-    return () => clearTimeout(timer);
+    // Et encore après un délai plus long pour être sûr
+    const timer2 = setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
+
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(timer2);
+    };
   }, [pathname]);
 
   return null;
