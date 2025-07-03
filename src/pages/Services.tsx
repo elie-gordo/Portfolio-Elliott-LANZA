@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from "react";
 import Footer from "@/components/Footer";
+import StarBackground from "@/components/StarBackground";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -53,8 +54,9 @@ const Services = () => {
 
   return (
     <div className="layout-container bg-background">
+      <StarBackground />
       <div className="content-wrapper pb-20">
-        <div className={`max-w-4xl mx-auto px-4 pt-24 pb-12 ${isVisible ? 'fade-in' : ''}`}>
+        <div className={`max-w-4xl mx-auto px-4 pt-16 sm:pt-24 pb-12 ${isVisible ? 'fade-in' : ''}`}>
           <h1 className="text-4xl md:text-5xl font-sans font-bold text-gradient mb-8">Nos Services Professionnels</h1>
           <p className="text-gray-300 text-lg mb-12">
             Découvrez mes différentes prestations pour répondre à vos besoins en matière de développement et de stratégie numérique.

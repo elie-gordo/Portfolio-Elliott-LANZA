@@ -59,7 +59,7 @@ const ProjectReferenceCard = ({
             );
           })}
         </div>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 mt-4">
           {technologies.map((tech, index) => (
             <Badge 
               key={index} 
@@ -76,7 +76,7 @@ const ProjectReferenceCard = ({
               href={githubLink} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-blue-400 hover:text-blue-300 transition-colors"
+              className="text-blue-400 hover:text-blue-300 transition-colors break-all text-sm"
             >
               🔗{githubLink}
             </a>

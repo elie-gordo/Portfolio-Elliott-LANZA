@@ -25,6 +25,8 @@ import {
   MessageSquare,
   Info
 } from "lucide-react";
+import Footer from "@/components/Footer";
+import StarBackground from "@/components/StarBackground";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Le nom doit contenir au moins 2 caractères" }),
@@ -58,7 +60,10 @@ const Contact = () => {
   };
 
   return (
-    <div className="container max-w-4xl mx-auto px-4 py-8 font-poppins">
+    <div className="layout-container bg-background">
+      <StarBackground />
+      <div className="content-wrapper">
+        <div className="container max-w-4xl mx-auto px-4 py-8 font-poppins pb-24 pt-16 sm:pt-20">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -280,6 +285,12 @@ const Contact = () => {
           </motion.div>
         </div>
       </motion.div>
+        </div>
+      </div>
+      
+      <div className="footer-wrapper">
+        <Footer />
+      </div>
     </div>
   );
 };
