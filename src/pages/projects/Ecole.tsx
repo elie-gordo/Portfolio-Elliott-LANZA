@@ -29,6 +29,7 @@ const Ecole = () => {
               image={schoolImage}
               technologies={["Java", "C++", "SQL", "Git", "Agile", "Testing", "Documentation", "Team Work"]}
               imageAlt="Environnement d'étude et projets académiques"
+              githubLink=""
             />
           </div>
         </div>

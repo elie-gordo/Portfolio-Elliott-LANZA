@@ -29,6 +29,7 @@ const Design = () => {
               image={designImage}
               technologies={["Figma", "Adobe Creative Suite", "UI/UX", "Branding", "Typography", "Color Theory", "Prototyping", "Wireframing"]}
               imageAlt="Outils de design et créations graphiques"
+              githubLink=""
             />
           </div>
         </div>

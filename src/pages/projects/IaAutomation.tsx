@@ -29,6 +29,7 @@ const IaAutomation = () => {
               image={aiImage}
               technologies={["Python", "TensorFlow", "OpenAI", "LangChain", "FastAPI", "Machine Learning", "NLP", "Automation"]}
               imageAlt="Intelligence artificielle et automatisation"
+              githubLink=""
             />
           </div>
         </div>

@@ -40,12 +40,11 @@ Assistant intelligent qui s'intègre à Google Calendar pour planifier, organise
 Tableau de bord interactif pour visualiser, analyser et interpréter des données métiers grâce à l'intelligence artificielle. Permet de prendre des décisions éclairées à partir de données complexes.
 
 **5. Générateur de personas + landing page IA**
-Outil générant automatiquement des personas marketing et une landing page personnalisée à l'aide de l'IA, facilitant la création de profils clients et la mise en place de campagnes ciblées.
-
-🔗 **Lien du repo GitHub:** https://github.com/elie-gordo/projets_portfolio_ai"
+Outil générant automatiquement des personas marketing et une landing page personnalisée à l'aide de l'IA, facilitant la création de profils clients et la mise en place de campagnes ciblées."
               image={pythonJsImage}
               technologies={["Python", "JavaScript", "React", "Django", "Flask", "PostgreSQL", "MongoDB", "REST API"]}
               imageAlt="Code Python et JavaScript sur écrans multiples"
+              githubLink="https://github.com/elie-gordo/projets_portfolio_ai"
             />
             
             <ProjectReferenceCard

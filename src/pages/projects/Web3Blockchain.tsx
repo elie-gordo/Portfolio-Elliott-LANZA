@@ -41,6 +41,7 @@ Le projet s'est distingué par une forte implication communautaire et une approc
               image={cryptowaifuImage}
               technologies={["React", "Next.js", "TailwindCSS", "Ethers.js", "WalletConnect", "OpenSea API", "Notion", "Figma"]}
               imageAlt="Interface de CryptoWaifu V2"
+              githubLink=""
             />
           </div>
         </div>

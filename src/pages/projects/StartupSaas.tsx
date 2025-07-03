@@ -38,6 +38,7 @@ const StartupSaas = () => {
               image={orionImage}
               technologies={["React", "Next.js", "TailwindCSS", "Supabase", "n8n", "GPT-4", "Figma"]}
               imageAlt="Interface de la plateforme Orion Solutions"
+              githubLink=""
             />
           </div>
         </div>
