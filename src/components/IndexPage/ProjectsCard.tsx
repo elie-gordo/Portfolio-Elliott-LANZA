@@ -1,44 +1,56 @@
 
 import React from "react";
 import ProjectCard from "./ProjectCard";
+import startupSaas from "@/assets/startup-saas.jpg";
+import pythonJs from "@/assets/python-js.jpg";
+import web3Blockchain from "@/assets/web3-blockchain.jpg";
+import aiAutomation from "@/assets/ai-automation.jpg";
+import schoolProjects from "@/assets/school-projects.jpg";
+import designCreation from "@/assets/design-creation.jpg";
 
 const ProjectsCard = () => {
   const projects = [
     {
-      title: "🛒 Projet 1 – E-Commerce Moderne",
-      description: "Une plateforme de vente en ligne intuitive avec une interface utilisateur épurée et responsive. Intégration complète d'un système de paiement sécurisé et d'un dashboard administrateur.",
-      category: "#WebApp #UI/UX #React #Stripe",
-      imageUrl: "https://images.unsplash.com/photo-1526379879527-8559ecfd8bf7?auto=format&fit=crop&w=500&q=80"
+      title: "Startup/Saas",
+      description: "Développement de plateformes SaaS scalables et d'applications startup avec focus sur l'expérience utilisateur et la performance.",
+      category: "#SaaS #Startup #React #Node.js",
+      imageUrl: startupSaas,
+      route: "/projets/startup-saas"
     },
     {
-      title: "✅ Projet 2 – Gestion de Tâches",
-      description: "Application élégante et ergonomique de gestion de tâches, pensée pour améliorer la productivité en équipe. Design centré utilisateur avec prototypage haute fidélité.",
-      category: "#Design #Figma #Productivity",
-      imageUrl: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=500&q=80"
+      title: "Python/JS",
+      description: "Applications web et scripts automation utilisant Python et JavaScript pour créer des solutions robustes et efficaces.",
+      category: "#Python #JavaScript #WebDev #Automation",
+      imageUrl: pythonJs,
+      route: "/projets/python-js"
     },
     {
-      title: "☁️ Projet 3 – Dashboard Météo",
-      description: "Un tableau de bord interactif affichant les prévisions météo en temps réel, alimenté par des APIs météo fiables et une interface fluide.",
-      category: "#Frontend #API #VueJS #Weather",
-      imageUrl: "https://images.unsplash.com/photo-1534794048419-48e110dca88e?auto=format&fit=crop&w=500&q=80"
+      title: "Web3/BlockChain",
+      description: "Développement d'applications décentralisées et intégration de technologies blockchain pour des solutions innovantes.",
+      category: "#Web3 #Blockchain #Crypto #DApps",
+      imageUrl: web3Blockchain,
+      route: "/projets/web3-blockchain"
     },
     {
-      title: "📊 Projet 4 – Analyse Médias Sociaux",
-      description: "Outil d'analyse des réseaux sociaux permettant de visualiser l'évolution d'une marque ou d'un sujet en ligne. Intégration de graphiques dynamiques et d'analyse sémantique.",
-      category: "#FullStack #Node.js #MongoDB #DataViz",
-      imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80"
+      title: "Agents iA & Automatisations",
+      description: "Création d'agents intelligents et systèmes d'automatisation avancés utilisant l'IA pour optimiser les processus.",
+      category: "#IA #Automation #CrewAI #n8n",
+      imageUrl: aiAutomation,
+      route: "/projets/ia-automation"
     },
     {
-      title: "🤖 Projet 5 – Reconnaissance d'Image IA",
-      description: "Application mobile capable d'identifier des objets ou scènes via la caméra en temps réel, utilisant un modèle de vision par ordinateur embarqué.",
-      category: "#Mobile #TensorFlow #Flutter #AI",
-      imageUrl: "https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?auto=format&fit=crop&w=500&q=80"
+      title: "Projets d'école",
+      description: "Projets académiques et éducatifs démontrant les compétences techniques acquises durant ma formation.",
+      category: "#Education #Academic #Portfolio #Learning",
+      imageUrl: schoolProjects,
+      route: "/projets/ecole"
     },
     {
-      title: "💬 Projet 6 – Chat en Temps Réel",
-      description: "Système de messagerie instantanée backend avec sockets pour des conversations fluides et en direct. Pensé pour être intégré dans des apps mobiles ou web.",
-      category: "#Backend #Socket.IO #Node.js #Realtime",
-      imageUrl: "https://images.unsplash.com/photo-1611606063065-ee7946f0787a?auto=format&fit=crop&w=500&q=80"
+      title: "Design et Création",
+      description: "Projets de design graphique, UI/UX et création visuelle avec focus sur l'esthétique et l'expérience utilisateur.",
+      category: "#Design #UI/UX #Figma #Creative",
+      imageUrl: designCreation,
+      route: "/projets/design"
     }
   ];
 
@@ -59,6 +71,7 @@ const ProjectsCard = () => {
             description={project.description}
             category={project.category}
             imageUrl={project.imageUrl}
+            route={project.route}
           />
         ))}
       </div>
