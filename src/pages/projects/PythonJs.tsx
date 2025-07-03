@@ -76,7 +76,7 @@ L'expérience utilisateur est entièrement intégrée à Telegram : boutons cliq
 
 🛠️ **Technos utilisées :** Node.js, Telegram Bot API, intelligence artificielle (modèle custom), gestion de données sportives, génération dynamique d'UI dans Telegram."
               image={betiqImage}
-              technologies={["Node.js", "Telegram Bot API", "IA", "Machine Learning", "JavaScript", "API REST"]}
+              technologies={["Telegram Bot API", "IA", "Machine Learning", "JavaScript", "API REST"]}
               imageAlt="Interface du bot Telegram BetIQ pour paris sportifs avec IA"
             />
             
@@ -98,7 +98,7 @@ Pensé pour favoriser l'engagement communautaire, le bot permet aux membres de p
 
 Le bot gère l'ensemble du processus en autonomie et transforme un simple groupe Telegram en une véritable compétition créative et communautaire."
               image={photoContestImage}
-              technologies={["Node.js", "Telegram Bot API", "Python", "MongoDB", "API REST"]}
+              technologies={["Telegram Bot API", "Python", "MongoDB", "API REST"]}
               imageAlt="Interface du bot Telegram PhotoContestBot pour concours photo avec système de vote"
             />
           </div>
