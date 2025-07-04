@@ -96,14 +96,14 @@ const Contact = () => {
                 transition={{ delay: 0.4 }}
                 className="lg:col-span-2 bg-card p-4 sm:p-6 rounded-2xl border border-white/5 relative z-30"
               >
-                <h2 className="text-xl font-semibold mb-6 flex items-center">
-                  <MessageSquare className="mr-2 h-5 w-5" />
+                <h2 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 flex items-center">
+                  <MessageSquare className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                   Formulaire de contact
                 </h2>
                 
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <FormField
                         control={form.control}
                         name="name"
@@ -145,7 +145,7 @@ const Contact = () => {
                       />
                     </div>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <FormField
                         control={form.control}
                         name="phone"
@@ -243,7 +243,7 @@ const Contact = () => {
                 transition={{ delay: 0.5 }}
                 className="bg-card p-4 sm:p-6 rounded-2xl border border-white/5 space-y-6 relative z-30"
               >
-                <h2 className="text-xl font-semibold mb-4">Informations</h2>
+                <h2 className="text-lg sm:text-xl font-semibold mb-4">Informations</h2>
                 
                 <div className="space-y-4">
                   <div className="flex items-start">
