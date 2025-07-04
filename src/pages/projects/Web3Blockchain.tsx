@@ -1,5 +1,4 @@
 import React from "react";
-import { useScrollToTop } from "@/hooks/useScrollToTop";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -9,7 +8,6 @@ import Footer from "@/components/Footer";
 import cryptowaifuImage from "@/assets/cryptowaifu-v2.jpg";
 
 const Web3Blockchain = () => {
-  useScrollToTop();
   return (
     <div className="layout-container bg-background">
       <StarBackground />
