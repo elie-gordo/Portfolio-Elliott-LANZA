@@ -59,10 +59,9 @@ const Contact = () => {
   };
 
   return (
-    <div className="home-container">
-      {/* Container avec le contenu principal */}
-      <div className="absolute inset-0 flex items-start justify-center p-4 pt-8 pb-32 sm:pb-28 md:pb-24 lg:pb-20 z-20 overflow-y-auto">
-        <div className="w-full max-w-4xl px-4 sm:px-6">
+    <div className="layout-container bg-background">
+      <div className="content-wrapper">
+        <div className="max-w-4xl mx-auto p-4 sm:p-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -94,7 +93,7 @@ const Contact = () => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4 }}
-                className="lg:col-span-2 bg-card p-4 sm:p-6 rounded-2xl border border-white/5 relative z-30"
+                className="lg:col-span-2 bg-card p-4 sm:p-6 rounded-2xl border border-white/5"
               >
                 <h2 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 flex items-center">
                   <MessageSquare className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
@@ -241,7 +240,7 @@ const Contact = () => {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.5 }}
-                className="bg-card p-4 sm:p-6 rounded-2xl border border-white/5 space-y-6 relative z-30"
+                className="bg-card p-4 sm:p-6 rounded-2xl border border-white/5 space-y-6"
               >
                 <h2 className="text-lg sm:text-xl font-semibold mb-4">Informations</h2>
                 
@@ -286,27 +285,8 @@ const Contact = () => {
           </motion.div>
         </div>
       </div>
-
-      {/* Éléments animés exactement comme dans Home.tsx */}
-      <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-white rounded-full animate-pulse-slow"></div>
-      <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-white rounded-full animate-pulse-slow" style={{ animationDelay: "1s" }}></div>
-      <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-white rounded-full animate-pulse-slow" style={{ animationDelay: "0.5s" }}></div>
-      <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-white rounded-full animate-pulse-slow" style={{ animationDelay: "1.5s" }}></div>
       
-      <motion.div 
-        className="absolute bottom-20 left-10 md:left-20 w-20 h-20 bg-gradient-to-tr from-white/5 to-white/10 rounded-full blur-xl"
-        animate={{ y: [-10, 10], opacity: [0.5, 0.3] }}
-        transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
-      />
-      
-      <motion.div 
-        className="absolute top-20 right-10 md:right-20 w-24 h-24 bg-gradient-to-tr from-white/5 to-white/10 rounded-full blur-xl"
-        animate={{ y: [10, -10], opacity: [0.3, 0.5] }}
-        transition={{ duration: 4, repeat: Infinity, repeatType: "reverse" }}
-      />
-
-      {/* Footer fixe en bas */}
-      <div className="absolute bottom-0 left-0 right-0">
+      <div className="footer-wrapper">
         <Footer />
       </div>
     </div>
