@@ -26,7 +26,7 @@ const ExperienceCard = () => {
 
   return (
     <div className="bento-card col-span-1 backdrop-blur-lg bg-gradient-to-br from-black/40 to-black/20">
-      <h2 className="text-2xl font-bold mb-6 font-poppins">Expérience</h2>
+      <h2 className="text-2xl font-bold mb-6 font-poppins">Expériences</h2>
       <div className="space-y-6">
         {experiences.map((exp, index) => (
           <TimelineItem
