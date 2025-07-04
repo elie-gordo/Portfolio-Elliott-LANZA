@@ -26,7 +26,6 @@ import {
   Info
 } from "lucide-react";
 import Footer from "@/components/Footer";
-import StarBackground from "@/components/StarBackground";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Le nom doit contenir au moins 2 caractères" }),
@@ -60,11 +59,10 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <StarBackground />
+    <div className="home-container">
       {/* Container avec le contenu principal */}
-      <div className="container mx-auto px-4 py-8 max-w-4xl">
-        <div className="w-full">
+      <div className="absolute inset-0 flex items-start justify-center p-4 pt-8 pb-20 z-10 overflow-y-auto">
+        <div className="w-full max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -76,7 +74,7 @@ const Contact = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="text-3xl sm:text-4xl font-bold mb-4 text-gradient"
+                className="text-4xl font-bold mb-4 text-gradient"
               >
                 Contactez-nous
               </motion.h1>
@@ -84,19 +82,19 @@ const Contact = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
-                className="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base px-4"
+                className="text-gray-400 max-w-2xl mx-auto"
               >
                 Vous avez une question ou un projet en tête ? N'hésitez pas à nous contacter. 
                 Nous vous répondrons dans les plus brefs délais.
               </motion.p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <motion.div 
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4 }}
-                className="lg:col-span-2 bg-card p-4 sm:p-6 rounded-2xl border border-white/5"
+                className="md:col-span-2 bg-card p-6 rounded-2xl border border-white/5"
               >
                 <h2 className="text-xl font-semibold mb-6 flex items-center">
                   <MessageSquare className="mr-2 h-5 w-5" />
@@ -105,7 +103,7 @@ const Contact = () => {
                 
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <FormField
                         control={form.control}
                         name="name"
@@ -147,7 +145,7 @@ const Contact = () => {
                       />
                     </div>
                     
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <FormField
                         control={form.control}
                         name="phone"
@@ -243,7 +241,7 @@ const Contact = () => {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.5 }}
-                className="bg-card p-4 sm:p-6 rounded-2xl border border-white/5 space-y-6"
+                className="bg-card p-6 rounded-2xl border border-white/5 space-y-6"
               >
                 <h2 className="text-xl font-semibold mb-4">Informations</h2>
                 
@@ -307,8 +305,10 @@ const Contact = () => {
         transition={{ duration: 4, repeat: Infinity, repeatType: "reverse" }}
       />
 
-      {/* Footer en bas */}
-      <Footer />
+      {/* Footer fixe en bas */}
+      <div className="absolute bottom-0 left-0 right-0">
+        <Footer />
+      </div>
     </div>
   );
 };

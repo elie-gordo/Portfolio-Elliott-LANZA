@@ -12,7 +12,7 @@ const Web3Blockchain = () => {
     <div className="layout-container bg-background">
       <StarBackground />
       <div className="content-wrapper">
-        <div className="max-w-4xl mx-auto p-4 sm:p-6">
+        <div className="max-w-4xl mx-auto p-6">
           <Link to="/index">
             <Button variant="ghost" className="mb-6 text-white hover:bg-white/10">
               <ArrowLeft className="w-4 h-4 mr-2" />
@@ -20,7 +20,7 @@ const Web3Blockchain = () => {
             </Button>
           </Link>
           
-          <h1 className="text-3xl sm:text-4xl font-bold mb-8 text-gradient">Web3/BlockChain</h1>
+          <h1 className="text-4xl font-bold mb-8 text-gradient">Web3/BlockChain</h1>
           
           <div className="grid gap-6">
             <ProjectReferenceCard
