@@ -26,7 +26,6 @@ import {
   Info
 } from "lucide-react";
 import Footer from "@/components/Footer";
-import StarBackground from "@/components/StarBackground";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Le nom doit contenir au moins 2 caractères" }),
@@ -61,7 +60,6 @@ const Contact = () => {
 
   return (
     <div className="layout-container bg-background">
-      <StarBackground />
       <div className="content-wrapper">
         <div className="max-w-4xl mx-auto p-4 sm:p-6">
           <motion.div
@@ -288,7 +286,7 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Éléments animés de fond */}
+      {/* Éléments animés exactement comme dans Home.tsx */}
       <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-white rounded-full animate-pulse-slow"></div>
       <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-white rounded-full animate-pulse-slow" style={{ animationDelay: "1s" }}></div>
       <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-white rounded-full animate-pulse-slow" style={{ animationDelay: "0.5s" }}></div>
