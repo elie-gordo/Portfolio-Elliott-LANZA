@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import StarBackground from "@/components/StarBackground";
 import ProjectReferenceCard from "@/components/ProjectReferenceCard";
 import Footer from "@/components/Footer";
-import schoolImage from "@/assets/school-projects.jpg";
+import movooImage from "@/assets/movoo-project.png";
 
 const Ecole = () => {
   return (
@@ -44,7 +44,7 @@ Un projet présenté à travers la France
 Le site web de Movoo a été conçu pour présenter notre solution aux autres groupes et promotions dans toute la France, dans un format clair, attractif et engageant.
 
 Movoo, c'est plus qu'un projet : c'est une vision de la ville de demain, plus sûre, plus verte, et plus solidaire."
-              image={schoolImage}
+              image={movooImage}
               technologies={["HTML", "CSS", "Figma", "Notion", "UIUXDesign"]}
               imageAlt="Application Movoo - Mobilité douce pour enfants"
               githubLink="https://github.com/elie-gordo/Movoo"
