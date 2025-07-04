@@ -61,7 +61,7 @@ const Contact = () => {
   return (
     <div className="home-container">
       {/* Container avec le contenu principal */}
-      <div className="absolute inset-0 flex items-start justify-center p-4 pt-8 pb-20 z-20 overflow-y-auto">
+      <div className="absolute inset-0 flex items-start justify-center p-4 pt-8 pb-32 sm:pb-28 md:pb-24 lg:pb-20 z-20 overflow-y-auto">
         <div className="w-full max-w-4xl px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
