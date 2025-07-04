@@ -1,4 +1,5 @@
 import React from "react";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -8,6 +9,7 @@ import Footer from "@/components/Footer";
 import designImage from "@/assets/design-creation.jpg";
 
 const Design = () => {
+  useScrollToTop();
   return (
     <div className="layout-container bg-background">
       <StarBackground />

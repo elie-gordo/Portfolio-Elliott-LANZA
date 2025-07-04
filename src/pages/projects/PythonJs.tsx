@@ -1,4 +1,5 @@
 import React from "react";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -10,6 +11,7 @@ import betiqImage from "@/assets/betiq-telegram-bot.jpg";
 import photoContestImage from "@/assets/photo-contest-bot.jpg";
 
 const PythonJs = () => {
+  useScrollToTop();
   return (
     <div className="layout-container bg-background">
       <StarBackground />
