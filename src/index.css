@@ -258,6 +258,14 @@ form {
   justify-content: center;
 }
 
+/* Container responsive pour les autres pages */
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 /* Responsive adjustments */
 @media (max-width: 1200px) {
   .container {
@@ -279,6 +287,11 @@ form {
   
   .home-container {
     padding: 0 1rem;
+  }
+  
+  /* Form responsivité */
+  form input, form textarea {
+    font-size: 16px; /* Évite le zoom sur iOS */
   }
 }
 
