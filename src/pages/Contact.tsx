@@ -1,4 +1,5 @@
 import React from "react";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -39,6 +40,7 @@ const formSchema = z.object({
 type FormValues = z.infer<typeof formSchema>;
 
 const Contact = () => {
+  useScrollToTop(); // Force le scroll vers le haut
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {

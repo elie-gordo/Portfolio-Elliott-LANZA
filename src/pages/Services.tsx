@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from "react";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 import Footer from "@/components/Footer";
 import StarBackground from "@/components/StarBackground";
 import { Button } from "@/components/ui/button";
@@ -9,6 +10,7 @@ import { Brain, Cpu, Smartphone, Lightbulb, Palette, ArrowRight } from "lucide-r
 
 const Services = () => {
   const [isVisible, setIsVisible] = useState(false);
+  useScrollToTop(); // Force le scroll vers le haut
 
   useEffect(() => {
     setIsVisible(true);

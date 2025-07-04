@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from "react";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 import Footer from "@/components/Footer";
 import WelcomeCard from "@/components/IndexPage/WelcomeCard";
 import AboutMeCard from "@/components/IndexPage/AboutMeCard";
@@ -13,6 +14,7 @@ import StarBackground from "@/components/StarBackground";
 
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
+  useScrollToTop(); // Force le scroll vers le haut
 
   useEffect(() => {
     setIsVisible(true);
