@@ -24,12 +24,30 @@ const Ecole = () => {
           
           <div className="grid gap-6">
             <ProjectReferenceCard
-              title="Projets Académiques"
-              description="Développement de projets étudiants couvrant différents domaines de l'informatique : algorithmes, structures de données, développement web, bases de données et projets de groupe. Acquisition de compétences fondamentales et méthodologies de développement."
+              title="Projet P3 - Application Movoo"
+              description="Dans le cadre du programme École de la Toile à l'EM Lyon, notre équipe a conçu Movoo, un projet innovant autour de la mobilité douce.
+
+Notre objectif : faciliter les trajets du quotidien pour les enfants en toute sécurité, tout en promouvant des modes de déplacement écologiques et solidaires.
+
+Nous avons imaginé Movoo comme une application mobile intuitive, accompagnée d'un site de présentation en HTML/CSS. La maquette de l'app a été entièrement conçue sur Figma, et nous avons utilisé Notion pour gérer efficacement notre projet de A à Z.
+
+Fonctionnalités clés de l'application :
+Création de groupes de pédibus (cortège d'enfants accompagnés à pied jusqu'à l'école)
+
+Mise en relation avec des accompagnateurs fiables et validés par la communauté
+
+Interface simple et rassurante pour les parents
+
+Extension future vers d'autres formes de mobilité douce : vélo, trottinette, covoiturage, etc.
+
+Un projet présenté à travers la France
+Le site web de Movoo a été conçu pour présenter notre solution aux autres groupes et promotions dans toute la France, dans un format clair, attractif et engageant.
+
+Movoo, c'est plus qu'un projet : c'est une vision de la ville de demain, plus sûre, plus verte, et plus solidaire."
               image={schoolImage}
-              technologies={["Java", "C++", "SQL", "Git", "Agile", "Testing", "Documentation", "Team Work"]}
-              imageAlt="Environnement d'étude et projets académiques"
-              githubLink=""
+              technologies={["HTML", "CSS", "Figma", "Notion", "UIUXDesign"]}
+              imageAlt="Application Movoo - Mobilité douce pour enfants"
+              githubLink="https://github.com/elie-gordo/Movoo"
             />
           </div>
         </div>
