@@ -16,7 +16,6 @@ import Ecole from "./pages/projects/Ecole";
 import Design from "./pages/projects/Design";
 import BottomNav from "./components/BottomNav";
 import StarBackground from "./components/StarBackground";
-import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -26,7 +25,6 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <ScrollToTop />
         <StarBackground />
         <Routes>
           <Route path="/" element={<Home />} />
