@@ -34,6 +34,23 @@
     height: 100%;
     width: 100%;
     overflow-x: hidden;
+    scroll-behavior: auto; /* Désactive le smooth scroll pour les changements de page */
+  }
+
+  /* Force le défilement pour les navigations de page */
+  .page-transition {
+    scroll-behavior: auto !important;
+  }
+
+  /* Force tous les éléments à ne pas garder leur position de scroll */
+  * {
+    scroll-behavior: auto !important;
+  }
+
+  /* Reset du scroll sur les éléments potentiellement problématiques */
+  html, body, #root, main, .app, [data-scroll-container] {
+    scroll-behavior: auto !important;
+    scroll-snap-type: none !important;
   }
 }
 
@@ -49,6 +66,17 @@
   }
 }
 
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
 @keyframes slide {
   0% {
     transform: translateX(-100%);
@@ -61,6 +89,10 @@
 /* Utilities */
 .fade-in {
   animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
 }
 
 .text-gradient {

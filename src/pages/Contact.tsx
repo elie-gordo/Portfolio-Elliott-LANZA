@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -39,6 +39,12 @@ const formSchema = z.object({
 type FormValues = z.infer<typeof formSchema>;
 
 const Contact = () => {
+  const [mounted, setMounted] = useState(false);
+  const mousePositionRef = useRef({ x: 0, y: 0 });
+  const containerRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const subtitleRef = useRef<HTMLParagraphElement>(null);
+
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -51,6 +57,48 @@ const Contact = () => {
     },
   });
 
+  // Gestion du mouvement de souris pour les animations parallax
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!containerRef.current) return;
+    
+    const { clientX, clientY } = e;
+    const { width, height, left, top } = containerRef.current.getBoundingClientRect();
+    
+    const x = ((clientX - left) / width - 0.5) * 2;
+    const y = ((clientY - top) / height - 0.5) * 2;
+    
+    mousePositionRef.current = { x, y };
+    
+    if (titleRef.current) {
+      titleRef.current.style.transform = `translate(${x * -15}px, ${y * -8}px)`;
+    }
+    
+    if (subtitleRef.current) {
+      subtitleRef.current.style.transform = `translate(${x * -8}px, ${y * -4}px)`;
+    }
+  };
+
+  useEffect(() => {
+    setMounted(true);
+    
+    const resetTransforms = () => {
+      if (titleRef.current) {
+        titleRef.current.style.transform = 'translate(0, 0)';
+      }
+      
+      if (subtitleRef.current) {
+        subtitleRef.current.style.transform = 'translate(0, 0)';
+      }
+    };
+    
+    const currentContainer = containerRef.current;
+    currentContainer?.addEventListener('mouseleave', resetTransforms);
+    
+    return () => {
+      currentContainer?.removeEventListener('mouseleave', resetTransforms);
+    };
+  }, []);
+
   const onSubmit = (data: FormValues) => {
     // In a real application, you would send this data to your backend
     console.log("Form data:", data);
@@ -59,8 +107,44 @@ const Contact = () => {
   };
 
   return (
-    <div className="layout-container bg-background">
-      <div className="content-wrapper">
+    <div 
+      ref={containerRef}
+      onMouseMove={handleMouseMove}
+      className="min-h-screen w-full relative overflow-hidden flex flex-col"
+    >
+      {/* Particules d'animation de fond - exactement comme dans Home */}
+      <motion.div
+        animate={{ scale: [0.9, 1] }}
+        transition={{ duration: 2, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
+        className="absolute -top-32 -left-32 w-64 h-64 rounded-full bg-white/5 blur-3xl"
+      />
+      
+      <motion.div
+        animate={{ scale: [1, 0.9] }}
+        transition={{ duration: 2, repeat: Infinity, repeatType: "reverse", ease: "easeInOut", delay: 0.5 }}
+        className="absolute -bottom-32 -right-32 w-64 h-64 rounded-full bg-white/5 blur-3xl"
+      />
+
+      {/* Petites particules scintillantes */}
+      <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-white rounded-full animate-pulse-slow"></div>
+      <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-white rounded-full animate-pulse-slow" style={{ animationDelay: "1s" }}></div>
+      <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-white rounded-full animate-pulse-slow" style={{ animationDelay: "0.5s" }}></div>
+      <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-white rounded-full animate-pulse-slow" style={{ animationDelay: "1.5s" }}></div>
+
+      {/* Orbes flottants */}
+      <motion.div 
+        className="absolute bottom-20 left-10 md:left-20 w-20 h-20 bg-gradient-to-tr from-white/5 to-white/10 rounded-full blur-xl"
+        animate={{ y: [-10, 10], opacity: [0.5, 0.3] }}
+        transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
+      />
+      
+      <motion.div 
+        className="absolute top-20 right-10 md:right-20 w-24 h-24 bg-gradient-to-tr from-white/5 to-white/10 rounded-full blur-xl"
+        animate={{ y: [10, -10], opacity: [0.3, 0.5] }}
+        transition={{ duration: 4, repeat: Infinity, repeatType: "reverse" }}
+      />
+
+      <div className="content-wrapper relative z-10 flex-1">
         <div className="max-w-4xl mx-auto p-4 sm:p-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -70,18 +154,20 @@ const Contact = () => {
           >
             <div className="text-center mb-8 md:mb-12">
               <motion.h1 
+                ref={titleRef}
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                animate={mounted ? { opacity: 1 } : {}}
                 transition={{ delay: 0.2 }}
-                className="text-3xl sm:text-4xl font-bold mb-4 text-gradient"
+                className="text-3xl sm:text-4xl font-bold mb-4 text-gradient transition-transform duration-200 ease-out"
               >
                 Contactez-nous
               </motion.h1>
               <motion.p 
+                ref={subtitleRef}
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                animate={mounted ? { opacity: 1 } : {}}
                 transition={{ delay: 0.3 }}
-                className="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base"
+                className="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base transition-transform duration-200 ease-out"
               >
                 Vous avez une question ou un projet en tête ? N'hésitez pas à nous contacter. 
                 Nous vous répondrons dans les plus brefs délais.
@@ -93,9 +179,13 @@ const Contact = () => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4 }}
-                className="lg:col-span-2 bg-card p-4 sm:p-6 rounded-2xl border border-white/5"
+                className="lg:col-span-2 bg-card/80 backdrop-blur-sm p-4 sm:p-6 rounded-2xl border border-white/10 shadow-xl relative overflow-hidden"
+                whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
               >
-                <h2 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 flex items-center">
+                {/* Effet de lueur au survol */}
+                <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
+                
+                <h2 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 flex items-center relative z-10">
                   <MessageSquare className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                   Formulaire de contact
                 </h2>
@@ -226,12 +316,19 @@ const Contact = () => {
                       )}
                     />
                     
-                    <Button 
-                      type="submit" 
-                      className="w-full"
+                    <motion.div 
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ type: "spring", duration: 0.3 }}
                     >
-                      <Send className="mr-2 h-4 w-4" /> Envoyer le message
-                    </Button>
+                      <Button 
+                        type="submit" 
+                        className="w-full relative overflow-hidden group"
+                      >
+                        <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        <Send className="mr-2 h-4 w-4 relative z-10" /> 
+                        <span className="relative z-10">Envoyer le message</span>
+                      </Button>
+                    </motion.div>
                   </form>
                 </Form>
               </motion.div>
@@ -240,53 +337,102 @@ const Contact = () => {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.5 }}
-                className="bg-card p-4 sm:p-6 rounded-2xl border border-white/5 space-y-6"
+                className="bg-card/80 backdrop-blur-sm p-4 sm:p-6 rounded-2xl border border-white/10 shadow-xl space-y-6 relative overflow-hidden"
+                whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
               >
-                <h2 className="text-lg sm:text-xl font-semibold mb-4">Informations</h2>
+                {/* Effet de lueur au survol */}
+                <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
                 
-                <div className="space-y-4">
-                  <div className="flex items-start">
+                <h2 className="text-lg sm:text-xl font-semibold mb-4 relative z-10">Informations</h2>
+                
+                <div className="space-y-4 relative z-10">
+                  <motion.div 
+                    className="flex items-start"
+                    whileHover={{ x: 5 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
                     <Mail className="h-5 w-5 mr-3 mt-1 text-gray-400" />
                     <div>
                       <h3 className="font-medium">Email</h3>
                       <p className="text-gray-400 text-sm">elliott.lanza@gmail.com</p>
                     </div>
-                  </div>
+                  </motion.div>
                   
-                  <div className="flex items-start">
+                  <motion.div 
+                    className="flex items-start"
+                    whileHover={{ x: 5 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
                     <Phone className="h-5 w-5 mr-3 mt-1 text-gray-400" />
                     <div>
                       <h3 className="font-medium">Téléphone</h3>
                       <p className="text-gray-400 text-sm">Bientôt disponible</p>
                     </div>
-                  </div>
+                  </motion.div>
                   
-                  <div className="flex items-start">
+                  <motion.div 
+                    className="flex items-start"
+                    whileHover={{ x: 5 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
                     <Briefcase className="h-5 w-5 mr-3 mt-1 text-gray-400" />
                     <div>
                       <h3 className="font-medium">Entreprise</h3>
                       <p className="text-gray-400 text-sm">Situé a Lyon</p>
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
                 
-                <Separator className="my-6" />
+                <Separator className="my-6 relative z-10" />
                 
-                <div>
+                <div className="relative z-10">
                   <h3 className="font-medium mb-2">Horaires</h3>
                   <p className="text-gray-400 text-sm">Nous sommes joignables 7j/7.</p>
                 </div>
                 
-                <p className="text-sm text-gray-500 mt-6">
+                <motion.p 
+                  className="text-sm text-gray-500 mt-6 relative z-10"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.8 }}
+                >
                   Nous nous efforçons de répondre à toutes les demandes dans un délai de 24 heures ouvrées.
-                </p>
+                </motion.p>
               </motion.div>
             </div>
+
+            {/* Particules supplémentaires pour l'ambiance - comme dans Home */}
+            <motion.div 
+              className="absolute top-40 left-10 w-2 h-2 bg-white/20 rounded-full"
+              animate={{ 
+                scale: [1, 1.5, 1],
+                opacity: [0.3, 0.7, 0.3]
+              }}
+              transition={{ 
+                duration: 2, 
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
+            
+            <motion.div 
+              className="absolute bottom-40 right-20 w-1.5 h-1.5 bg-white/30 rounded-full"
+              animate={{ 
+                scale: [1, 1.2, 1],
+                opacity: [0.4, 0.8, 0.4]
+              }}
+              transition={{ 
+                duration: 3, 
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 1
+              }}
+            />
           </motion.div>
         </div>
       </div>
       
-      <div className="footer-wrapper">
+      <div className="footer-wrapper flex-shrink-0">
         <Footer />
       </div>
     </div>
