@@ -59,8 +59,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="layout-container bg-background relative">
-      <div className="content-wrapper relative z-10">
+    <div className="layout-container bg-background">
+      <div className="content-wrapper">
         <div className="max-w-4xl mx-auto p-4 sm:p-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -285,24 +285,6 @@ const Contact = () => {
           </motion.div>
         </div>
       </div>
-
-      {/* Éléments animés exactement comme dans Home.tsx */}
-      <div className="fixed top-1/4 left-1/4 w-1 h-1 bg-white rounded-full animate-pulse-slow z-0"></div>
-      <div className="fixed top-3/4 right-1/4 w-1 h-1 bg-white rounded-full animate-pulse-slow z-0" style={{ animationDelay: "1s" }}></div>
-      <div className="fixed top-1/3 right-1/3 w-1 h-1 bg-white rounded-full animate-pulse-slow z-0" style={{ animationDelay: "0.5s" }}></div>
-      <div className="fixed bottom-1/4 left-1/3 w-1 h-1 bg-white rounded-full animate-pulse-slow z-0" style={{ animationDelay: "1.5s" }}></div>
-      
-      <motion.div 
-        className="fixed bottom-20 left-10 md:left-20 w-20 h-20 bg-gradient-to-tr from-white/5 to-white/10 rounded-full blur-xl z-0"
-        animate={{ y: [-10, 10], opacity: [0.5, 0.3] }}
-        transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
-      />
-      
-      <motion.div 
-        className="fixed top-20 right-10 md:right-20 w-24 h-24 bg-gradient-to-tr from-white/5 to-white/10 rounded-full blur-xl z-0"
-        animate={{ y: [10, -10], opacity: [0.3, 0.5] }}
-        transition={{ duration: 4, repeat: Infinity, repeatType: "reverse" }}
-      />
       
       <div className="footer-wrapper">
         <Footer />
