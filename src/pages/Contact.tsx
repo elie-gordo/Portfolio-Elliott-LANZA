@@ -61,20 +61,20 @@ const Contact = () => {
   return (
     <div className="home-container">
       {/* Container avec le contenu principal */}
-      <div className="absolute inset-0 flex items-start justify-center p-4 pt-8 pb-20 z-10 overflow-y-auto">
-        <div className="w-full max-w-4xl">
+      <div className="absolute inset-0 flex items-start justify-center p-4 pt-8 pb-20 z-20 overflow-y-auto">
+        <div className="w-full max-w-4xl px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            <div className="text-center mb-12">
+            <div className="text-center mb-8 md:mb-12">
               <motion.h1 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="text-4xl font-bold mb-4 text-gradient"
+                className="text-3xl sm:text-4xl font-bold mb-4 text-gradient"
               >
                 Contactez-nous
               </motion.h1>
@@ -82,19 +82,19 @@ const Contact = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
-                className="text-gray-400 max-w-2xl mx-auto"
+                className="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base"
               >
                 Vous avez une question ou un projet en tête ? N'hésitez pas à nous contacter. 
                 Nous vous répondrons dans les plus brefs délais.
               </motion.p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
               <motion.div 
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4 }}
-                className="md:col-span-2 bg-card p-6 rounded-2xl border border-white/5"
+                className="lg:col-span-2 bg-card p-4 sm:p-6 rounded-2xl border border-white/5 relative z-30"
               >
                 <h2 className="text-xl font-semibold mb-6 flex items-center">
                   <MessageSquare className="mr-2 h-5 w-5" />
@@ -241,7 +241,7 @@ const Contact = () => {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.5 }}
-                className="bg-card p-6 rounded-2xl border border-white/5 space-y-6"
+                className="bg-card p-4 sm:p-6 rounded-2xl border border-white/5 space-y-6 relative z-30"
               >
                 <h2 className="text-xl font-semibold mb-4">Informations</h2>
                 
