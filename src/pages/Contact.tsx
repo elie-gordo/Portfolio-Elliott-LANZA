@@ -204,6 +204,7 @@ const Contact = () => {
                             <FormControl>
                               <Input 
                                 placeholder="Votre nom" 
+                                className="bg-card-hover border-white/10" 
                                 {...field} 
                               />
                             </FormControl>
@@ -223,6 +224,7 @@ const Contact = () => {
                             <FormControl>
                               <Input 
                                 placeholder="votre@email.com" 
+                                className="bg-card-hover border-white/10" 
                                 {...field} 
                               />
                             </FormControl>
@@ -244,6 +246,7 @@ const Contact = () => {
                             <FormControl>
                               <Input 
                                 placeholder="Votre numéro de téléphone" 
+                                className="bg-card-hover border-white/10" 
                                 {...field} 
                               />
                             </FormControl>
@@ -263,6 +266,7 @@ const Contact = () => {
                             <FormControl>
                               <Input 
                                 placeholder="Nom de votre entreprise" 
+                                className="bg-card-hover border-white/10" 
                                 {...field} 
                               />
                             </FormControl>
@@ -283,6 +287,7 @@ const Contact = () => {
                           <FormControl>
                             <Input 
                               placeholder="Sujet de votre message" 
+                              className="bg-card-hover border-white/10" 
                               {...field} 
                             />
                           </FormControl>
@@ -302,7 +307,7 @@ const Contact = () => {
                           <FormControl>
                             <Textarea 
                               placeholder="Détaillez votre demande ici..." 
-                              className="min-h-32" 
+                              className="min-h-32 bg-card-hover border-white/10" 
                               {...field} 
                             />
                           </FormControl>
