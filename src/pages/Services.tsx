@@ -57,7 +57,7 @@ const Services = () => {
       <StarBackground />
       <div className="content-wrapper pb-20">
         <div className={`max-w-4xl mx-auto px-4 pt-16 sm:pt-24 pb-12 ${isVisible ? 'fade-in' : ''}`}>
-          <h1 className="text-4xl md:text-5xl font-sans font-bold text-gradient mb-8">Nos Services Professionnels</h1>
+          <h1 className="text-4xl md:text-5xl font-sans font-bold text-gradient mb-8">Mes Services Professionnels</h1>
           <p className="text-gray-300 text-lg mb-12">
             Découvrez mes différentes prestations pour répondre à vos besoins en matière de développement et de stratégie numérique.
           </p>
