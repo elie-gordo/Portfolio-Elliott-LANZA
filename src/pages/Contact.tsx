@@ -266,7 +266,7 @@ const Contact = () => {
                     <Briefcase className="h-5 w-5 mr-3 mt-1 text-gray-400" />
                     <div>
                       <h3 className="font-medium">Entreprise</h3>
-                      <p className="text-gray-400 text-sm">Notre entreprise, Paris</p>
+                      <p className="text-gray-400 text-sm">Situé a Lyon</p>
                     </div>
                   </div>
                 </div>
@@ -275,7 +275,7 @@ const Contact = () => {
                 
                 <div>
                   <h3 className="font-medium mb-2">Horaires</h3>
-                  <p className="text-gray-400 text-sm">Nous sommes joignables 24h/24 et 7j/7.</p>
+                  <p className="text-gray-400 text-sm">Nous sommes joignables 7j/7.</p>
                 </div>
                 
                 <p className="text-sm text-gray-500 mt-6">
