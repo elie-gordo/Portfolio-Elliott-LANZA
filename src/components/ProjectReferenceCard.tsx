@@ -9,6 +9,7 @@ interface ProjectReferenceCardProps {
   technologies: string[];
   imageAlt?: string;
   githubLink?: string;
+  figmaLink?: string;
 }
 
 const ProjectReferenceCard = ({ 
@@ -17,7 +18,8 @@ const ProjectReferenceCard = ({
   image, 
   technologies, 
   imageAlt,
-  githubLink 
+  githubLink,
+  figmaLink 
 }: ProjectReferenceCardProps) => {
   return (
     <Card className="bg-black/20 border-white/10 overflow-hidden">
@@ -70,18 +72,32 @@ const ProjectReferenceCard = ({
             </Badge>
           ))}
         </div>
-        {githubLink && (
-          <div className="mt-4">
-            <a 
-              href={githubLink} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-blue-400 hover:text-blue-300 transition-colors break-all text-sm"
-            >
-              🔗{githubLink}
-            </a>
-          </div>
-        )}
+        <div className="space-y-2">
+          {githubLink && (
+            <div>
+              <a 
+                href={githubLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:text-blue-300 transition-colors break-all text-sm"
+              >
+                🔗{githubLink}
+              </a>
+            </div>
+          )}
+          {figmaLink && (
+            <div>
+              <a 
+                href={figmaLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:text-blue-300 transition-colors break-all text-sm"
+              >
+                🔗{figmaLink}
+              </a>
+            </div>
+          )}
+        </div>
       </CardContent>
     </Card>
   );

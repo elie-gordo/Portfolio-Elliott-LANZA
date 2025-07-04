@@ -48,6 +48,7 @@ Movoo, c'est plus qu'un projet : c'est une vision de la ville de demain, plus sÃ
               technologies={["HTML", "CSS", "Figma", "Notion", "UIUXDesign"]}
               imageAlt="Application Movoo - MobilitÃ© douce pour enfants"
               githubLink="https://github.com/elie-gordo/Movoo"
+              figmaLink="https://www.figma.com/proto/uAfCnWxMIk2rn4JofFOqU6/Movoo?node-id=1-2&t=IUqrPNAeU5SusdZn-1"
             />
           </div>
         </div>
