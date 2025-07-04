@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 import { 
   Form, 
   FormControl, 
@@ -40,6 +41,7 @@ type FormValues = z.infer<typeof formSchema>;
 
 const Contact = () => {
   const [mounted, setMounted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const mousePositionRef = useRef({ x: 0, y: 0 });
   const containerRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -99,11 +101,36 @@ const Contact = () => {
     };
   }, []);
 
-  const onSubmit = (data: FormValues) => {
-    // In a real application, you would send this data to your backend
-    console.log("Form data:", data);
-    toast.success("Message envoyé avec succès! Nous vous contacterons bientôt.");
-    form.reset();
+  const onSubmit = async (data: FormValues) => {
+    setIsSubmitting(true);
+    
+    try {
+      // Préparer les données en s'assurant que les champs optionnels sont des chaînes
+      const contactData = {
+        name: data.name,
+        email: data.email,
+        phone: data.phone || '',
+        company: data.company || '',
+        subject: data.subject,
+        message: data.message,
+      };
+
+      const { error } = await supabase
+        .from('contact_messages')
+        .insert([contactData]);
+
+      if (error) {
+        throw error;
+      }
+
+      toast.success("Message envoyé !");
+      form.reset();
+    } catch (error) {
+      console.error('Erreur lors de l\'envoi:', error);
+      toast.error("Erreur lors de l'envoi du message. Veuillez réessayer.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -322,11 +349,14 @@ const Contact = () => {
                     >
                       <Button 
                         type="submit" 
+                        disabled={isSubmitting}
                         className="w-full relative overflow-hidden group"
                       >
                         <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                         <Send className="mr-2 h-4 w-4 relative z-10" /> 
-                        <span className="relative z-10">Envoyer le message</span>
+                        <span className="relative z-10">
+                          {isSubmitting ? "Envoi en cours..." : "Envoyer le message"}
+                        </span>
                       </Button>
                     </motion.div>
                   </form>
