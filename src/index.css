@@ -30,14 +30,11 @@
     transition: background-color 0.3s ease;
   }
 
-  html {
-    scroll-behavior: auto !important;
-  }
-
   html, body, #root {
     height: 100%;
     width: 100%;
     overflow-x: hidden;
+    scroll-behavior: auto !important;
   }
 }
 
