@@ -5,18 +5,32 @@ export const useScrollToTop = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Force immédiatement
-    window.scrollTo(0, 0);
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;
-    
-    // Force après que tout soit rendu
-    const timeoutId = setTimeout(() => {
-      window.scrollTo(0, 0);
+    // Solution brutale - force le scroll de toutes les manières possibles
+    const forceScroll = () => {
+      // Méthode 1
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      // Méthode 2
       document.documentElement.scrollTop = 0;
+      // Méthode 3
       document.body.scrollTop = 0;
-    }, 0);
+      // Méthode 4
+      window.pageYOffset = 0;
+      // Méthode 5 - pour les navigateurs anciens
+      if (window.scrollY !== 0) {
+        window.scroll(0, 0);
+      }
+    };
 
-    return () => clearTimeout(timeoutId);
-  }, [location.pathname, location.key]);
+    // Exécution immédiate
+    forceScroll();
+    
+    // Exécution après chaque frame
+    requestAnimationFrame(forceScroll);
+    requestAnimationFrame(() => requestAnimationFrame(forceScroll));
+    
+    // Et pour être vraiment sûr
+    const timer = setTimeout(forceScroll, 100);
+    
+    return () => clearTimeout(timer);
+  }, [location.pathname]);
 };
