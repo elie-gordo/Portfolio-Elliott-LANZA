@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import StarBackground from "@/components/StarBackground";
 import ProjectReferenceCard from "@/components/ProjectReferenceCard";
 import Footer from "@/components/Footer";
-import designImage from "@/assets/design-creation.jpg";
+import blocksignsImage from "@/assets/blocksigns-streetwear.png";
 
 const Design = () => {
   return (
@@ -24,11 +24,23 @@ const Design = () => {
           
           <div className="grid gap-6">
             <ProjectReferenceCard
-              title="Design & Créations Visuelles"
-              description="Conception d'interfaces utilisateur modernes et créatives, développement d'identités visuelles et création de supports graphiques. Focus sur l'expérience utilisateur et l'esthétique pour des solutions digitales impactantes."
-              image={designImage}
-              technologies={["Figma", "Adobe Creative Suite", "UI/UX", "Branding", "Typography", "Color Theory", "Prototyping", "Wireframing"]}
-              imageAlt="Outils de design et créations graphiques"
+              title="BlockSigns — Marque Streetwear POD (Work in Progress)"
+              description="BlockSigns est une marque streetwear en cours de création, pensée pour le print-on-demand. L'objectif : proposer des pièces au design percutant, accessibles partout, sans compromis sur l'identité.
+
+Inspirée par la culture urbaine, le code graphique des rues et une esthétique brute et symbolique, BlockSigns revendique une approche visuelle forte et codée, où chaque design porte un message.
+
+Une collection en POD qui parle aux esprits créatifs, rebelles et conscients — là où le textile devient un moyen d'expression.
+
+🎯 Work in progress :
+
+• Direction artistique & moodboards
+• Création des premiers visuels & slogans
+• Tests produits (t-shirts, hoodies, accessoires)
+• Setup boutique en ligne (POD ready)
+• Branding & stratégie de lancement"
+              image={blocksignsImage}
+              technologies={["Shopify", "PrintOnDemand", "AdobeIllustrator", "AdobePhotoshop", "ChatGPT"]}
+              imageAlt="BlockSigns - Marque Streetwear POD"
               githubLink=""
             />
           </div>
