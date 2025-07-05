@@ -384,7 +384,7 @@ const Contact = () => {
                     <Mail className="h-5 w-5 mr-3 mt-1 text-gray-400" />
                     <div>
                       <h3 className="font-medium">Email</h3>
-                      <p className="text-gray-400 text-sm">elliott.lanza@gmail.com</p>
+                      <p className="text-gray-400 text-sm">contact@elliott-lanza.com</p>
                     </div>
                   </motion.div>
                   
