@@ -75,6 +75,7 @@ L'expérience utilisateur est entièrement intégrée à Telegram : boutons cliq
               image={betiqImage}
               technologies={["Telegram Bot API", "IA", "Machine Learning", "JavaScript", "API REST"]}
               imageAlt="Interface du bot Telegram BetIQ pour paris sportifs avec IA"
+              githubLink="https://github.com/elie-gordo/bot_paris_sportifs"
             />
             
             <ProjectReferenceCard
