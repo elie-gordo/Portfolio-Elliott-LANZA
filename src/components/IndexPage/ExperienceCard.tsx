@@ -20,7 +20,7 @@ const ExperienceCard = () => {
       title: "👨‍💻 Développeur FullStack – Giant Consulting",
       organization: "",
       period: "",
-      description: "J'ai travaillé pendant 6 mois en tant que développeur FullStack pour Giant Consulting, une agence de conseil qui accompagnait les entreprises dans leur transformation digitale.\n\nJ'intervenais régulièrement sur des missions variées : maintenance d'outils internes, développement de dashboards, création d'APIs ou refonte de front-end.\n\nCette collaboration m'a permis de rester au contact des problématiques concrètes des clients tout en cultivant un code propre, scalable et bien documenté.\n\n🧰 Techs utilisées : Vue.js / React, Node.js, MongoDB, REST APIs, GitLab CI/CD."
+      description: "J'ai travaillé pendant 6 mois en tant que développeur FullStack pour Giant Consulting, une agence de conseil qui accompagne les entreprises dans leur transformation digitale.\n\nJ'intervenais régulièrement sur des missions variées : maintenance d'outils internes, développement de dashboards, création d'APIs ou refonte de front-end.\n\nCette collaboration m'a permis de rester au contact des problématiques concrètes des clients tout en cultivant un code propre, scalable et bien documenté.\n\n🧰 Techs utilisées : Vue.js / React, Node.js, MongoDB, REST APIs, GitLab CI/CD."
     }
   ];
 
