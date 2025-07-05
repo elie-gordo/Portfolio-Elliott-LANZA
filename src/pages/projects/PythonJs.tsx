@@ -79,7 +79,7 @@ L'expérience utilisateur est entièrement intégrée à Telegram : boutons cliq
             />
             
             <ProjectReferenceCard
-              title="📸 PhotoContestBot – Bot Telegram pour concours photo automatisés"
+              title="PhotoContestBot – Bot Telegram pour concours photo automatisés"
               description="**PhotoContestBot** est un bot Telegram interactif conçu pour animer des groupes autour de concours photo hebdomadaires, avec un système de vote intégré, des statistiques en temps réel et une gestion automatisée des sondages et résultats.
 
 Pensé pour favoriser l'engagement communautaire, le bot permet aux membres de publier des photos accompagnées d'un titre ou d'une description, de voter via des boutons personnalisés, et de suivre l'évolution des scores et classements. Chaque semaine, les meilleures contributions sont automatiquement sélectionnées pour un sondage final, et les résultats sont partagés au sein du groupe.
@@ -98,6 +98,7 @@ Le bot gère l'ensemble du processus en autonomie et transforme un simple groupe
               image={photoContestImage}
               technologies={["Telegram Bot API", "Python", "MongoDB", "API REST"]}
               imageAlt="Interface du bot Telegram PhotoContestBot pour concours photo avec système de vote"
+              githubLink="https://github.com/elie-gordo/bot_telegram_vote_image"
             />
           </div>
         </div>
