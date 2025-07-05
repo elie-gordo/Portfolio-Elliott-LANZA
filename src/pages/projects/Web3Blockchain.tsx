@@ -41,7 +41,8 @@ Le projet s'est distingué par une forte implication communautaire et une approc
               image={cryptowaifuImage}
               technologies={["React", "Next.js", "TailwindCSS", "Ethers.js", "WalletConnect", "OpenSea API", "Notion", "Figma"]}
               imageAlt="Interface de CryptoWaifu V2"
-              githubLink=""
+              githubLink="https://github.com/elie-gordo/CW_site"
+              figmaLink="https://stalwart-bonbon-770a70.netlify.app/"
             />
           </div>
         </div>
