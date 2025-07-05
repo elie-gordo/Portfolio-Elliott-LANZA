@@ -16,7 +16,7 @@ const SocialCard = () => {
           className="p-3 rounded-full bg-white/5 hover:bg-white/10 transition-colors hover:scale-110 transform duration-300">
           <Linkedin className="w-8 h-8 text-white" />
         </a>
-        <a href="mailto:elliott.lanza@gmail.com"
+        <a href="mailto:contact@elliott-lanza.com"
           className="p-3 rounded-full bg-white/5 hover:bg-white/10 transition-colors hover:scale-110 transform duration-300">
           <Mail className="w-8 h-8 text-white" />
         </a>
